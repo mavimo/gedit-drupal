@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='utf-8'?>
+<snippets language="drupal">
+  <snippet>
+    <text><![CDATA[$<
+# Define global variable
+global module_name
+
+####### Module name ##########
+# Check if current file is empty
+if $GEDIT_BASENAME != '' :
+	# extract fil name (no extension)
+	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+else:
+	# Default module name
+	module_name = 'mymodule'
+
+>drupal_add_css(drupal_get_path('module','$<return module_name>') . '$(1: echo '/css/style.css')', '${2:module}', '${3:all}');]]></text>
+    <tag>drupal</tag>
+    <description>drupal_add_css()</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[drupal_add_js('
+if (Drupal.jsEnabled) {
+	$(echo '$')(document).ready(function() {
+		${0:// Add code here}
+	});
+}', 'inline');	]]></text>
+    <tag>drupal</tag>
+    <description>drupal_add_js( inline )</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[$<
+# Define global variable
+global module_name
+
+####### Module name ##########
+# Check if current file is empty
+if $GEDIT_BASENAME != '' :
+	# extract fil name (no extension)
+	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+else:
+	# Default module name
+	module_name = 'mymodule'
+
+>drupal_add_js(drupal_get_path('module','$<return module_name>').'$(1: echo '/js/script.js')');]]></text>
+    <tag>drupal</tag>
+    <description>drupal_add_js( module )</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[$<
+# Define global variable
+global module_name
+
+####### Module name ##########
+# Check if current file is empty
+if $GEDIT_BASENAME != '' :
+	# extract fil name (no extension)
+	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+else:
+	# Default module name
+	module_name = 'mymodule'
+
+>drupal_add_js(array('$<return module_name>' => ${0:$settings}, 'setting');]]></text>
+    <tag>drupal</tag>
+    <description>drupal_add_js( settings )</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[drupal_json(${0:$var});]]></text>
+    <tag>drupal</tag>
+    <description>drupal_json()</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[drupal_set_message('${1:message}', '${2:status | warning | error}', ${3:$repeat});]]></text>
+    <tag>drupal</tag>
+    <description>drupal_set_message()</description>
+  </snippet>
+</snippets>
