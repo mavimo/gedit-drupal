@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<snippets language="drupal">
+  <snippet>
+    <text><![CDATA[check_file(${1:$filename})]]></text>
+    <tag>file</tag>
+    <description>check_file()</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[file_copy(${1:&$source}, ${2:$dest}, ${3:FILE_EXISTS_REPLACE | FILE_EXISTS_RENAME | FILE_EXISTS_ERROR});]]></text>
+    <tag>file</tag>
+    <description>file_copy()</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[file_delete(${1:&$source});]]></text>
+    <tag>file</tag>
+    <description>file_delete()</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[file_destination(${1:$destination}, ${2:FILE_EXISTS_REPLACE | FILE_EXISTS_RENAME | FILE_EXISTS_ERROR});]]></text>
+    <tag>file</tag>
+    <description>file_destination()</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[file_move(${1:&$source}, ${2:$dest}, ${3:FILE_EXISTS_REPLACE | FILE_EXISTS_RENAME | FILE_EXISTS_ERROR});]]></text>
+    <tag>file</tag>
+    <description>file_move()</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[file_save_upload(${1:$source}, ${2:$validators}, ${3:$dest}, ${3:FILE_EXISTS_REPLACE | FILE_EXISTS_RENAME | FILE_EXISTS_ERROR})]]></text>
+    <tag>file</tag>
+    <description>file_save_upload()</description>
+  </snippet>
+</snippets>
