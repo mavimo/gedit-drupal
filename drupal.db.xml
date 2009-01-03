@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<snippets language="drupal">
+  <snippet>
+    <text><![CDATA[db_fetch_array(${1:$result});]]></text>
+    <tag>db</tag>
+    <description>db_fetch_array()</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[db_fetch_object(${1:$result});]]></text>
+    <tag>db</tag>
+    <description>db_fetch_object()</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[$results = db_query("");]]></text>
+    <tag>db</tag>
+    <description>db_query()</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[db_query_range(${1:""}, ${2:$from}, ${4:$count});]]></text>
+    <tag>db</tag>
+    <description>db_query_range()</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[db_set_active(${1:'default'});]]></text>
+    <tag>db</tag>
+    <description>db_set_active()</description>
+  </snippet>
+</snippets>
