@@ -1,0 +1,199 @@
+<?xml version='1.0' encoding='utf-8'?>
+<snippets language="drupal">
+  <snippet>
+    <text><![CDATA[format_plural(${1:$count}, '${2:singular}, '${3:plural}, array('${4:@param}' => ${5:$value}), ${6:$langcode})]]></text>
+    <tag>t</tag>
+    <description>format_plural()</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[$<
+# Define global variable
+global strparam, module_name
+
+####### Function params ##########
+strparam = ''
+params = $3.split(',')
+# Generate documentation array
+for par in params:
+	strparam = strparam + '  * @param ' + par.strip() + '\n  *   Description of param ' + par.strip() + '\n'
+
+####### Module name ##########
+# Check if current file is empty
+if $GEDIT_BASENAME != '' :
+	# extract fil name (no extension)
+	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+else:
+	# Default module name
+	module_name = 'mymodule'
+
+>/** ${10:Short description of this function}.
+  *
+  * ${11:Long description of this function.}
+  *
+  * Example usage:
+  * @code
+  *  ${12:my_print('Function usage sample');}
+  * @endcode
+  * 
+$<[3]: return strparam
+> *
+  * @return
+  *   ${15:Description of return value}
+  */
+function _$< return module_name >_${2:function_name}(${3:$param1, $param2, $param3}) {
+	${0:#code}
+}]]></text>
+    <tag>function</tag>
+    <description>function()</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<?php // $$(echo 'I')d$
+/**
+ * Module:      ${1:modulename}
+ * Date:        $(3:date +%Y-%m-%d%t%k:%M)
+ * Author:      $(4:whoami)
+ *
+ * License:
+ *	 ${1}
+ *   Copyright (C) $(date +%Y)  $(whoami)
+ *
+ *   This program is free software: you can redistribute it and/or modify
+ *   it under the terms of the GNU General Public License as published by
+ *   the Free Software Foundation, either version 3 of the License, or
+ *   (at your option) any later version.
+ *
+ *   This program is distributed in the hope that it will be useful,
+ *   but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.pro See the
+ *   GNU General Public License for more details.
+ *
+ *   You should have received a copy of the GNU General Public License
+ *   along with this program. If not, see <http://www.gnu.org/licenses/>.
+ *
+ */
+
+/**
+ * Implementation of hook_install().
+ */
+function ${1}_install() {
+  drupal_install_schema('${1}');
+}
+
+/**
+ * Implementation of hook_schema().
+ */
+function ${1}_schema() {
+  $schema['${1}'] = array(
+    'description' => t('${2:description}'),
+    'fields' => array(
+      '' => array(
+        'description' => t(''),
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE
+			),
+      '' => array(
+        'description' => t(''),
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0
+			),
+      '' => array(
+        'description' => t(''),
+        'type' => 'varchar',
+        'length' => 32,
+        'not null' => TRUE,
+        'default' => ''
+			),
+    'primary key' => array(''),
+  );
+  return $schema;
+}
+
+/**
+ * Implementation of hook_uninstall().
+ */
+function ${1}_uninstall() {
+  drupal_uninstall_schema('${1}');
+  $result = db_query('SELECT name FROM {variable} WHERE name LIKE "${1}_%"');
+	while ($row = db_fetch_object($result)) {
+		variable_del($row->name);
+	}
+}]]></text>
+    <tag>install</tag>
+    <description>install</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[l(${1:$text}, ${2:$path}, array( 'attributes' => '${3}', 'query' => '${4}', 'fragment' => '${5}', 'absolute' => ${6:false}, 'html' => ${7:false},	'alias' => ${8:false}));]]></text>
+    <tag>l</tag>
+    <description>l()</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[$<
+# Define global variable
+global module_name
+
+####### Module name ##########
+# Check if current file is empty
+if $GEDIT_BASENAME != '' :
+	# extract fil name (no extension)
+	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+else:
+	# Default module name
+	module_name = 'mymodule'
+
+><?php // $$(echo 'I')d$
+/**
+ * Module:      $<return module_name>
+ * Date:        $(3:date +%Y-%m-%d%t%k:%M)
+ * Author:      $(4:whoami)
+ *
+ * Description:
+ *   ${2:description}
+ *
+ * License:
+ *	 ${1}
+ *   Copyright (C) $(date +%Y)  $(whoami)
+ *
+ *   This program is free software: you can redistribute it and/or modify
+ *   it under the terms of the GNU General Public License as published by
+ *   the Free Software Foundation, either version 3 of the License, or
+ *   (at your option) any later version.
+ *
+ *   This program is distributed in the hope that it will be useful,
+ *   but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.pro See the
+ *   GNU General Public License for more details.
+ *
+ *   You should have received a copy of the GNU General Public License
+ *   along with this program. If not, see <http://www.gnu.org/licenses/>.
+ *
+ */]]></text>
+    <tag>module</tag>
+    <description>module</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[t('${1:string}', array('${2:@param}' => ${3:$value}), ${4:$langcode});]]></text>
+    <tag>t</tag>
+    <description>t()</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[$<
+# Define global variable
+global module_name
+
+####### Module name ##########
+# Check if current file is empty
+if $GEDIT_BASENAME != '' :
+	# extract fil name (no extension)
+	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+else:
+	# Default module name
+	module_name = 'mymodule'
+
+>watchdog('$< return module_name >', '${1:message}', ${1:$variables}, ${2:WATCHDOG_DEBUG | WATCHDOG_INFO | WATCHDOG_NOTICE | WATCHDOG_WARNING | WATCHDOG_ERROR | WATCHDOG_ALERT  | WATCHDOG_EMERG }, '${3:link}')]]></text>
+    <tag>watchdog</tag>
+    <description>watchdog()</description>
+  </snippet>
+</snippets>
