@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='utf-8'?>
+<snippets language="drupal">
+  <snippet>
+    <text><![CDATA[array('${1:key}' => ${2:$value});]]></text>
+    <tag>array</tag>
+    <description>array</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[case '${1:variable}':
+	${0:# code...}
+	break;]]></text>
+    <tag>case</tag>
+    <description>case ..</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[do {
+	${0:# code...}
+} while (${1:$a <= 10});]]></text>
+    <tag>do</tag>
+    <description>do .. while ..</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[else {
+	${0:# code...}
+}]]></text>
+    <tag>else</tag>
+    <description>else ..</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[elseif (${1:condition}) {
+	${0:# code...}	
+}]]></text>
+    <tag>elseif</tag>
+    <description>elseif ..</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[for ($${1:i} = ${2:0}; $${1:i} < $3; $${1:i}++) {
+	${0:# code...}
+}]]></text>
+    <tag>for</tag>
+    <description>for ..</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[foreach ($${1:variable} as $${2:key} => $${3:value}) {
+	${0:# code...}
+}]]></text>
+    <tag>foreach</tag>
+    <description>foreach ..</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[if (${1:condition}) {
+	${0:# code...}
+}]]></text>
+    <tag>if</tag>
+    <description>if ..</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[if (${1:condition}) {
+	${2:# code...}
+} else {
+	${3:# code...}
+}
+${0:# code...}]]></text>
+    <tag>ifelse</tag>
+    <description>if .. else ..</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[switch (${1:variable}) {
+	case '${2:value}':
+		${3:# code...}
+		break;
+	
+	
+	default:
+		${0:# code...}
+		break;
+}]]></text>
+    <tag>switch</tag>
+    <description>switch ..</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[while (${1:$a <= 10}) {
+	${0:# code...}
+}]]></text>
+    <tag>while</tag>
+    <description>while ..</description>
+  </snippet>
+</snippets>
