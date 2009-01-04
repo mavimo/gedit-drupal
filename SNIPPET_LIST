@@ -1,17 +1,36 @@
+== PHP Function ================================================================
+
 array
     array
 case
     case ..
-file
-    check_file()
+do
+    do .. while ..
+else
+    else ..
+elseif
+    elseif ..
+for
+    for ..
+foreach
+    foreach ..
+if
+    if ..
+ifelse
+    if .. else ..
+switch
+    switch ..
+while
+    while ..
+
+== Drupal Function =============================================================
+
 db
     db_fetch_array()
     db_fetch_object()
     db_query()
     db_query_range()
     db_set_active()
-do
-    do .. while ..
 drupal
     drupal_add_css()
     drupal_add_js( inline )
@@ -19,10 +38,6 @@ drupal
     drupal_add_js( settings )
     drupal_json()
     drupal_set_message()
-else
-    else ..
-elseif
-    elseif ..
 fapi
     FAPI button
     FAPI checkbox
@@ -43,12 +58,7 @@ file
     file_destination()
     file_move()
     file_save_upload()
-for
-    for ..
-foreach
-    foreach ..
-t
-    format_plural()
+    check_file()
 function
     function()
 hook
@@ -76,21 +86,14 @@ hook
     hook_update_N()
     hook_user()
     hook_validate()
-if
-    if ..
-ifelse
-    if .. else ..
-install
-    install
 l
     l()
-module
-    module
-switch
-    switch ..
 t
     t()
+    format_plural()
 watchdog
     watchdog()
-while
-    while ..
+module
+    module
+install
+    install
