@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <snippets language="drupal">
   <snippet>
     <text><![CDATA[check_file(${1:$filename})]]></text>
