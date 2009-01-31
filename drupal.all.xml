@@ -1,0 +1,1544 @@
+<?xml version='1.0' encoding='utf-8'?>
+<?xml-stylesheet type="text/xsl" href="list_generator.xsl"?>
+<snippets language="drupal">
+  <snippet>
+    <text><![CDATA[array('${1:key}' => ${2:$value});]]></text>
+    <tag>array</tag>
+    <description>array</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[case '${1:variable}':
+	${0:# code...}
+	break;]]></text>
+    <tag>case</tag>
+    <description>case ..</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[check_file(${1:$filename})]]></text>
+    <tag>file</tag>
+    <description>check_file()</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[db_fetch_array(${1:$result});]]></text>
+    <tag>db</tag>
+    <description>db_fetch_array()</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[db_fetch_object(${1:$result});]]></text>
+    <tag>db</tag>
+    <description>db_fetch_object()</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[$results = db_query("");]]></text>
+    <tag>db</tag>
+    <description>db_query()</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[db_query_range(${1:""}, ${2:$from}, ${4:$count});]]></text>
+    <tag>db</tag>
+    <description>db_query_range()</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[db_set_active(${1:'default'});]]></text>
+    <tag>db</tag>
+    <description>db_set_active()</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[do {
+	${0:# code...}
+} while (${1:$a <= 10});]]></text>
+    <tag>do</tag>
+    <description>do .. while ..</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[$<
+# Define global variable
+global module_name
+
+####### Module name ##########
+# Check if current file is empty
+if $GEDIT_BASENAME != '' :
+	# extract fil name (no extension)
+	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+else:
+	# Default module name
+	module_name = 'mymodule'
+
+>drupal_add_css(drupal_get_path('module','$<return module_name>') . '$(1: echo '/css/style.css')', '${2:module}', '${3:all}');]]></text>
+    <tag>drupal</tag>
+    <description>drupal_add_css()</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[drupal_add_js('
+if (Drupal.jsEnabled) {
+	$(echo '$')(document).ready(function() {
+		${0:// Add code here}
+	});
+}', 'inline');	]]></text>
+    <tag>drupal</tag>
+    <description>drupal_add_js( inline )</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[$<
+# Define global variable
+global module_name
+
+####### Module name ##########
+# Check if current file is empty
+if $GEDIT_BASENAME != '' :
+	# extract fil name (no extension)
+	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+else:
+	# Default module name
+	module_name = 'mymodule'
+
+>drupal_add_js(drupal_get_path('module','$<return module_name>').'$(1: echo '/js/script.js')');]]></text>
+    <tag>drupal</tag>
+    <description>drupal_add_js( module )</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[$<
+# Define global variable
+global module_name
+
+####### Module name ##########
+# Check if current file is empty
+if $GEDIT_BASENAME != '' :
+	# extract fil name (no extension)
+	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+else:
+	# Default module name
+	module_name = 'mymodule'
+
+>drupal_add_js(array('$<return module_name>' => ${0:$settings}, 'setting');]]></text>
+    <tag>drupal</tag>
+    <description>drupal_add_js( settings )</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[drupal_json(${0:$var});]]></text>
+    <tag>drupal</tag>
+    <description>drupal_json()</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[drupal_set_message('${1:message}', '${2:status | warning | error}', ${3:$repeat});]]></text>
+    <tag>drupal</tag>
+    <description>drupal_set_message()</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[else {
+	${0:# code...}
+}]]></text>
+    <tag>else</tag>
+    <description>else ..</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[elseif (${1:condition}) {
+	${0:# code...}	
+}]]></text>
+    <tag>elseif</tag>
+    <description>elseif ..</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[$form['${1:name}'] = array(
+  '#type' => 'button',
+  '#value' => t('${2:Title}'),
+  '#weight' => 5,
+);]]></text>
+    <tag>fapi</tag>
+    <description>FAPI button</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[$form['${1:name}'] = array(
+  '#type' => 'checkbox',
+  '#title' => t('${2:Title}'),
+	'#description' => t('${3:Description}'),
+  '#default_value' => TRUE,
+  '#weight' => 5,
+  '#required' => TRUE,
+);]]></text>
+    <tag>fapi</tag>
+    <description>FAPI checkbox</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[$form['${1:name}'] = array(
+  '#type' => 'checkboxs',
+  '#title' => t('${2:Title}'),
+	'#description' => t('${3:Description}'),
+  '#default_value' => array(TRUE, TRUE, FALSE),
+  '#options' => array(
+    'value1' => t('Description 1'),
+    'value2' => t('Description 2'),
+    'value3' => t('Description 3'),
+  ),
+  '#weight' => 5,
+  '#required' => TRUE,
+);]]></text>
+    <tag>fapi</tag>
+    <description>FAPI checkboxes</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[$form['${1:name}'] = array(
+  '#type' => 'date',
+  '#title' => t('${2:Title}'),
+	'#description' => t('${3:Description}'),
+  '#default_value' => array('year' => 2007, 'month' => 2, 'day' => 15),
+  '#weight' => 5,
+  '#required' => TRUE,
+);
+]]></text>
+    <tag>fapi</tag>
+    <description>FAPI date</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[$form['${1:name}'] = array(
+  '#type'        => 'fieldset',
+  '#title'       => t('${2:Title}'),
+	'#description' => t('${3:Description}'),
+  '#weight'      => ${4:5},
+  '#collapsible' => ${5:true},
+  '#collapsed'   => ${6:false},
+);]]></text>
+    <tag>fapi</tag>
+    <description>FAPI fieldset</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[$form['${1:name}'] = array(
+  '#type'        => 'file',
+  '#title'       => t('${2:Title}'),
+	'#description' => t('${3:Description}'),
+  '#size'        => ${4:40},
+  '#weight'      => ${5:5},
+);
+// NB: please add ===
+$form['#attributes'] = array('enctype' => "multipart/form-data");
+// ==================]]></text>
+    <tag>fapi</tag>
+    <description>FAPI file</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[$form['${1:name}'] = array(
+	'#type'  => 'hidden',
+	'#value' => '${2:value}',
+);]]></text>
+    <tag>fapi</tag>
+    <description>FAPI hidden</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[$form['${1:name}'] = array(
+	'#type'      => 'markup',
+	'#value'     => '${2:value}',
+	'#prefix'    => '${3}',
+	'#suffix'    => '${4}',
+	'#attribute' => '${5}',
+);]]></text>
+    <tag>fapi</tag>
+    <description>FAPI markup</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[$form['${1:name}'] = array(
+  '#type'        => 'password',
+  '#title'       => t('${2:Title}'),
+	'#description' => t('${3:Description}'),
+  '#weight'      => ${4:5},
+  '#size'        => ${5:60},
+  '#maxlength'   => ${6:128},
+  '#required'    => ${7:true},
+);]]></text>
+    <tag>fapi</tag>
+    <description>FAPI password</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[$form['${1:name}'] = array(
+  '#type'          => 'radios',
+  '#title'         => t('${2:Title}'),
+	'#description'   => t('${3:Description}'),
+  '#weight'        => ${4:5},
+  '#required'      => ${5:true},
+  '#default_value' => ${6:'value'},
+  '#options' => array(
+    'value1' => t('Description 1'),
+    'value2' => t('Description 2'),
+    'value3' => t('Description 3'),
+  ),
+);]]></text>
+    <tag>fapi</tag>
+    <description>FAPI radios</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[$form['${1:name}'] = array(
+  '#type'          => 'select',
+  '#title'         => t('${2:Title}'),
+	'#description'   => t('${3:Description}'),
+  '#weight'        => ${4:5},
+  '#required'      => ${5:true},
+  '#default_value' => $(6:echo '$node->'${1}),
+  '#options' => array(
+    'value1' => t('Description 1'),
+    'value2' => t('Description 2'),
+    'value3' => t('Description 3'),
+  ),
+);]]></text>
+    <tag>fapi</tag>
+    <description>FAPI select</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[$form['${1:name}'] = array(
+  '#type'          => 'textarea',
+  '#title'         => t('${2:Title}'),
+	'#description'   => t('${3:Description}'),
+  '#weight'        => ${4:5},
+  '#required'      => ${5:true},
+  '#default_value' => $(6:echo '$node->'${1})
+  '#maxlength'     => ${7:128},
+);]]></text>
+    <tag>fapi</tag>
+    <description>FAPI textarea</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[$form['${1:name}'] = array(
+  '#type'          => 'textfield',
+  '#title'         => t('${2:Title}'),
+	'#description'   => t('${3:Description}'),
+  '#weight'        => ${4:5},
+  '#required'      => ${5:true},
+  '#default_value' => $(6:echo '$node->'${1})
+  '#maxlength'     => ${7:128},
+);]]></text>
+    <tag>fapi</tag>
+    <description>FAPI textfield</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[file_copy(${1:&$source}, ${2:$dest}, ${3:FILE_EXISTS_REPLACE | FILE_EXISTS_RENAME | FILE_EXISTS_ERROR});]]></text>
+    <tag>file</tag>
+    <description>file_copy()</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[file_delete(${1:&$source});]]></text>
+    <tag>file</tag>
+    <description>file_delete()</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[file_destination(${1:$destination}, ${2:FILE_EXISTS_REPLACE | FILE_EXISTS_RENAME | FILE_EXISTS_ERROR});]]></text>
+    <tag>file</tag>
+    <description>file_destination()</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[file_move(${1:&$source}, ${2:$dest}, ${3:FILE_EXISTS_REPLACE | FILE_EXISTS_RENAME | FILE_EXISTS_ERROR});]]></text>
+    <tag>file</tag>
+    <description>file_move()</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[file_save_upload(${1:$source}, ${2:$validators}, ${3:$dest}, ${3:FILE_EXISTS_REPLACE | FILE_EXISTS_RENAME | FILE_EXISTS_ERROR})]]></text>
+    <tag>file</tag>
+    <description>file_save_upload()</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[for ($${1:i} = ${2:0}; $${1:i} < $3; $${1:i}++) {
+	${0:# code...}
+}]]></text>
+    <tag>for</tag>
+    <description>for ..</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[foreach ($${1:variable} as $${2:key} => $${3:value}) {
+	${0:# code...}
+}]]></text>
+    <tag>foreach</tag>
+    <description>foreach ..</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[format_plural(${1:$count}, '${2:singular}, '${3:plural}, array('${4:@param}' => ${5:$value}), ${6:$langcode})]]></text>
+    <tag>t</tag>
+    <description>format_plural()</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[$<
+# Define global variable
+global strparam, module_name
+
+####### Function params ##########
+strparam = ''
+params = $3.split(',')
+# Generate documentation array
+for par in params:
+	strparam = strparam + '  * @param ' + par.strip() + '\n  *   Description of param ' + par.strip() + '\n'
+
+####### Module name ##########
+# Check if current file is empty
+if $GEDIT_BASENAME != '' :
+	# extract fil name (no extension)
+	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+else:
+	# Default module name
+	module_name = 'mymodule'
+
+>/** ${10:Short description of this function}.
+  *
+  * ${11:Long description of this function.}
+  *
+  * Example usage:
+  * @code
+  *  ${12:my_print('Function usage sample');}
+  * @endcode
+  * 
+$<[3]: return strparam
+> *
+  * @return
+  *   ${15:Description of return value}
+  */
+function _$< return module_name >_${2:function_name}(${3:$param1, $param2, $param3}) {
+	${0:#code}
+}]]></text>
+    <tag>function</tag>
+    <description>function()</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[$<
+# Define global variable
+global module_name
+
+####### Module name ##########
+# Check if current file is empty
+if $GEDIT_BASENAME != '' :
+	# extract fil name (no extension)
+	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+else:
+	# Default module name
+	module_name = 'mymodule'
+
+>/**
+ * Implementation of hook_access().
+ */
+function $<return module_name>_access($op, $node, $account) {
+	switch ($op) {
+		case 'create':
+			return user_access('create ${2:my content type}', $account);
+			break;
+		case 'delete':
+		  if ((user_access('edit own ${2}', $account) && ($account->uid == $node->uid)) || (user_access('delete ${2}', $account)) {
+		    return TRUE;
+		  } else {
+				return FALSE;
+			}
+			break;
+		case 'update':
+		  if ((user_access('edit own ${2}', $account) && ($account->uid == $node->uid)) || (user_access('edit ${2}', $account)) {
+		    return TRUE;
+		  } else {
+				return FALSE;
+			}
+			break;
+		case 'view':
+			return user_access('view ${2}', $account);
+			break;
+	}
+}]]></text>
+    <tag>hook</tag>
+    <description>hook_access()</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[$<
+# Define global variable
+global module_name
+
+####### Module name ##########
+# Check if current file is empty
+if $GEDIT_BASENAME != '' :
+	# extract fil name (no extension)
+	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+else:
+	# Default module name
+	module_name = 'mymodule'
+
+>/**
+ * Implementation of hook_block().
+ */
+function $<return module_name>_block($op = 'list', $delta = 0, $edit = array()) {
+  switch ($op) {
+    case 'list':
+			$blocks[0] = array(
+        'info'       => t('Title of block #1'),
+				'cache'			 => BLOCK_CACHE_PER_ROLE | BLOCK_CACHE_PER_USER | BLOCK_CACHE_PER_PAGE | BLOCK_CACHE_GLOBAL | BLOCK_NO_CACHE,
+        'status'     => TRUE,
+        'weight'     => 0,
+				'region'		 => '',
+        'visibility' => 1,
+        'pages'      => '',
+      );
+			$blocks[1] = array(
+        'info'       => t('Title of block #2'),
+				'cache'			 => BLOCK_CACHE_PER_ROLE | BLOCK_CACHE_PER_USER | BLOCK_CACHE_PER_PAGE | BLOCK_CACHE_GLOBAL | BLOCK_NO_CACHE,
+        'status'     => TRUE,
+        'weight'     => 0,
+				'region'		 => '',
+        'visibility' => 1,
+        'pages'      => '',
+      );
+      return $blocks;
+			break;
+
+    case 'configure':
+      $form = array();
+			switch ($delta)	{
+				case 0:
+					# form code
+					break;
+				case 1:
+					# form code
+					break;
+			}
+      return $form;
+
+    case 'save':
+			switch ($delta)	{
+				case 0:
+					# form code
+					break;
+				case 1:
+					# form code
+					break;
+			}
+			break;
+
+    case 'view': default:
+      switch ($delta) {
+        case 0:
+          $block['subject'] = t('Title of block #1');
+          $block['content'] = 'Content of block #1';
+          break;
+        case 1:
+          $block['subject'] = t('Title of block #2');
+          $block['content'] = 'Content of block #2';
+          break;
+      }
+      return $block;
+  }
+}]]></text>
+    <tag>hook</tag>
+    <description>hook_block()</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[$<
+# Define global variable
+global module_name
+
+####### Module name ##########
+# Check if current file is empty
+if $GEDIT_BASENAME != '' :
+	# extract fil name (no extension)
+	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+else:
+	# Default module name
+	module_name = 'mymodule'
+
+>/**
+ * Implementation of hook_comment().
+ */
+function $<return module_name>_comment(&$a1, $op) {
+	switch ($op) {
+		case 'insert':
+			// $a1 = $form_values
+			break;
+		case 'update':
+			// $a1 = $form_values
+			break;
+		case 'view':
+			// $a1 = $comment
+			break;
+		case 'validate':
+			// $a1 = $form_values
+			break;
+		case 'publish':
+			// $a1 = $comment
+			break;
+		case 'unpublish':
+			// $a1 = $comment
+			break;
+		case 'delete':
+			// $a1 = $comment
+			break;
+	}
+}]]></text>
+    <tag>hook</tag>
+    <description>hook_comment</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[$<
+# Define global variable
+global module_name
+
+####### Module name ##########
+# Check if current file is empty
+if $GEDIT_BASENAME != '' :
+	# extract fil name (no extension)
+	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+else:
+	# Default module name
+	module_name = 'mymodule'
+
+>/**
+ * Implementation of hook_cron().
+ */
+function $<return module_name>_cron() {
+	$0
+}]]></text>
+    <tag>hook</tag>
+    <description>hook_cron()</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[$<
+# Define global variable
+global module_name
+
+####### Module name ##########
+# Check if current file is empty
+if $GEDIT_BASENAME != '' :
+	# extract fil name (no extension)
+	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+else:
+	# Default module name
+	module_name = 'mymodule'
+
+>/**
+ * Implementation of hook_delete().
+ */
+function $<return module_name>_delete(&$node) {
+	db_query("DELETE FROM {${2:mytable}} WHERE nid = %d", $node->nid);
+}]]></text>
+    <tag>hook</tag>
+    <description>hook_delete()</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[$<
+# Define global variable
+global module_name
+
+####### Module name ##########
+# Check if current file is empty
+if $GEDIT_BASENAME != '' :
+	# extract fil name (no extension)
+	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+else:
+	# Default module name
+	module_name = 'mymodule'
+
+>/**
+ * Implementation of hook_filter().
+ */
+function $<return module_name>_filter($op, $delta = 0, $format = -1, $text = '', $cache_id = 0) {
+	switch ($op) {
+		case 'list':
+      return array(0 => t('${2:filtername}'));
+			break;
+		case 'description':
+      return t('${3:description}');
+			break;
+		case 'no cache':
+			break;
+		case 'prepare':
+			// Do some change into $text
+			return $text;
+			break;
+		case 'process':
+			// Do some change into $text
+			return $text;
+			break;
+		case 'settings':
+			break;
+	}
+}]]></text>
+    <tag>hook</tag>
+    <description>hook_filter</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[$<
+# Define global variable
+global module_name
+
+####### Module name ##########
+# Check if current file is empty
+if $GEDIT_BASENAME != '' :
+	# extract fil name (no extension)
+	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+else:
+	# Default module name
+	module_name = 'mymodule'
+
+>/**
+ * Implementation of hook_form_alter().
+ */
+function $<return module_name>_form_alter(&$form, $form_state, $form_id) {
+  if (isset($form['type']) && $form['type']['#value'] .'${2:_node_settings}' == $form_id) {
+		// Change or add some element into $form
+  }
+}]]></text>
+    <tag>hook</tag>
+    <description>hook_form_alter()</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[$<
+# Define global variable
+global module_name
+
+####### Module name ##########
+# Check if current file is empty
+if $GEDIT_BASENAME != '' :
+	# extract fil name (no extension)
+	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+else:
+	# Default module name
+	module_name = 'mymodule'
+
+>/**
+ * Implementation of hook_form().
+ */
+function $<return module_name>_form(&$node, $form_state) {
+  $type = node_get_types('type', $node);
+
+  $form = array();
+
+	// Build Form with FAPI
+	$0
+
+  return $form;
+}]]></text>
+    <tag>hook</tag>
+    <description>hook_form()</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[$<
+# Define global variable
+global module_name
+
+####### Module name ##########
+# Check if current file is empty
+if $GEDIT_BASENAME != '' :
+	# extract fil name (no extension)
+	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+else:
+	# Default module name
+	module_name = 'mymodule'
+
+>/**
+ * Implementation of hook_help().
+ */
+function $<return module_name>_help($path, $arg) {
+  switch ($path) {
+    case 'admin/help#$<return module_name>':
+      return t('');
+    case 'user/help#$<return module_name>':
+      return t('');
+  }
+}
+]]></text>
+    <tag>hook</tag>
+    <description>hook_help()</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[$<
+# Define global variable
+global module_name
+
+####### Module name ##########
+# Check if current file is empty
+if $GEDIT_BASENAME != '' :
+	# extract fil name (no extension)
+	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+else:
+	# Default module name
+	module_name = 'mymodule'
+
+>/**
+ * Implementation of hook_insert().
+ */
+function $<return module_name>_insert($node) {
+	db_query("INSERT INTO {${2:mytable}} 
+					 		('nid', 'extra')
+						VALUES
+							(%d, %d)",
+						$node->nid, $node->extra
+					);
+}]]></text>
+    <tag>hook</tag>
+    <description>hook_insert()</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[$<
+# Define global variable
+global module_name
+
+####### Module name ##########
+# Check if current file is empty
+if $GEDIT_BASENAME != '' :
+	# extract fil name (no extension)
+	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+else:
+	# Default module name
+	module_name = 'mymodule'
+
+>/**
+ * Implementation of hook_install().
+ */
+function $<return module_name>_install() {
+  drupal_install_schema('${1}');
+}]]></text>
+    <tag>hook</tag>
+    <description>hook_install()</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[$<
+# Define global variable
+global module_name
+
+####### Module name ##########
+# Check if current file is empty
+if $GEDIT_BASENAME != '' :
+	# extract fil name (no extension)
+	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+else:
+	# Default module name
+	module_name = 'mymodule'
+
+>/**
+ * Implementation of hook_link().
+ */
+function $<return module_name>_link($type, $object, $teaser = FALSE) {
+	$links = array();
+
+	 $links['${2:linkname}'] = array(
+    'title' => t('${3:Title of link #1}'),
+    'href' => '${4:link/path}',
+    'query' => '',	
+    'fragment' => '',
+    'attributes' => array(
+			'title' => t('${5:link description}'),
+			'class' => '',
+		),
+		'html' => FALSE,
+  );
+
+	return $links;
+}
+]]></text>
+    <tag>hook</tag>
+    <description>hook_link()</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[$<
+# Define global variable
+global module_name
+
+####### Module name ##########
+# Check if current file is empty
+if $GEDIT_BASENAME != '' :
+	# extract fil name (no extension)
+	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+else:
+	# Default module name
+	module_name = 'mymodule'
+
+>/**
+ * Implementation of hook_menu().
+ */
+function $<return module_name>_menu() {
+  $items = array();
+
+  $items[${2:'path/1'}] = array(
+    'title' => '',
+		'description' => ,
+    'page callback' => '',
+    'page arguments' => '',
+    'access callback' => array(''),
+    'access arguments' => array(''),
+		'weight' => 0,
+		'menu_name' => 'Navigation',
+    'type' => MENU_NORMAL_ITEM | MENU_CALLBACK | MENU_SUGGESTED_ITEM | MENU_LOCAL_TASK | MENU_DEFAULT_LOCAL_TASK,
+  );
+
+  $items[${3:'path/2'}] = array(
+    'title' => '',
+		'description' => ,
+    'page callback' => '',
+    'page arguments' => '',
+    'access callback' => array(''),
+    'access arguments' => array(''),
+		'weight' => 0,
+		'menu_name' => 'Navigation',
+    'type' => MENU_NORMAL_ITEM | MENU_CALLBACK | MENU_SUGGESTED_ITEM | MENU_LOCAL_TASK | MENU_DEFAULT_LOCAL_TASK,
+  );
+
+  return $items;
+}]]></text>
+    <tag>hook</tag>
+    <description>hook_menu()</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[$<
+# Define global variable
+global module_name
+
+####### Module name ##########
+# Check if current file is empty
+if $GEDIT_BASENAME != '' :
+	# extract fil name (no extension)
+	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+else:
+	# Default module name
+	module_name = 'mymodule'
+
+>/**
+ * Implementation of hook_nodeapi().
+ */
+function $<return module_name>_nodeapi(&$node, $op, $a3 = NULL, $a4 = NULL) {
+	switch ($op) {
+		case 'alter':
+			# code...
+			break;
+		case 'delete':
+			# code...
+			break;
+		case 'delete revision':
+			# code...
+			break;
+		case 'insert':
+			# code...
+			break;
+		case 'load':
+			# code...
+			break;
+		case 'prepare':
+			# code...
+			break;
+		case 'prepare translation':
+			# code...
+			break;
+		case 'print':
+			# code...
+			break;
+		case 'rss item':
+			# code...
+			break;
+		case 'search result':
+			# code...
+			break;
+		case 'presave':
+			# code...
+			break;
+		case 'update':
+			# code...
+			break;
+		case 'update index':
+			# code...
+			break;
+		case 'validate':
+			# code...
+			break;
+		case 'view':
+			# code...
+			break;
+	}
+}]]></text>
+    <tag>hook</tag>
+    <description>hook_nodeapi()</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[$<
+# Define global variable
+global module_name
+
+####### Module name ##########
+# Check if current file is empty
+if $GEDIT_BASENAME != '' :
+	# extract fil name (no extension)
+	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+else:
+	# Default module name
+	module_name = 'mymodule'
+
+>/**
+ * Implementation of hook_perm().
+ */
+function $<return module_name>_perm() {
+	return array(
+		'create ${2:mycontent}',
+		'edit ${2}',
+		'edit own ${2}',
+		'delete ${2}',
+		'view ${2}',
+	);
+}]]></text>
+    <tag>hook</tag>
+    <description>hook_perm()</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[$<
+# Define global variable
+global module_name
+
+####### Module name ##########
+# Check if current file is empty
+if $GEDIT_BASENAME != '' :
+	# extract fil name (no extension)
+	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+else:
+	# Default module name
+	module_name = 'mymodule'
+
+>/**
+ * Implementation of hook_schema().
+ */
+function $<return module_name>_schema() {
+  $schema['$<return module_name>'] = array(
+    'description' => t('${2:description}'),
+    'fields' => array(
+      '' => array(
+        'description' => t(''),
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE
+			),
+      '' => array(
+        'description' => t(''),
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0
+			),
+      '' => array(
+        'description' => t(''),
+        'type' => 'varchar',
+        'length' => 32,
+        'not null' => TRUE,
+        'default' => ''
+			),
+    'primary key' => array(''),
+  );
+  return $schema;
+}
+]]></text>
+    <tag>hook</tag>
+    <description>hook_schema()</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[$<
+# Define global variable
+global module_name
+
+####### Module name ##########
+# Check if current file is empty
+if $GEDIT_BASENAME != '' :
+	# extract fil name (no extension)
+	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+else:
+	# Default module name
+	module_name = 'mymodule'
+
+>/**
+ * Implementation of hook_search().
+ */
+function $<return module_name>_search($op = 'search', $keys = null) {
+	switch ($op) {
+		case 'name':
+			# code...
+			return t('${2:Content}');
+			break;
+		case 'reset':
+			# code...
+			break;
+		case 'search':
+			// Do operation for extract info
+      $results[] = array(
+        'link' => url(''),
+        'type' => check_plain(''),
+        'title' => '',
+        'user' => '',
+        'date' => '',
+        'node' => $node,
+        'extra' => $extra,
+        'score' => $score / $total,
+        'snippet' => '',
+      );
+			return $results;
+			break;
+		case 'status':
+      return array(
+				'remaining' => $remaining,
+				'total' => $total
+			);
+			break;
+	}
+}]]></text>
+    <tag>hook</tag>
+    <description>hook_search()</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[$<
+# Define global variable
+global module_name
+
+####### Module name ##########
+# Check if current file is empty
+if $GEDIT_BASENAME != '' :
+	# extract fil name (no extension)
+	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+else:
+	# Default module name
+	module_name = 'mymodule'
+
+>/**
+ * Implementation of hook_taxonomy().
+ */
+function $<return module_name>_filter($op, $type, $array = NULL) {
+	switch ($type) {
+		// Term operation
+		case 'term':
+			switch ($op) {
+				case 'delete':
+					break;
+				case 'insert':
+				  return t('${3:description}');
+					break;
+				case 'update':
+					break;
+			}
+			break;
+
+		// Vocabulary operation
+		case 'vocabulary':
+			switch ($op) {
+				case 'delete':
+					break;
+				case 'insert':
+				  return t('${3:description}');
+					break;
+				case 'update':
+					break;
+			}
+			break;
+	}
+}]]></text>
+    <tag>hook</tag>
+    <description>hook_taxonomy()</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[$<
+# Define global variable
+global module_name
+
+####### Module name ##########
+# Check if current file is empty
+if $GEDIT_BASENAME != '' :
+	# extract fil name (no extension)
+	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+else:
+	# Default module name
+	module_name = 'mymodule'
+
+>/**
+ * Implementation of hook_theme().
+ */
+function $<return module_name>_theme($existing, $type, $theme, $path) {
+	 return array(
+    '${2:theme_name_a}' => array(
+      'arguments' => array('' => NULL),
+			'file' => '',
+			'path' => ,
+			'template' => ,
+			'function' => ,
+			'pattern' => ,
+			'preprocess functions' => ,
+			'override preprocess functions' => ,
+			'type' => ,
+			'theme path' => ,
+			'theme paths' => ,
+    ),
+    '${3:theme_name_b}' => array(
+      'arguments' => array('' => NULL),
+			'file' => '',
+			'path' => ,
+			'template' => ,
+			'function' => ,
+			'pattern' => ,
+			'preprocess functions' => ,
+			'override preprocess functions' => ,
+			'type' => ,
+			'theme path' => ,
+			'theme paths' => ,
+    ),
+  );
+}]]></text>
+    <tag>hook</tag>
+    <description>hook_theme()</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[$<
+# Define global variable
+global module_name
+
+####### Module name ##########
+# Check if current file is empty
+if $GEDIT_BASENAME != '' :
+	# extract fil name (no extension)
+	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+else:
+	# Default module name
+	module_name = 'mymodule'
+
+>/**
+ * Implementation of hook_uninstall().
+ */
+function $<return module_name>_uninstall() {
+  drupal_uninstall_schema('${1}');
+  $result = db_query('SELECT name FROM {variable} WHERE name LIKE "${1}_%"');
+	while ($row = db_fetch_object($result)) {
+		variable_del($row->name);
+	}
+}
+]]></text>
+    <tag>hook</tag>
+    <description>hook_uninstall()</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[$<
+# Define global variable
+global module_name
+
+####### Module name ##########
+# Check if current file is empty
+if $GEDIT_BASENAME != '' :
+	# extract fil name (no extension)
+	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+else:
+	# Default module name
+	module_name = 'mymodule'
+
+>/**
+ * Implementation of hook_update().
+ */
+function $<return module_name>_update($node) {
+	db_query("UPDATE {${2:mytable}} 
+					 	SET
+							'extra' = %d
+						WHERE
+							nid = %d",
+						$node->extra, $node->nid
+					);
+}]]></text>
+    <tag>hook</tag>
+    <description>hook_update()</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[$<
+# Define global variable
+global module_name
+
+####### Module name ##########
+# Check if current file is empty
+if $GEDIT_BASENAME != '' :
+	# extract fil name (no extension)
+	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+else:
+	# Default module name
+	module_name = 'mymodule'
+
+>/**
+ * Implementation of hook_update_N().
+ */
+function $<return module_name>_update_${2:N}() {
+  $ret = array();
+  db_add_field($ret, '${1}', '', array('type' => 'int', 'not null' => TRUE));
+  return $ret;
+}]]></text>
+    <tag>hook</tag>
+    <description>hook_update_N()</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[$<
+# Define global variable
+global module_name
+
+####### Module name ##########
+# Check if current file is empty
+if $GEDIT_BASENAME != '' :
+	# extract fil name (no extension)
+	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+else:
+	# Default module name
+	module_name = 'mymodule'
+
+>/**
+ * Implementation of hook_user().
+ */
+function $<return module_name>_user($op, &$edit, &$account, $category = NULL) {
+	switch ($op) {
+		case 'after_update':
+			# code...
+			break;
+		case 'categories':
+			$categories = array(
+				'name' => t(''),
+				'title' => t(''),
+				'weight' => 0,
+			);
+			return $categories;
+			# code...
+			break;
+		case 'delete':
+			# code...
+			break;
+		case 'form':
+			$form = array();
+			# code...
+			return $form;
+			break;
+		case 'insert':
+			# code...
+			break;
+		case 'load':
+			# code...
+			break;
+		case 'login':
+			# code...
+			break;
+		case 'logout':
+			# code...
+			break;
+		case 'register':
+			# code...
+			break;
+		case 'submit':
+			# code...
+			break;
+		case 'update':
+			# code...
+			break;
+		case 'validate':
+			# code...
+			break;
+		case 'view':
+			# code...
+			break;
+	}
+}]]></text>
+    <tag>hook</tag>
+    <description>hook_user()</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[$<
+# Define global variable
+global module_name
+
+####### Module name ##########
+# Check if current file is empty
+if $GEDIT_BASENAME != '' :
+	# extract fil name (no extension)
+	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+else:
+	# Default module name
+	module_name = 'mymodule'
+
+>/**
+ * Implementation of hook_validate().
+ */
+function $<return module_name>_validate($node, &$form) {
+	if(${2:false}) {
+		form_set_error('${3:form_element}', t('${4:Error message}.'));
+  }
+}]]></text>
+    <tag>hook</tag>
+    <description>hook_validate()</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[if (${1:condition}) {
+	${0:# code...}
+}]]></text>
+    <tag>if</tag>
+    <description>if ..</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[if (${1:condition}) {
+	${2:# code...}
+} else {
+	${3:# code...}
+}
+${0:# code...}]]></text>
+    <tag>ifelse</tag>
+    <description>if .. else ..</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<?php // $$(echo 'I')d$
+/**
+ * Module:      ${1:modulename}
+ * Date:        $(3:date +%Y-%m-%d%t%k:%M)
+ * Author:      $(4:whoami)
+ *
+ * License:
+ *	 ${1}
+ *   Copyright (C) $(date +%Y)  $(whoami)
+ *
+ *   This program is free software: you can redistribute it and/or modify
+ *   it under the terms of the GNU General Public License as published by
+ *   the Free Software Foundation, either version 3 of the License, or
+ *   (at your option) any later version.
+ *
+ *   This program is distributed in the hope that it will be useful,
+ *   but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.pro See the
+ *   GNU General Public License for more details.
+ *
+ *   You should have received a copy of the GNU General Public License
+ *   along with this program. If not, see <http://www.gnu.org/licenses/>.
+ *
+ */
+
+/**
+ * Implementation of hook_install().
+ */
+function ${1}_install() {
+  drupal_install_schema('${1}');
+}
+
+/**
+ * Implementation of hook_schema().
+ */
+function ${1}_schema() {
+  $schema['${1}'] = array(
+    'description' => t('${2:description}'),
+    'fields' => array(
+      '' => array(
+        'description' => t(''),
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE
+			),
+      '' => array(
+        'description' => t(''),
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0
+			),
+      '' => array(
+        'description' => t(''),
+        'type' => 'varchar',
+        'length' => 32,
+        'not null' => TRUE,
+        'default' => ''
+			),
+    'primary key' => array(''),
+  );
+  return $schema;
+}
+
+/**
+ * Implementation of hook_uninstall().
+ */
+function ${1}_uninstall() {
+  drupal_uninstall_schema('${1}');
+  $result = db_query('SELECT name FROM {variable} WHERE name LIKE "${1}_%"');
+	while ($row = db_fetch_object($result)) {
+		variable_del($row->name);
+	}
+}]]></text>
+    <tag>install</tag>
+    <description>install</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[l(${1:$text}, ${2:$path}, array( 'attributes' => '${3}', 'query' => '${4}', 'fragment' => '${5}', 'absolute' => ${6:false}, 'html' => ${7:false},	'alias' => ${8:false}));]]></text>
+    <tag>l</tag>
+    <description>l()</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[$<
+# Define global variable
+global module_name
+
+####### Module name ##########
+# Check if current file is empty
+if $GEDIT_BASENAME != '' :
+	# extract fil name (no extension)
+	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+else:
+	# Default module name
+	module_name = 'mymodule'
+
+><?php // $$(echo 'I')d$
+/**
+ * Module:      $<return module_name>
+ * Date:        $(3:date +%Y-%m-%d%t%k:%M)
+ * Author:      $(4:whoami)
+ *
+ * Description:
+ *   ${2:description}
+ *
+ * License:
+ *	 ${1}
+ *   Copyright (C) $(date +%Y)  $(whoami)
+ *
+ *   This program is free software: you can redistribute it and/or modify
+ *   it under the terms of the GNU General Public License as published by
+ *   the Free Software Foundation, either version 3 of the License, or
+ *   (at your option) any later version.
+ *
+ *   This program is distributed in the hope that it will be useful,
+ *   but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.pro See the
+ *   GNU General Public License for more details.
+ *
+ *   You should have received a copy of the GNU General Public License
+ *   along with this program. If not, see <http://www.gnu.org/licenses/>.
+ *
+ */]]></text>
+    <tag>module</tag>
+    <description>module</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[switch (${1:variable}) {
+	case '${2:value}':
+		${3:# code...}
+		break;
+	
+	
+	default:
+		${0:# code...}
+		break;
+}]]></text>
+    <tag>switch</tag>
+    <description>switch ..</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[t('${1:string}', array('${2:@param}' => ${3:$value}), ${4:$langcode});]]></text>
+    <tag>t</tag>
+    <description>t()</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[$<
+# Define global variable
+global module_name
+
+####### Module name ##########
+# Check if current file is empty
+if $GEDIT_BASENAME != '' :
+	# extract fil name (no extension)
+	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+else:
+	# Default module name
+	module_name = 'mymodule'
+
+>watchdog('$< return module_name >', '${1:message}', ${1:$variables}, ${2:WATCHDOG_DEBUG | WATCHDOG_INFO | WATCHDOG_NOTICE | WATCHDOG_WARNING | WATCHDOG_ERROR | WATCHDOG_ALERT  | WATCHDOG_EMERG }, '${3:link}')]]></text>
+    <tag>watchdog</tag>
+    <description>watchdog()</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[while (${1:$a <= 10}) {
+	${0:# code...}
+}]]></text>
+    <tag>while</tag>
+    <description>while ..</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[drupal_write_record('${1:table}', $${2:object}, array('${3:update_key}' => '${4:value}'));]]></text>
+    <tag>db</tag>
+    <description>drupal_write_record()</description>
+  </snippet>
+</snippets>
