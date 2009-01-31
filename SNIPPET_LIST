@@ -94,6 +94,9 @@ t
     format_plural()
 watchdog
     watchdog()
+
+== Drupal File structure =======================================================
+
 module
     module
 install
