@@ -31,6 +31,7 @@ db
     db_query()
     db_query_range()
     db_set_active()
+    drupal_write_record()
 drupal
     drupal_add_css()
     drupal_add_js( inline )
@@ -97,3 +98,5 @@ module
     module
 install
     install
+info
+    info
