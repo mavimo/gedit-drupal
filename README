@@ -15,7 +15,7 @@ This project contains Snippet for getid to have a rapid development for Drupal d
 
 	c)	Create a new mimetype into your machine
 
-				# sudo cp drupal.mime.xml /usr/share/mime/packages/drupal.mime.xml 
+				# sudo cp drupal-mime.xml /usr/share/mime/packages/drupal.mime.xml 
 
 	d)	Update mimetype database
 
