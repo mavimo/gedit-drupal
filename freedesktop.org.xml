@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mime-info [
+  <!ELEMENT mime-info (mime-type)+>
+  <!ATTLIST mime-info xmlns CDATA #FIXED "http://www.freedesktop.org/standards/shared-mime-info">
+
+  <!ELEMENT mime-type (comment+, (acronym,expanded-acronym)? , (generic-icon? | glob | magic | treemagic | root-XML | alias | sub-class-of)*)>
+  <!ATTLIST mime-type type CDATA #REQUIRED>
+
+  <!-- a comment describing a document with the respective MIME type. Example: "WMV video" -->
+  <!ELEMENT comment (#PCDATA)>
+  <!ATTLIST comment xml:lang CDATA #IMPLIED>
+
+  <!-- a comment describing the respective unexpanded MIME type acronym. Example: "WMV" -->
+  <!ELEMENT acronym (#PCDATA)>
+  <!ATTLIST acronym xml:lang CDATA #IMPLIED>
+
+  <!-- a comment describing the respective expanded MIME type acronym. Example: "Windows Media Video" -->
+  <!ELEMENT expanded-acronym (#PCDATA)>
+  <!ATTLIST expanded-acronym xml:lang CDATA #IMPLIED>
+
+  <!-- a generic icon name as per the Icon Naming Specification, only required if computing
+  it from the mime-type would not work, See "generic-icon" in the Shared Mime Specification -->
+  <!ELEMENT generic-icon (#PCDATA)>
+  <!ATTLIST generic-icon name (application-x-executable|audio-x-generic|font-x-generic|image-x-generic|package-x-generic|text-html|text-x-generic|text-x-generic-template|text-x-script|video-x-generic|x-office-address-book|x-office-calendar|x-office-document|x-office-presentation|x-office-spreadsheet) #IMPLIED>
+
+  <!ELEMENT glob EMPTY>
+  <!ATTLIST glob pattern CDATA #REQUIRED>
+  <!ATTLIST glob weight CDATA #IMPLIED>
+
+  <!ELEMENT magic (match)+>
+  <!ATTLIST magic priority CDATA #IMPLIED>
+
+  <!ELEMENT match (match)*>
+  <!ATTLIST match offset CDATA #REQUIRED>
+  <!ATTLIST match type (string|big16|big32|little16|little32|host16|host32|byte) #REQUIRED>
+  <!ATTLIST match value CDATA #REQUIRED>
+  <!ATTLIST match mask CDATA #IMPLIED>
+
+  <!ELEMENT treemagic (treematch)+>
+  <!ATTLIST treemagic priority CDATA #IMPLIED>
+
+  <!ELEMENT treematch (treematch)*>
+  <!ATTLIST treematch path CDATA #REQUIRED>
+  <!ATTLIST treematch type (file|directory|link) #IMPLIED>
+  <!ATTLIST treematch match-case (true|false) #IMPLIED>
+  <!ATTLIST treematch executable (true|false) #IMPLIED>
+  <!ATTLIST treematch non-empty (true|false) #IMPLIED>
+  <!ATTLIST treematch mimetype CDATA #IMPLIED>
+
+  <!ELEMENT root-XML EMPTY>
+  <!ATTLIST root-XML
+  	namespaceURI CDATA #REQUIRED
+	localName CDATA #REQUIRED>
+
+  <!ELEMENT alias EMPTY>
+  <!ATTLIST alias
+  	type CDATA #REQUIRED>
+
+  <!ELEMENT sub-class-of EMPTY>
+  <!ATTLIST sub-class-of
+  	type CDATA #REQUIRED>
+]>
+<mime-info xmlns="http://www.freedesktop.org/standards/shared-mime-info">
+  <!-- Add this to file -->
+  <mime-type type="application/x-drupal-php">
+    <comment>Drupal module script</comment>
+    <comment xml:lang="it">Modulo di Drupal</comment>
+
+    <sub-class-of type="text/plain"/>
+    <generic-icon name="text-x-script"/>
+    <magic priority="80">
+      <match value="&lt;?php" type="string" offset="0:64"/>
+    </magic>
+    <glob pattern="*.install"/>
+    <glob pattern="*.module"/>
+  </mime-type>
+  <!-- End insertion -->
+</mime-info>
