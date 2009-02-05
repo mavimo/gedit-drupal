@@ -13,7 +13,15 @@ This project contains Snippet for getid to have a rapid development for Drupal d
 
 				# sudo cp drupal.lang /usr/share/gtksourceview-2.0/language-specs/
 
-	c)	Enable Snippet plugin from
+	c)	Create a new mimetype into your machine
+
+				# sudo cp drupal.mime.xml /usr/share/mime/packages/drupal.mime.xml 
+
+	d)	Update mimetype database
+
+				# sudo update-mime-database /usr/share/mime
+
+	e)	Enable Snippet plugin from
 
 				Edit -> Preferences -> Plugins
 
@@ -22,9 +30,9 @@ This project contains Snippet for getid to have a rapid development for Drupal d
 
 				# sudo apt-get install gedit-plugins
 
-	d)	Add variuos snippets
+	f)	Add variuos snippets
 
-				Tools -> L Manage Snippets
+				Tools -> Manage Snippets ...
 
 			Press "Import snippets" button (second from left on bottom) and import *.xml file
 			do you require. After that you can use drupal-snippet
@@ -35,3 +43,5 @@ Using Snippet is very simple, when you write a drupal module or install file
 please select, from View -> Highlight Mode -> Scripts -Drupal, and now you can
 write your code with snippet accelerator, a complete list of snippet is aviable
 on file SNIPPET_LIST
+If you create new mimetype to you machine is not required set Highlight Mode, sistem
+automatically detect it.
