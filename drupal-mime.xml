@@ -10,5 +10,6 @@
     </magic>
     <glob pattern="*.install"/>
     <glob pattern="*.module"/>
+    <glob pattern="*.info"/>
   </mime-type>
 </mime-info>
