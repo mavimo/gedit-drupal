@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <language id="drupal" _name="Drupal" version="1.0" _section="Scripts">
   <metadata>
-    <property name="mimetypes">text/x-php;application/x-php;text/x-php-source;application/x-php-source</property>
+    <property name="mimetypes">application/x-drupal-php</property>
     <property name="globs">*.module;*.install</property>
     <property name="line-comment-start">#</property>
     <property name="block-comment-start">/*</property>
