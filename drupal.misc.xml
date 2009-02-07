@@ -15,16 +15,16 @@ strparam = ''
 params = $3.split(',')
 # Generate documentation array
 for par in params:
-	strparam = strparam + '  * @param ' + par.strip() + '\n  *   Description of param ' + par.strip() + '\n'
+  strparam = strparam + '  * @param ' + par.strip() + '\n  *   Description of param ' + par.strip() + '\n'
 
 ####### Module name ##########
 # Check if current file is empty
 if $GEDIT_BASENAME != '' :
-	# extract fil name (no extension)
-	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  # extract fil name (no extension)
+  module_name = $GEDIT_BASENAME.split('.')[0].lower()
 else:
-	# Default module name
-	module_name = 'mymodule'
+  # Default module name
+  module_name = 'mymodule'
 
 >/** ${10:Short description of this function}.
   *
@@ -41,7 +41,7 @@ $<[3]: return strparam
   *   ${15:Description of return value}
   */
 function _$< return module_name >_${2:function_name}(${3:$param1, $param2, $param3}) {
-	${0:#code}
+  ${0:#code}
 }]]></text>
     <tag>function</tag>
     <description>function()</description>
@@ -54,11 +54,11 @@ global module_name
 ####### Module name ##########
 # Check if current file is empty
 if $GEDIT_BASENAME != '' :
-	# extract fil name (no extension)
-	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  # extract fil name (no extension)
+  module_name = $GEDIT_BASENAME.split('.')[0].lower()
 else:
-	# Default module name
-	module_name = 'mymodule'
+  # Default module name
+  module_name = 'mymodule'
 
 ><?php // $$(echo 'I')d$
 /**
@@ -67,7 +67,7 @@ else:
  * Author:      $(4:whoami)
  *
  * License:
- *	 ${1}
+ *   ${1}
  *   Copyright (C) $(date +%Y)  $(whoami)
  *
  *   This program is free software: you can redistribute it and/or modify
@@ -143,7 +143,7 @@ function $<return module_name>_schema() {
     <description>install</description>
   </snippet>
   <snippet>
-    <text><![CDATA[l(${1:$text}, ${2:$path}, array( 'attributes' => '${3}', 'query' => '${4}', 'fragment' => '${5}', 'absolute' => ${6:false}, 'html' => ${7:false},	'alias' => ${8:false}));]]></text>
+    <text><![CDATA[l(${1:$text}, ${2:$path}, array( 'attributes' => '${3}', 'query' => '${4}', 'fragment' => '${5}', 'absolute' => ${6:false}, 'html' => ${7:false},  'alias' => ${8:false}));]]></text>
     <tag>l</tag>
     <description>l()</description>
   </snippet>
@@ -155,11 +155,11 @@ global module_name
 ####### Module name ##########
 # Check if current file is empty
 if $GEDIT_BASENAME != '' :
-	# extract fil name (no extension)
-	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  # extract fil name (no extension)
+  module_name = $GEDIT_BASENAME.split('.')[0].lower()
 else:
-	# Default module name
-	module_name = 'mymodule'
+  # Default module name
+  module_name = 'mymodule'
 
 ><?php // $$(echo 'I')d$
 /**
@@ -171,7 +171,7 @@ else:
  *   ${2:description}
  *
  * License:
- *	 ${1}
+ *   ${1}
  *   Copyright (C) $(date +%Y)  $(whoami)
  *
  *   This program is free software: you can redistribute it and/or modify
@@ -204,11 +204,11 @@ global module_name
 ####### Module name ##########
 # Check if current file is empty
 if $GEDIT_BASENAME != '' :
-	# extract fil name (no extension)
-	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  # extract fil name (no extension)
+  module_name = $GEDIT_BASENAME.split('.')[0].lower()
 else:
-	# Default module name
-	module_name = 'mymodule'
+  # Default module name
+  module_name = 'mymodule'
 
 >watchdog('$< return module_name >', '${1:message}', ${1:$variables}, ${2:WATCHDOG_DEBUG | WATCHDOG_INFO | WATCHDOG_NOTICE | WATCHDOG_WARNING | WATCHDOG_ERROR | WATCHDOG_ALERT  | WATCHDOG_EMERG }, '${3:link}')]]></text>
     <tag>watchdog</tag>
