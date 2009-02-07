@@ -1,4 +1,3 @@
-<?xml version='1.0' encoding='utf-8'?>
 <snippets language="drupal">
   <snippet>
     <text><![CDATA[$form['${1:name}'] = array(
@@ -150,7 +149,7 @@ $form['#attributes'] = array('enctype' => "multipart/form-data");
 	'#description'   => t('${3:Description}'),
   '#weight'        => ${4:5},
   '#required'      => ${5:true},
-  '#default_value' => $(6:echo '$node->'${1})
+  '#default_value' => $(6:echo '$node->'${1}),
   '#maxlength'     => ${7:128},
 );]]></text>
     <tag>fapi</tag>
@@ -163,7 +162,7 @@ $form['#attributes'] = array('enctype' => "multipart/form-data");
 	'#description'   => t('${3:Description}'),
   '#weight'        => ${4:5},
   '#required'      => ${5:true},
-  '#default_value' => $(6:echo '$node->'${1})
+  '#default_value' => $(6:echo '$node->'${1}),
   '#maxlength'     => ${7:128},
 );]]></text>
     <tag>fapi</tag>
