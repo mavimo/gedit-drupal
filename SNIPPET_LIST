@@ -77,6 +77,7 @@ hook
     hook_link()
     hook_menu()
     hook_nodeapi()
+    hook_node_info()
     hook_perm()
     hook_schema()
     hook_search()
