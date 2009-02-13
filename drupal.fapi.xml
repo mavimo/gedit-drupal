@@ -1,50 +1,55 @@
+<?xml version='1.0' encoding='utf-8'?>
 <snippets language="drupal">
   <snippet>
     <text><![CDATA[$form['${1:name}'] = array(
-  '#type' => 'button',
-  '#value' => t('${2:Title}'),
-  '#weight' => 5,
+  '#type'          => 'button',
+  '#value'         => t('${2:Title}'),
+  '#weight'        => ${3:0},
 );]]></text>
     <tag>fapi</tag>
     <description>FAPI button</description>
   </snippet>
   <snippet>
     <text><![CDATA[$form['${1:name}'] = array(
-  '#type' => 'checkbox',
-  '#title' => t('${2:Title}'),
-	'#description' => t('${3:Description}'),
-  '#default_value' => TRUE,
-  '#weight' => 5,
-  '#required' => TRUE,
+  '#type'          => 'checkbox',
+  '#title'         => t('${2:Title}'),
+	'#description'   => t('${3:Description}'),
+  '#weight'        => ${4:5},
+  '#required'      => ${5:TRUE},
+  '#default_value' => $(6:echo '$node->'${1}),
 );]]></text>
     <tag>fapi</tag>
     <description>FAPI checkbox</description>
   </snippet>
   <snippet>
     <text><![CDATA[$form['${1:name}'] = array(
-  '#type' => 'checkboxs',
-  '#title' => t('${2:Title}'),
-	'#description' => t('${3:Description}'),
-  '#default_value' => array(TRUE, TRUE, FALSE),
-  '#options' => array(
+  '#type'          => 'checkboxs',
+  '#title'         => t('${2:Title}'),
+	'#description'   => t('${3:Description}'),
+  '#default_value' => ${4:array(TRUE, TRUE, FALSE)},
+  '#options'       => ${5:array(
     'value1' => t('Description 1'),
     'value2' => t('Description 2'),
     'value3' => t('Description 3'),
-  ),
-  '#weight' => 5,
-  '#required' => TRUE,
+  )},
+  '#weight'        => ${6:0},
+  '#required'      => ${7:TRUE},
 );]]></text>
     <tag>fapi</tag>
     <description>FAPI checkboxes</description>
   </snippet>
   <snippet>
     <text><![CDATA[$form['${1:name}'] = array(
-  '#type' => 'date',
-  '#title' => t('${2:Title}'),
-	'#description' => t('${3:Description}'),
-  '#default_value' => array('year' => 2007, 'month' => 2, 'day' => 15),
-  '#weight' => 5,
-  '#required' => TRUE,
+  '#type'          => 'date',
+  '#title'         => t('${2:Title}'),
+	'#description'   => t('${3:Description}'),
+  '#default_value' => ${4:array(
+    'year'  => 2007,
+    'month' => 2,
+    'day'   => 15
+  )},
+  '#weight'        => ${6:0},
+  '#required'      => ${7:TRUE},
 );
 ]]></text>
     <tag>fapi</tag>
@@ -52,23 +57,23 @@
   </snippet>
   <snippet>
     <text><![CDATA[$form['${1:name}'] = array(
-  '#type'        => 'fieldset',
-  '#title'       => t('${2:Title}'),
-	'#description' => t('${3:Description}'),
-  '#weight'      => ${4:5},
-  '#collapsible' => ${5:true},
-  '#collapsed'   => ${6:false},
+  '#type'          => 'fieldset',
+  '#title'         => t('${2:Title}'),
+	'#description'   => t('${3:Description}'),
+  '#weight'        => ${4:0},
+  '#collapsible'   => ${5:true},
+  '#collapsed'     => ${6:false},
 );]]></text>
     <tag>fapi</tag>
     <description>FAPI fieldset</description>
   </snippet>
   <snippet>
     <text><![CDATA[$form['${1:name}'] = array(
-  '#type'        => 'file',
-  '#title'       => t('${2:Title}'),
-	'#description' => t('${3:Description}'),
-  '#size'        => ${4:40},
-  '#weight'      => ${5:5},
+  '#type'          => 'file',
+  '#title'         => t('${2:Title}'),
+	'#description'   => t('${3:Description}'),
+  '#size'          => ${4:40},
+  '#weight'        => ${5:0},
 );
 // NB: please add ===
 $form['#attributes'] = array('enctype' => "multipart/form-data");
@@ -78,32 +83,33 @@ $form['#attributes'] = array('enctype' => "multipart/form-data");
   </snippet>
   <snippet>
     <text><![CDATA[$form['${1:name}'] = array(
-	'#type'  => 'hidden',
-	'#value' => '${2:value}',
+	'#type'          => 'hidden',
+	'#value'         => '${2:value}',
 );]]></text>
     <tag>fapi</tag>
     <description>FAPI hidden</description>
   </snippet>
   <snippet>
     <text><![CDATA[$form['${1:name}'] = array(
-	'#type'      => 'markup',
-	'#value'     => '${2:value}',
-	'#prefix'    => '${3}',
-	'#suffix'    => '${4}',
-	'#attribute' => '${5}',
+	'#type'          => 'markup',
+	'#value'         => '${2:value}',
+  '#weight'        => ${4:0},
+	'#prefix'        => '${3:}',
+	'#suffix'        => '${4:}',
+	'#attribute'     => '${5:}',
 );]]></text>
     <tag>fapi</tag>
     <description>FAPI markup</description>
   </snippet>
   <snippet>
     <text><![CDATA[$form['${1:name}'] = array(
-  '#type'        => 'password',
-  '#title'       => t('${2:Title}'),
-	'#description' => t('${3:Description}'),
-  '#weight'      => ${4:5},
-  '#size'        => ${5:60},
-  '#maxlength'   => ${6:128},
-  '#required'    => ${7:true},
+  '#type'          => 'password',
+  '#title'         => t('${2:Title}'),
+	'#description'   => t('${3:Description}'),
+  '#weight'        => ${4:0},
+  '#size'          => ${5:60},
+  '#maxlength'     => ${6:128},
+  '#required'      => ${7:true},
 );]]></text>
     <tag>fapi</tag>
     <description>FAPI password</description>
@@ -114,13 +120,13 @@ $form['#attributes'] = array('enctype' => "multipart/form-data");
   '#title'         => t('${2:Title}'),
 	'#description'   => t('${3:Description}'),
   '#weight'        => ${4:5},
-  '#required'      => ${5:true},
-  '#default_value' => ${6:'value'},
-  '#options' => array(
+  '#required'      => ${5:TRUE},
+  '#default_value' => $(6:echo '$node->'${1}),
+  '#options'       => ${7:array(
     'value1' => t('Description 1'),
     'value2' => t('Description 2'),
     'value3' => t('Description 3'),
-  ),
+  )},
 );]]></text>
     <tag>fapi</tag>
     <description>FAPI radios</description>
@@ -133,11 +139,11 @@ $form['#attributes'] = array('enctype' => "multipart/form-data");
   '#weight'        => ${4:5},
   '#required'      => ${5:true},
   '#default_value' => $(6:echo '$node->'${1}),
-  '#options' => array(
+  '#options'       => ${7:array(
     'value1' => t('Description 1'),
     'value2' => t('Description 2'),
     'value3' => t('Description 3'),
-  ),
+  )},
 );]]></text>
     <tag>fapi</tag>
     <description>FAPI select</description>
