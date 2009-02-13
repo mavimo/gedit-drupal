@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <snippets language="drupal">
   <snippet>
-    <text><![CDATA[array('${1:key}' => ${2:$value});]]></text>
+    <text><![CDATA[array('${1:key}' => '${2:$value}');]]></text>
     <tag>array</tag>
     <description>array</description>
   </snippet>
@@ -34,18 +34,52 @@
     <description>elseif ..</description>
   </snippet>
   <snippet>
-    <text><![CDATA[for ($${1:i} = ${2:0}; $${1:i} < $3; $${1:i}++) {
+    <text><![CDATA[for (${1:$i} = ${2:0}; ${1} < ${3:10}; ${1}++) {
 	${0:# code...}
 }]]></text>
     <tag>for</tag>
     <description>for ..</description>
   </snippet>
   <snippet>
-    <text><![CDATA[foreach ($${1:variable} as $${2:key} => $${3:value}) {
-	${0:# code...}
+    <text><![CDATA[$<
+# Define global variable
+global strparam, module_name
+
+####### Function params ##########
+strparam = ''
+params = $3.split(',')
+# Generate documentation array
+for par in params:
+	strparam = strparam + '  * @param ' + par.strip() + '\n  *   Description of param ' + par.strip() + '\n'
+
+####### Module name ##########
+# Check if current file is empty
+if $GEDIT_BASENAME != '' :
+	# extract fil name (no extension)
+	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+else:
+	# Default module name
+	module_name = 'mymodule'
+
+>/** ${10:Short description of this function}.
+  *
+  * ${11:Long description of this function.}
+  *
+  * Example usage:
+  * @code
+  *  ${12:my_print('Function usage sample');}
+  * @endcode
+  * 
+$<[3]: return strparam
+> *
+  * @return
+  *   ${15:Description of return value}
+  */
+function _$< return module_name >_${2:function_name}(${3:$param1, $param2, $param3}) {
+	${0:#code}
 }]]></text>
-    <tag>foreach</tag>
-    <description>foreach ..</description>
+    <tag>function</tag>
+    <description>function()</description>
   </snippet>
   <snippet>
     <text><![CDATA[if (${1:condition}) {
@@ -69,8 +103,7 @@ ${0:# code...}]]></text>
 	case '${2:value}':
 		${3:# code...}
 		break;
-	
-	
+		
 	default:
 		${0:# code...}
 		break;
@@ -79,7 +112,7 @@ ${0:# code...}]]></text>
     <description>switch ..</description>
   </snippet>
   <snippet>
-    <text><![CDATA[while (${1:$a <= 10}) {
+    <text><![CDATA[while (${1:$a} <= ${2:10}) {
 	${0:# code...}
 }]]></text>
     <tag>while</tag>
