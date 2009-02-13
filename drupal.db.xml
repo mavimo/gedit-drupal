@@ -21,12 +21,12 @@
     <description>db_query_range()</description>
   </snippet>
   <snippet>
-    <text><![CDATA[db_set_active(${1:'default'});]]></text>
+    <text><![CDATA[db_set_active('${1:default}');]]></text>
     <tag>db</tag>
     <description>db_set_active()</description>
   </snippet>
   <snippet>
-    <text><![CDATA[drupal_write_record('${1:table}', $${2:object}, array('${3:update_key}' => '${4:value}'));]]></text>
+    <text><![CDATA[drupal_write_record('${1:table}', ${2:$object}, array('${3:update_key}' => '${4:value}'));]]></text>
     <tag>db</tag>
     <description>drupal_write_record()</description>
   </snippet>
