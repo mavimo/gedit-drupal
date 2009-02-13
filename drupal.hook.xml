@@ -65,22 +65,22 @@ function $<return module_name>_block($op = 'list', $delta = 0, $edit = array()) 
   switch ($op) {
     case 'list':
 			$blocks[0] = array(
-        'info'       => t('Title of block #1'),
-				'cache'			 => BLOCK_CACHE_PER_ROLE | BLOCK_CACHE_PER_USER | BLOCK_CACHE_PER_PAGE | BLOCK_CACHE_GLOBAL | BLOCK_NO_CACHE,
-        'status'     => TRUE,
-        'weight'     => 0,
-				'region'		 => '',
-        'visibility' => 1,
-        'pages'      => '',
+        'info'       => t('${1:Title of block #1}'),
+				'cache'			 => ${2:BLOCK_CACHE_PER_ROLE | BLOCK_CACHE_PER_USER | BLOCK_CACHE_PER_PAGE | BLOCK_CACHE_GLOBAL | BLOCK_NO_CACHE},
+        'status'     => ${3:TRUE},
+        'weight'     => ${4:0},
+				'region'		 => '${5}',
+        'visibility' => ${6:1},
+        'pages'      => '${7}',
       );
 			$blocks[1] = array(
-        'info'       => t('Title of block #2'),
-				'cache'			 => BLOCK_CACHE_PER_ROLE | BLOCK_CACHE_PER_USER | BLOCK_CACHE_PER_PAGE | BLOCK_CACHE_GLOBAL | BLOCK_NO_CACHE,
-        'status'     => TRUE,
-        'weight'     => 0,
-				'region'		 => '',
-        'visibility' => 1,
-        'pages'      => '',
+        'info'       => t('${11:Title of block #2}'),
+				'cache'			 => ${12:BLOCK_CACHE_PER_ROLE | BLOCK_CACHE_PER_USER | BLOCK_CACHE_PER_PAGE | BLOCK_CACHE_GLOBAL | BLOCK_NO_CACHE},
+        'status'     => ${13:TRUE},
+        'weight'     => ${14:0},
+				'region'		 => '${15}',
+        'visibility' => ${16:1},
+        'pages'      => '${17}',
       );
       return $blocks;
 			break;
@@ -168,7 +168,7 @@ function $<return module_name>_comment(&$a1, $op) {
 	}
 }]]></text>
     <tag>hook</tag>
-    <description>hook_comment</description>
+    <description>hook_comment()</description>
   </snippet>
   <snippet>
     <text><![CDATA[$<
@@ -256,7 +256,7 @@ function $<return module_name>_filter($op, $delta = 0, $format = -1, $text = '',
 	}
 }]]></text>
     <tag>hook</tag>
-    <description>hook_filter</description>
+    <description>hook_filter()</description>
   </snippet>
   <snippet>
     <text><![CDATA[$<
@@ -333,9 +333,9 @@ else:
 function $<return module_name>_help($path, $arg) {
   switch ($path) {
     case 'admin/help#$<return module_name>':
-      return t('');
+      return t('${1}');
     case 'user/help#$<return module_name>':
-      return t('');
+      return t('${2}');
   }
 }
 ]]></text>
@@ -388,6 +388,7 @@ else:
  * Implementation of hook_install().
  */
 function $<return module_name>_install() {
+	// Install tables
   drupal_install_schema('${1}');
 }]]></text>
     <tag>hook</tag>
@@ -414,15 +415,15 @@ function $<return module_name>_link($type, $object, $teaser = FALSE) {
 	$links = array();
 
 	 $links['${2:linkname}'] = array(
-    'title' => t('${3:Title of link #1}'),
-    'href' => '${4:link/path}',
-    'query' => '',	
-    'fragment' => '',
+    'title'      => t('${3:Title of link #1}'),
+    'href'       => '${4:link/path}',
+    'query'      => '',	
+    'fragment'   => '',
     'attributes' => array(
 			'title' => t('${5:link description}'),
 			'class' => '',
 		),
-		'html' => FALSE,
+		'html'       => FALSE,
   );
 
 	return $links;
@@ -451,30 +452,30 @@ else:
 function $<return module_name>_menu() {
   $items = array();
 
-  $items[${2:'path/1'}] = array(
-    'title' => '',
-		'description' => ,
-    'page callback' => '',
-    'page arguments' => '',
-    'access callback' => array(''),
-    'access arguments' => array(''),
-		'weight' => 0,
-		'menu_name' => 'Navigation',
-    'type' => MENU_NORMAL_ITEM | MENU_CALLBACK | MENU_SUGGESTED_ITEM | MENU_LOCAL_TASK | MENU_DEFAULT_LOCAL_TASK,
+  $items['${1:path/1}'] = array(
+    'title'            => t('${2:title}'),
+		'description'      => t('${3:description}'),
+    'page callback'    => '${4:drupal_get_form}',
+    'page arguments'   => array(${5:''}),
+    'access callback'  => '${6}',
+    'access arguments' => array(${7:''}),
+		'weight'           => ${8:0},
+		'menu_name'        => '${9:Navigation}',
+    'type'             => ${10:MENU_NORMAL_ITEM | MENU_CALLBACK | MENU_SUGGESTED_ITEM | MENU_LOCAL_TASK | MENU_DEFAULT_LOCAL_TASK},
   );
-
-  $items[${3:'path/2'}] = array(
-    'title' => '',
-		'description' => ,
-    'page callback' => '',
-    'page arguments' => '',
-    'access callback' => array(''),
-    'access arguments' => array(''),
-		'weight' => 0,
-		'menu_name' => 'Navigation',
-    'type' => MENU_NORMAL_ITEM | MENU_CALLBACK | MENU_SUGGESTED_ITEM | MENU_LOCAL_TASK | MENU_DEFAULT_LOCAL_TASK,
+  
+  $items['${11:path/1}'] = array(
+    'title'            => t('${12:title}'),
+		'description'      => t('${13:description}'),
+    'page callback'    => '${14:drupal_get_form}',
+    'page arguments'   => array(${15:''}),
+    'access callback'  => '${16}',
+    'access arguments' => array(${17:''}),
+		'weight'           => ${18:0},
+		'menu_name'        => '${19:Navigation}',
+    'type'             => ${20:MENU_NORMAL_ITEM | MENU_CALLBACK | MENU_SUGGESTED_ITEM | MENU_LOCAL_TASK | MENU_DEFAULT_LOCAL_TASK},
   );
-
+  
   return $items;
 }]]></text>
     <tag>hook</tag>
@@ -564,6 +565,62 @@ else:
 	module_name = 'mymodule'
 
 >/**
+ * Implementation of hook_node_grants().
+ */
+function $<return module_name>_node_grants($account, $op) {
+  return TRUE;
+}]]></text>
+    <tag>hook</tag>
+    <description>hook_node_garant()</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[$<
+# Define global variable
+global module_name
+
+####### Module name ##########
+# Check if current file is empty
+if $GEDIT_BASENAME != '' :
+	# extract fil name (no extension)
+	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+else:
+	# Default module name
+	module_name = 'mymodule'
+
+>/**
+ * Implementation of hook_node_info().
+ */
+function $<return module_name>_node_info() {
+	return array(
+		'$<return module_name>' => array(
+      'name'        => t('${1:Node name}'),
+      'module'      => '$<return module_name>',
+      'description' => t("${2:Node description}"),
+      'has_title'   => ${3:TRUE},
+      'title_label' => t('${4:Title}'),
+      'has_body'    => ${5:TRUE},
+      'body_label'  => t('${6:Body}'),
+		),
+	);
+}]]></text>
+    <tag>hook</tag>
+    <description>hook_node_info()</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[$<
+# Define global variable
+global module_name
+
+####### Module name ##########
+# Check if current file is empty
+if $GEDIT_BASENAME != '' :
+	# extract fil name (no extension)
+	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+else:
+	# Default module name
+	module_name = 'mymodule'
+
+>/**
  * Implementation of hook_perm().
  */
 function $<return module_name>_perm() {
@@ -599,27 +656,28 @@ function $<return module_name>_schema() {
   $schema['$<return module_name>'] = array(
     'description' => t('${2:description}'),
     'fields' => array(
-      '' => array(
-        'description' => t(''),
-        'type' => 'serial',
-        'unsigned' => TRUE,
-        'not null' => TRUE
+      '${3}' => array(
+        'description' => t('${4}'),
+        'type'        => '${5:serial}',
+        'unsigned'    => ${6:TRUE},
+        'not null'    => ${7:TRUE},
 			),
-      '' => array(
-        'description' => t(''),
-        'type' => 'int',
-        'unsigned' => TRUE,
-        'not null' => TRUE,
-        'default' => 0
+      '${13}' => array(
+        'description' => t('${14}'),
+        'type'        => '${15:int}',
+        'unsigned'    => ${16:TRUE},
+        'not null'    => ${17:TRUE},
+        'default'     => ${18:0},
 			),
-      '' => array(
-        'description' => t(''),
-        'type' => 'varchar',
-        'length' => 32,
-        'not null' => TRUE,
-        'default' => ''
+      '${23}' => array(
+        'description' => t('${24}'),
+        'type'        => '${25:varchar}',
+        'length'      => ${26:32},
+        'not null'    => ${27:TRUE},
+        'default'     => '${28}',
 			),
-    'primary key' => array(''),
+		),
+    'primary key'     => array('${30}'),
   );
   return $schema;
 }
@@ -656,22 +714,22 @@ function $<return module_name>_search($op = 'search', $keys = null) {
 		case 'search':
 			// Do operation for extract info
       $results[] = array(
-        'link' => url(''),
-        'type' => check_plain(''),
-        'title' => '',
-        'user' => '',
-        'date' => '',
-        'node' => $node,
-        'extra' => $extra,
-        'score' => $score / $total,
-        'snippet' => '',
+        'link'      => url(''),
+        'type'      => check_plain(''),
+        'title'     => '',
+        'user'      => '',
+        'date'      => '',
+        'node'      => $node,
+        'extra'     => $extra,
+        'score'     => $score / $total,
+        'snippet'   => '',
       );
 			return $results;
 			break;
 		case 'status':
       return array(
 				'remaining' => $remaining,
-				'total' => $total
+				'total'     => $total
 			);
 			break;
 	}
@@ -696,7 +754,7 @@ else:
 >/**
  * Implementation of hook_taxonomy().
  */
-function $<return module_name>_filter($op, $type, $array = NULL) {
+function $<return module_name>_taxonomy($op, $type, $array = NULL) {
 	switch ($type) {
 		// Term operation
 		case 'term':
@@ -748,30 +806,30 @@ else:
 function $<return module_name>_theme($existing, $type, $theme, $path) {
 	 return array(
     '${2:theme_name_a}' => array(
-      'arguments' => array('' => NULL),
-			'file' => '',
-			'path' => ,
-			'template' => ,
-			'function' => ,
-			'pattern' => ,
+      'arguments'     => array('' => NULL),
+			'file'          => '',
+			'path'          => ,
+			'template'      => ,
+			'function'      => ,
+			'pattern'       => ,
 			'preprocess functions' => ,
 			'override preprocess functions' => ,
-			'type' => ,
-			'theme path' => ,
-			'theme paths' => ,
+			'type'          => ,
+			'theme path'    => ,
+			'theme paths'   => ,
     ),
     '${3:theme_name_b}' => array(
-      'arguments' => array('' => NULL),
-			'file' => '',
-			'path' => ,
-			'template' => ,
-			'function' => ,
-			'pattern' => ,
+      'arguments'     => array('' => NULL),
+			'file'          => '',
+			'path'          => ,
+			'template'      => ,
+			'function'      => ,
+			'pattern'       => ,
 			'preprocess functions' => ,
 			'override preprocess functions' => ,
-			'type' => ,
-			'theme path' => ,
-			'theme paths' => ,
+			'type'          => ,
+			'theme path'    => ,
+			'theme paths'   => ,
     ),
   );
 }]]></text>
@@ -796,7 +854,10 @@ else:
  * Implementation of hook_uninstall().
  */
 function $<return module_name>_uninstall() {
+  // Remove tables
   drupal_uninstall_schema('${1}');
+  
+  // Remove all variable into table
   $result = db_query('SELECT name FROM {variable} WHERE name LIKE "${1}_%"');
 	while ($row = db_fetch_object($result)) {
 		variable_del($row->name);
@@ -884,8 +945,8 @@ function $<return module_name>_user($op, &$edit, &$account, $category = NULL) {
 			break;
 		case 'categories':
 			$categories = array(
-				'name' => t(''),
-				'title' => t(''),
+				'name'   => t(''),
+				'title'  => t(''),
 				'weight' => 0,
 			);
 			return $categories;
