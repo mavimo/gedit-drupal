@@ -21,7 +21,18 @@ This project contains Snippet for getid to have a rapid development for Drupal d
 
 				# sudo update-mime-database /usr/share/mime
 
-	e)	Enable Snippet plugin from
+	e)	Add icon into your icons folder, first of all find your iconset name 
+			(gnome, Tangerine, ..), and copy into this folder (on scalable subfolder)
+			icon file:
+			
+				# sudo cp application-x-drupal-php.svg /usr/share/icon/ICONSET_NAME/scalable/mimetype/application-x-drupal-php.svg
+			
+			after that regenerate iconset cache:
+			
+				# cd /usr/share/icon
+				# sudo gtk-update-icon-cache ICONSET_NAME
+
+	f)	Enable Snippet plugin from
 
 				Edit -> Preferences -> Plugins
 
@@ -30,7 +41,7 @@ This project contains Snippet for getid to have a rapid development for Drupal d
 
 				# sudo apt-get install gedit-plugins
 
-	f)	Add variuos snippets
+	g)	Add variuos snippets
 
 				Tools -> Manage Snippets ...
 
