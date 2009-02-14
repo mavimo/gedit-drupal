@@ -186,9 +186,9 @@ else:
   '#title'         => t('${2:Title}'),
 	'#description'   => t('${3:Description}'),
   '#default_value' => ${4:array(
-    'year'  => 2007,
-    'month' => 2,
-    'day'   => 15
+    'year'  => format_date(time(), 'custom', 'Y'),
+    'month' => format_date(time(), 'custom', 'n'),
+    'day'   => format_date(time(), 'custom', 'j'),
   )},
   '#weight'        => ${6:0},
   '#required'      => ${7:TRUE},
