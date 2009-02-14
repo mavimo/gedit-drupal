@@ -4,7 +4,7 @@
     <comment>Drupal module script</comment>
     <comment xml:lang="it">Modulo di Drupal</comment>
     <sub-class-of type="text/plain"/>
-    <generic-icon name="text-x-script"/>
+    <generic-icon name="x-drupal-php"/>
     <magic priority="80">
       <match value="&lt;?php" type="string" offset="0:64"/>
     </magic>
