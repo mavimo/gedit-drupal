@@ -1,0 +1,212 @@
+<?xml version='1.0' encoding='utf-8'?>
+<snippets language="drupal">
+  <snippet>
+    <text><![CDATA[$<
+# Define global variable
+global module_name
+
+####### Module name ##########
+# Check if current file is empty
+if $GEDIT_BASENAME != '' :
+	# extract fil name (no extension)
+	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+else:
+	# Default module name
+	module_name = 'mymodule'
+
+>// ===========================================================================
+// Fields ${21} of table
+$data['$<return module_name>']['${21:field}'] = array(
+  'title'  => t('${22:Field name}'),
+  'help'   => t('${23:Field description}'), 
+  
+  'field'  => array(
+    'handler'        => '${24:views_handler_field}',
+    'click sortable' => ${25:TRUE},
+  ),
+  // Information for accepting a name as a filter
+  'filter' => array(
+    'handler'        => '${26:views_handler_filter}',
+  ),
+  // Information for sorting on a name.
+  'sort'   => array(
+    'handler'        => '${27:views_handler_sort}',
+  ),
+);]]></text>
+    <tag>views</tag>
+    <description>field</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[$<
+# Define global variable
+global module_name
+
+####### Module name ##########
+# Check if current file is empty
+if $GEDIT_BASENAME != '' :
+	# extract fil name (no extension)
+	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+else:
+	# Default module name
+	module_name = 'mymodule'
+
+>/**
+ * Field handler.
+ */
+class $<return module_name>_handler_field_${5:field-type} extends views_handler_field {
+  /**
+   * Override init function to provide generic option
+   */
+  function init(&$view, &$data) {
+    parent::init($view, $data);
+    if (!empty($this->options['${10:option_key}'])) {
+      $this->additional_fields['${11:field}'] = '${11}';
+    }
+  }
+
+  function option_definition() {
+    $options = parent::option_definition();
+    $options['${10}'] = array('default' => TRUE);
+    return $options;
+  }
+  
+  function options_form(&$form, &$form_state) {
+    parent::options_form($form, $form_state);
+    // Add other form field to option with FAPI
+    $form['${10}'] = array(
+      '#type'          => 'checkbox',
+      '#title'         => t('${15:Title}'),
+    	'#description'   => t('${16:Description}'),
+      '#weight'        => ${17:5},
+      '#default_value' => $this->options['${10}'],
+    );
+  }
+  
+  function render($values) {
+    // Generate output for $values->{$this->field_alias}
+    return $values->{$this->field_alias};
+  }
+}]]></text>
+    <tag>views</tag>
+    <description>field handler</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[$<
+# Define global variable
+global module_name
+
+####### Module name ##########
+# Check if current file is empty
+if $GEDIT_BASENAME != '' :
+	# extract fil name (no extension)
+	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+else:
+	# Default module name
+	module_name = 'mymodule'
+
+>/**
+ * Implementation of hook_views_api.
+ */
+function $<return module_name>_views_api() {
+  return array('api' => 2);
+}]]></text>
+    <tag>views</tag>
+    <description>hook_views_api()</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[$<
+# Define global variable
+global module_name
+
+####### Module name ##########
+# Check if current file is empty
+if $GEDIT_BASENAME != '' :
+	# extract fil name (no extension)
+	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+else:
+	# Default module name
+	module_name = 'mymodule'
+
+>/**
+* Implementation of hook_views_data()
+*/
+function $<return module_name>_views_data() {
+  // ===========================================================================
+  // Generic info
+  $data['$<return module_name>']['table']['group']  = t('${1:Table group}');
+
+  $data['$<return module_name>']['table']['base'] = array(
+    'field'  => '${5:id}', // Primary key of table
+    'title'  => t('${6:Table name}'),
+    'help'   => t('${7:Table information, this appair into GUI to help users.}'),
+    'weight' => ${8:-10},
+  );
+  
+  // ===========================================================================
+  // Table join
+  $data['$<return module_name>']['table']['join'] = array(
+    '${10:table_to_join}' => array(
+      'left_field' => '${11:id}',
+      'field'      => '${12:id}',
+    ),
+  );
+  
+  // ===========================================================================
+  // Fields ${21} of table
+  $data['$<return module_name>']['${21:field}'] = array(
+    'title'  => t('${22:Field name}'),
+    'help'   => t('${23:Field description}'), 
+    
+    'field'  => array(
+      'handler'        => '${24:views_handler_field}',
+      'click sortable' => ${25:TRUE},
+    ),
+    // Information for accepting a name as a filter
+    'filter' => array(
+      'handler'        => '${26:views_handler_filter}',
+    ),
+    // Information for sorting on a name.
+    'sort'   => array(
+      'handler'        => '${27:views_handler_sort}',
+    ),
+  );
+  
+  return $data;
+}]]></text>
+    <tag>views</tag>
+    <description>hook_views_data()</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[$<
+# Define global variable
+global module_name
+
+####### Module name ##########
+# Check if current file is empty
+if $GEDIT_BASENAME != '' :
+	# extract fil name (no extension)
+	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+else:
+	# Default module name
+	module_name = 'mymodule'
+
+>/**
+ * Implementation of hook_views_handlers().
+ */
+function $<return module_name>_views_handlers() {
+  return array(
+    'info' => array(
+      'path' => drupal_get_path('module', '$<return module_name>'),
+    ),
+    'handlers' => array(
+      // field handlers
+      '$<return module_name>_handler_field_${1:field-name}' => array(
+        'parent' => 'views_handler_field',
+      ),
+    )
+  );
+}]]></text>
+    <tag>views</tag>
+    <description>hook_views_handler()</description>
+  </snippet>
+</snippets>
