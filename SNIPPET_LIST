@@ -93,6 +93,12 @@ l
 t
     t()
     format_plural()
+views
+    field
+    field handler
+    hook_views_api()
+    hook_views_data()
+    hook_views_handler()
 watchdog
     watchdog()
 
