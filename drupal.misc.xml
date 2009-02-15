@@ -8,11 +8,11 @@ global module_name
 ####### Module name ##########
 # Check if current file is empty
 if $GEDIT_BASENAME != '' :
-	# extract fil name (no extension)
-	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  # extract fil name (no extension)
+  module_name = $GEDIT_BASENAME.split('.')[0].lower()
 else:
-	# Default module name
-	module_name = 'mymodule'
+  # Default module name
+  module_name = 'mymodule'
 
 >; $$(echo 'I')d$
 name = $<return module_name>
@@ -31,20 +31,20 @@ global module_name
 ####### Module name ##########
 # Check if current file is empty
 if $GEDIT_BASENAME != '' :
-	# extract fil name (no extension)
-	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  # extract fil name (no extension)
+  module_name = $GEDIT_BASENAME.split('.')[0].lower()
 else:
-	# Default module name
-	module_name = 'mymodule'
+  # Default module name
+  module_name = 'mymodule'
 
 ><?php // $$(echo 'I')d$
 /**
  * Module:      $<return module_name>
- * Date:        $(3:date +%Y-%m-%d%t%k:%M)
- * Author:      $(4:whoami)
+ * Date:        $(date +%Y-%m-%d%t%k:%M)
+ * Author:      $(whoami)
  *
  * License:
- *	 ${1}
+ *   ${1}
  *   Copyright (C) $(date +%Y)  $(whoami)
  *
  *   This program is free software: you can redistribute it and/or modify
@@ -66,7 +66,7 @@ else:
  * Implementation of hook_install().
  */
 function $<return module_name>_install() {
-	// Install tables
+  // Install tables
   drupal_install_schema('$<return module_name>');
 }
 
@@ -79,9 +79,9 @@ function $<return module_name>_uninstall() {
   
   // Remove all variable into table
   $result = db_query('SELECT name FROM {variable} WHERE name LIKE "${1}_%"');
-	while ($row = db_fetch_object($result)) {
-		variable_del($row->name);
-	}
+  while ($row = db_fetch_object($result)) {
+    variable_del($row->name);
+  }
 }
 
 /**
@@ -96,27 +96,26 @@ function $<return module_name>_schema() {
         'type'        => '${5:serial}',
         'unsigned'    => ${6:TRUE},
         'not null'    => ${7:TRUE},
-			),
+      ),
       '${13}' => array(
         'description' => t('${14}'),
         'type'        => '${15:int}',
         'unsigned'    => ${16:TRUE},
         'not null'    => ${17:TRUE},
         'default'     => ${18:0},
-			),
+      ),
       '${23}' => array(
         'description' => t('${24}'),
         'type'        => '${25:varchar}',
         'length'      => ${26:32},
         'not null'    => ${27:TRUE},
         'default'     => '${28}',
-			),
-		),
-    'primary key'     => array('${30}'),
+      ),
+    ),
+    'primary key'     => array('${3}'),
   );
   return $schema;
 }
-
 ]]></text>
     <tag>install</tag>
     <description>install</description>
@@ -129,11 +128,11 @@ global module_name
 ####### Module name ##########
 # Check if current file is empty
 if $GEDIT_BASENAME != '' :
-	# extract fil name (no extension)
-	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  # extract fil name (no extension)
+  module_name = $GEDIT_BASENAME.split('.')[0].lower()
 else:
-	# Default module name
-	module_name = 'mymodule'
+  # Default module name
+  module_name = 'mymodule'
 
 ><?php // $$(echo 'I')d$
 /**
@@ -145,7 +144,7 @@ else:
  *   ${2:description}
  *
  * License:
- *	 ${1}
+ *   ${1}
  *   Copyright (C) $(date +%Y)  $(whoami)
  *
  *   This program is free software: you can redistribute it and/or modify
