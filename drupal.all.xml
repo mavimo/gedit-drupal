@@ -7,8 +7,8 @@
   </snippet>
   <snippet>
     <text><![CDATA[case '${1:variable}':
-	${0:# code...}
-	break;]]></text>
+  ${0:# code...}
+  break;]]></text>
     <tag>case</tag>
     <description>case ..</description>
   </snippet>
@@ -44,7 +44,7 @@
   </snippet>
   <snippet>
     <text><![CDATA[do {
-	${0:# code...}
+  ${0:# code...}
 } while (${1:$a <= 10});]]></text>
     <tag>do</tag>
     <description>do .. while ..</description>
@@ -57,11 +57,11 @@ global module_name
 ####### Module name ##########
 # Check if current file is empty
 if $GEDIT_BASENAME != '' :
-	# extract fil name (no extension)
-	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  # extract fil name (no extension)
+  module_name = $GEDIT_BASENAME.split('.')[0].lower()
 else:
-	# Default module name
-	module_name = 'mymodule'
+  # Default module name
+  module_name = 'mymodule'
 
 >drupal_add_css(drupal_get_path('module','$<return module_name>') . '$(1: echo '/css/style.css')', '${2:module}', '${3:all}');]]></text>
     <tag>drupal</tag>
@@ -70,10 +70,10 @@ else:
   <snippet>
     <text><![CDATA[drupal_add_js('
 if (Drupal.jsEnabled) {
-	$(echo '$')(document).ready(function() {
-		${0:// Add code here}
-	});
-}', 'inline');	]]></text>
+  $(echo '$')(document).ready(function() {
+    ${0:// Add code here}
+  });
+}', 'inline');  ]]></text>
     <tag>drupal</tag>
     <description>drupal_add_js( inline )</description>
   </snippet>
@@ -85,11 +85,11 @@ global module_name
 ####### Module name ##########
 # Check if current file is empty
 if $GEDIT_BASENAME != '' :
-	# extract fil name (no extension)
-	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  # extract fil name (no extension)
+  module_name = $GEDIT_BASENAME.split('.')[0].lower()
 else:
-	# Default module name
-	module_name = 'mymodule'
+  # Default module name
+  module_name = 'mymodule'
 
 >drupal_add_js(drupal_get_path('module','$<return module_name>').'$(1: echo '/js/script.js')');]]></text>
     <tag>drupal</tag>
@@ -103,11 +103,11 @@ global module_name
 ####### Module name ##########
 # Check if current file is empty
 if $GEDIT_BASENAME != '' :
-	# extract fil name (no extension)
-	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  # extract fil name (no extension)
+  module_name = $GEDIT_BASENAME.split('.')[0].lower()
 else:
-	# Default module name
-	module_name = 'mymodule'
+  # Default module name
+  module_name = 'mymodule'
 
 >drupal_add_js(array('$<return module_name>' => ${0:$settings}, 'setting');]]></text>
     <tag>drupal</tag>
@@ -130,14 +130,14 @@ else:
   </snippet>
   <snippet>
     <text><![CDATA[else {
-	${0:# code...}
+  ${0:# code...}
 }]]></text>
     <tag>else</tag>
     <description>else ..</description>
   </snippet>
   <snippet>
     <text><![CDATA[elseif (${1:condition}) {
-	${0:# code...}	
+  ${0:# code...}  
 }]]></text>
     <tag>elseif</tag>
     <description>elseif ..</description>
@@ -155,7 +155,7 @@ else:
     <text><![CDATA[$form['${1:name}'] = array(
   '#type'          => 'checkbox',
   '#title'         => t('${2:Title}'),
-	'#description'   => t('${3:Description}'),
+  '#description'   => t('${3:Description}'),
   '#weight'        => ${4:5},
   '#required'      => ${5:TRUE},
   '#default_value' => $(6:echo '$node->'${1}),
@@ -167,7 +167,7 @@ else:
     <text><![CDATA[$form['${1:name}'] = array(
   '#type'          => 'checkboxs',
   '#title'         => t('${2:Title}'),
-	'#description'   => t('${3:Description}'),
+  '#description'   => t('${3:Description}'),
   '#default_value' => ${4:array(TRUE, TRUE, FALSE)},
   '#options'       => ${5:array(
     'value1' => t('Description 1'),
@@ -184,7 +184,7 @@ else:
     <text><![CDATA[$form['${1:name}'] = array(
   '#type'          => 'date',
   '#title'         => t('${2:Title}'),
-	'#description'   => t('${3:Description}'),
+  '#description'   => t('${3:Description}'),
   '#default_value' => ${4:array(
     'year'  => format_date(time(), 'custom', 'Y'),
     'month' => format_date(time(), 'custom', 'n'),
@@ -201,7 +201,7 @@ else:
     <text><![CDATA[$form['${1:name}'] = array(
   '#type'          => 'fieldset',
   '#title'         => t('${2:Title}'),
-	'#description'   => t('${3:Description}'),
+  '#description'   => t('${3:Description}'),
   '#weight'        => ${4:0},
   '#collapsible'   => ${5:true},
   '#collapsed'     => ${6:false},
@@ -213,7 +213,7 @@ else:
     <text><![CDATA[$form['${1:name}'] = array(
   '#type'          => 'file',
   '#title'         => t('${2:Title}'),
-	'#description'   => t('${3:Description}'),
+  '#description'   => t('${3:Description}'),
   '#size'          => ${4:40},
   '#weight'        => ${5:0},
 );
@@ -225,20 +225,20 @@ $form['#attributes'] = array('enctype' => "multipart/form-data");
   </snippet>
   <snippet>
     <text><![CDATA[$form['${1:name}'] = array(
-	'#type'          => 'hidden',
-	'#value'         => '${2:value}',
+  '#type'          => 'hidden',
+  '#value'         => '${2:value}',
 );]]></text>
     <tag>fapi</tag>
     <description>FAPI hidden</description>
   </snippet>
   <snippet>
     <text><![CDATA[$form['${1:name}'] = array(
-	'#type'          => 'markup',
-	'#value'         => '${2:value}',
+  '#type'          => 'markup',
+  '#value'         => '${2:value}',
   '#weight'        => ${4:0},
-	'#prefix'        => '${3:}',
-	'#suffix'        => '${4:}',
-	'#attribute'     => '${5:}',
+  '#prefix'        => '${3:}',
+  '#suffix'        => '${4:}',
+  '#attribute'     => '${5:}',
 );]]></text>
     <tag>fapi</tag>
     <description>FAPI markup</description>
@@ -247,7 +247,7 @@ $form['#attributes'] = array('enctype' => "multipart/form-data");
     <text><![CDATA[$form['${1:name}'] = array(
   '#type'          => 'password',
   '#title'         => t('${2:Title}'),
-	'#description'   => t('${3:Description}'),
+  '#description'   => t('${3:Description}'),
   '#weight'        => ${4:0},
   '#size'          => ${5:60},
   '#maxlength'     => ${6:128},
@@ -260,7 +260,7 @@ $form['#attributes'] = array('enctype' => "multipart/form-data");
     <text><![CDATA[$form['${1:name}'] = array(
   '#type'          => 'radios',
   '#title'         => t('${2:Title}'),
-	'#description'   => t('${3:Description}'),
+  '#description'   => t('${3:Description}'),
   '#weight'        => ${4:5},
   '#required'      => ${5:TRUE},
   '#default_value' => $(6:echo '$node->'${1}),
@@ -277,7 +277,7 @@ $form['#attributes'] = array('enctype' => "multipart/form-data");
     <text><![CDATA[$form['${1:name}'] = array(
   '#type'          => 'select',
   '#title'         => t('${2:Title}'),
-	'#description'   => t('${3:Description}'),
+  '#description'   => t('${3:Description}'),
   '#weight'        => ${4:5},
   '#required'      => ${5:true},
   '#default_value' => $(6:echo '$node->'${1}),
@@ -294,7 +294,7 @@ $form['#attributes'] = array('enctype' => "multipart/form-data");
     <text><![CDATA[$form['${1:name}'] = array(
   '#type'          => 'textarea',
   '#title'         => t('${2:Title}'),
-	'#description'   => t('${3:Description}'),
+  '#description'   => t('${3:Description}'),
   '#weight'        => ${4:5},
   '#required'      => ${5:true},
   '#default_value' => $(6:echo '$node->'${1}),
@@ -307,7 +307,7 @@ $form['#attributes'] = array('enctype' => "multipart/form-data");
     <text><![CDATA[$form['${1:name}'] = array(
   '#type'          => 'textfield',
   '#title'         => t('${2:Title}'),
-	'#description'   => t('${3:Description}'),
+  '#description'   => t('${3:Description}'),
   '#weight'        => ${4:5},
   '#required'      => ${5:true},
   '#default_value' => $(6:echo '$node->'${1}),
@@ -343,14 +343,14 @@ $form['#attributes'] = array('enctype' => "multipart/form-data");
   </snippet>
   <snippet>
     <text><![CDATA[for (${1:$i} = ${2:0}; ${1} < ${3:10}; ${1}++) {
-	${0:# code...}
+  ${0:# code...}
 }]]></text>
     <tag>for</tag>
     <description>for ..</description>
   </snippet>
   <snippet>
     <text><![CDATA[foreach (${1:$variable} as ${2:$key} => ${3:$value}) {
-	${0:# code...}
+  ${0:# code...}
 }]]></text>
     <tag>foreach</tag>
     <description>foreach ..</description>
@@ -370,16 +370,16 @@ strparam = ''
 params = $3.split(',')
 # Generate documentation array
 for par in params:
-	strparam = strparam + '  * @param ' + par.strip() + '\n  *   Description of param ' + par.strip() + '\n'
+  strparam = strparam + '  * @param ' + par.strip() + '\n  *   Description of param ' + par.strip() + '\n'
 
 ####### Module name ##########
 # Check if current file is empty
 if $GEDIT_BASENAME != '' :
-	# extract fil name (no extension)
-	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  # extract fil name (no extension)
+  module_name = $GEDIT_BASENAME.split('.')[0].lower()
 else:
-	# Default module name
-	module_name = 'mymodule'
+  # Default module name
+  module_name = 'mymodule'
 
 >/** ${10:Short description of this function}.
   *
@@ -396,7 +396,7 @@ $<[3]: return strparam
   *   ${15:Description of return value}
   */
 function _$< return module_name >_${2:function_name}(${3:$param1, $param2, $param3}) {
-	${0:#code}
+  ${0:#code}
 }]]></text>
     <tag>function</tag>
     <description>function()</description>
@@ -409,38 +409,38 @@ global module_name
 ####### Module name ##########
 # Check if current file is empty
 if $GEDIT_BASENAME != '' :
-	# extract fil name (no extension)
-	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  # extract fil name (no extension)
+  module_name = $GEDIT_BASENAME.split('.')[0].lower()
 else:
-	# Default module name
-	module_name = 'mymodule'
+  # Default module name
+  module_name = 'mymodule'
 
 >/**
  * Implementation of hook_access().
  */
 function $<return module_name>_access($op, $node, $account) {
-	switch ($op) {
-		case 'create':
-			return user_access('create ${2:my content type}', $account);
-			break;
-		case 'delete':
-		  if ((user_access('edit own ${2}', $account) && ($account->uid == $node->uid)) || (user_access('delete ${2}', $account)) {
-		    return TRUE;
-		  } else {
-				return FALSE;
-			}
-			break;
-		case 'update':
-		  if ((user_access('edit own ${2}', $account) && ($account->uid == $node->uid)) || (user_access('edit ${2}', $account)) {
-		    return TRUE;
-		  } else {
-				return FALSE;
-			}
-			break;
-		case 'view':
-			return user_access('view ${2}', $account);
-			break;
-	}
+  switch ($op) {
+    case 'create':
+      return user_access('create ${2:my content type}', $account);
+      break;
+    case 'delete':
+      if ((user_access('edit own ${2}', $account) && ($account->uid == $node->uid)) || (user_access('delete ${2}', $account)) {
+        return TRUE;
+      } else {
+        return FALSE;
+      }
+      break;
+    case 'update':
+      if ((user_access('edit own ${2}', $account) && ($account->uid == $node->uid)) || (user_access('edit ${2}', $account)) {
+        return TRUE;
+      } else {
+        return FALSE;
+      }
+      break;
+    case 'view':
+      return user_access('view ${2}', $account);
+      break;
+  }
 }]]></text>
     <tag>hook</tag>
     <description>hook_access()</description>
@@ -453,11 +453,11 @@ global module_name
 ####### Module name ##########
 # Check if current file is empty
 if $GEDIT_BASENAME != '' :
-	# extract fil name (no extension)
-	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  # extract fil name (no extension)
+  module_name = $GEDIT_BASENAME.split('.')[0].lower()
 else:
-	# Default module name
-	module_name = 'mymodule'
+  # Default module name
+  module_name = 'mymodule'
 
 >/**
  * Implementation of hook_block().
@@ -465,49 +465,49 @@ else:
 function $<return module_name>_block($op = 'list', $delta = 0, $edit = array()) {
   switch ($op) {
     case 'list':
-			$blocks[0] = array(
+      $blocks[0] = array(
         'info'       => t('${1:Title of block #1}'),
-				'cache'			 => ${2:BLOCK_CACHE_PER_ROLE | BLOCK_CACHE_PER_USER | BLOCK_CACHE_PER_PAGE | BLOCK_CACHE_GLOBAL | BLOCK_NO_CACHE},
+        'cache'       => ${2:BLOCK_CACHE_PER_ROLE | BLOCK_CACHE_PER_USER | BLOCK_CACHE_PER_PAGE | BLOCK_CACHE_GLOBAL | BLOCK_NO_CACHE},
         'status'     => ${3:TRUE},
         'weight'     => ${4:0},
-				'region'		 => '${5}',
+        'region'     => '${5}',
         'visibility' => ${6:1},
         'pages'      => '${7}',
       );
-			$blocks[1] = array(
+      $blocks[1] = array(
         'info'       => t('${11:Title of block #2}'),
-				'cache'			 => ${12:BLOCK_CACHE_PER_ROLE | BLOCK_CACHE_PER_USER | BLOCK_CACHE_PER_PAGE | BLOCK_CACHE_GLOBAL | BLOCK_NO_CACHE},
+        'cache'       => ${12:BLOCK_CACHE_PER_ROLE | BLOCK_CACHE_PER_USER | BLOCK_CACHE_PER_PAGE | BLOCK_CACHE_GLOBAL | BLOCK_NO_CACHE},
         'status'     => ${13:TRUE},
         'weight'     => ${14:0},
-				'region'		 => '${15}',
+        'region'     => '${15}',
         'visibility' => ${16:1},
         'pages'      => '${17}',
       );
       return $blocks;
-			break;
+      break;
 
     case 'configure':
       $form = array();
-			switch ($delta)	{
-				case 0:
-					# form code
-					break;
-				case 1:
-					# form code
-					break;
-			}
+      switch ($delta)  {
+        case 0:
+          # form code
+          break;
+        case 1:
+          # form code
+          break;
+      }
       return $form;
 
     case 'save':
-			switch ($delta)	{
-				case 0:
-					# form code
-					break;
-				case 1:
-					# form code
-					break;
-			}
-			break;
+      switch ($delta)  {
+        case 0:
+          # form code
+          break;
+        case 1:
+          # form code
+          break;
+      }
+      break;
 
     case 'view': default:
       switch ($delta) {
@@ -534,39 +534,39 @@ global module_name
 ####### Module name ##########
 # Check if current file is empty
 if $GEDIT_BASENAME != '' :
-	# extract fil name (no extension)
-	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  # extract fil name (no extension)
+  module_name = $GEDIT_BASENAME.split('.')[0].lower()
 else:
-	# Default module name
-	module_name = 'mymodule'
+  # Default module name
+  module_name = 'mymodule'
 
 >/**
  * Implementation of hook_comment().
  */
 function $<return module_name>_comment(&$a1, $op) {
-	switch ($op) {
-		case 'insert':
-			// $a1 = $form_values
-			break;
-		case 'update':
-			// $a1 = $form_values
-			break;
-		case 'view':
-			// $a1 = $comment
-			break;
-		case 'validate':
-			// $a1 = $form_values
-			break;
-		case 'publish':
-			// $a1 = $comment
-			break;
-		case 'unpublish':
-			// $a1 = $comment
-			break;
-		case 'delete':
-			// $a1 = $comment
-			break;
-	}
+  switch ($op) {
+    case 'insert':
+      // $a1 = $form_values
+      break;
+    case 'update':
+      // $a1 = $form_values
+      break;
+    case 'view':
+      // $a1 = $comment
+      break;
+    case 'validate':
+      // $a1 = $form_values
+      break;
+    case 'publish':
+      // $a1 = $comment
+      break;
+    case 'unpublish':
+      // $a1 = $comment
+      break;
+    case 'delete':
+      // $a1 = $comment
+      break;
+  }
 }]]></text>
     <tag>hook</tag>
     <description>hook_comment()</description>
@@ -579,17 +579,17 @@ global module_name
 ####### Module name ##########
 # Check if current file is empty
 if $GEDIT_BASENAME != '' :
-	# extract fil name (no extension)
-	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  # extract fil name (no extension)
+  module_name = $GEDIT_BASENAME.split('.')[0].lower()
 else:
-	# Default module name
-	module_name = 'mymodule'
+  # Default module name
+  module_name = 'mymodule'
 
 >/**
  * Implementation of hook_cron().
  */
 function $<return module_name>_cron() {
-	$0
+  $0
 }]]></text>
     <tag>hook</tag>
     <description>hook_cron()</description>
@@ -602,17 +602,17 @@ global module_name
 ####### Module name ##########
 # Check if current file is empty
 if $GEDIT_BASENAME != '' :
-	# extract fil name (no extension)
-	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  # extract fil name (no extension)
+  module_name = $GEDIT_BASENAME.split('.')[0].lower()
 else:
-	# Default module name
-	module_name = 'mymodule'
+  # Default module name
+  module_name = 'mymodule'
 
 >/**
  * Implementation of hook_delete().
  */
 function $<return module_name>_delete(&$node) {
-	db_query("DELETE FROM {${2:mytable}} WHERE nid = %d", $node->nid);
+  db_query("DELETE FROM {${2:mytable}} WHERE nid = %d", $node->nid);
 }]]></text>
     <tag>hook</tag>
     <description>hook_delete()</description>
@@ -625,36 +625,36 @@ global module_name
 ####### Module name ##########
 # Check if current file is empty
 if $GEDIT_BASENAME != '' :
-	# extract fil name (no extension)
-	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  # extract fil name (no extension)
+  module_name = $GEDIT_BASENAME.split('.')[0].lower()
 else:
-	# Default module name
-	module_name = 'mymodule'
+  # Default module name
+  module_name = 'mymodule'
 
 >/**
  * Implementation of hook_filter().
  */
 function $<return module_name>_filter($op, $delta = 0, $format = -1, $text = '', $cache_id = 0) {
-	switch ($op) {
-		case 'list':
+  switch ($op) {
+    case 'list':
       return array(0 => t('${2:filtername}'));
-			break;
-		case 'description':
+      break;
+    case 'description':
       return t('${3:description}');
-			break;
-		case 'no cache':
-			break;
-		case 'prepare':
-			// Do some change into $text
-			return $text;
-			break;
-		case 'process':
-			// Do some change into $text
-			return $text;
-			break;
-		case 'settings':
-			break;
-	}
+      break;
+    case 'no cache':
+      break;
+    case 'prepare':
+      // Do some change into $text
+      return $text;
+      break;
+    case 'process':
+      // Do some change into $text
+      return $text;
+      break;
+    case 'settings':
+      break;
+  }
 }]]></text>
     <tag>hook</tag>
     <description>hook_filter()</description>
@@ -667,18 +667,18 @@ global module_name
 ####### Module name ##########
 # Check if current file is empty
 if $GEDIT_BASENAME != '' :
-	# extract fil name (no extension)
-	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  # extract fil name (no extension)
+  module_name = $GEDIT_BASENAME.split('.')[0].lower()
 else:
-	# Default module name
-	module_name = 'mymodule'
+  # Default module name
+  module_name = 'mymodule'
 
 >/**
  * Implementation of hook_form_alter().
  */
 function $<return module_name>_form_alter(&$form, $form_state, $form_id) {
   if (isset($form['type']) && $form['type']['#value'] .'${2:_node_settings}' == $form_id) {
-		// Change or add some element into $form
+    // Change or add some element into $form
   }
 }]]></text>
     <tag>hook</tag>
@@ -692,11 +692,11 @@ global module_name
 ####### Module name ##########
 # Check if current file is empty
 if $GEDIT_BASENAME != '' :
-	# extract fil name (no extension)
-	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  # extract fil name (no extension)
+  module_name = $GEDIT_BASENAME.split('.')[0].lower()
 else:
-	# Default module name
-	module_name = 'mymodule'
+  # Default module name
+  module_name = 'mymodule'
 
 >/**
  * Implementation of hook_form().
@@ -706,8 +706,8 @@ function $<return module_name>_form(&$node, $form_state) {
 
   $form = array();
 
-	// Build Form with FAPI
-	$0
+  // Build Form with FAPI
+  $0
 
   return $form;
 }]]></text>
@@ -722,11 +722,11 @@ global module_name
 ####### Module name ##########
 # Check if current file is empty
 if $GEDIT_BASENAME != '' :
-	# extract fil name (no extension)
-	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  # extract fil name (no extension)
+  module_name = $GEDIT_BASENAME.split('.')[0].lower()
 else:
-	# Default module name
-	module_name = 'mymodule'
+  # Default module name
+  module_name = 'mymodule'
 
 >/**
  * Implementation of hook_help().
@@ -751,22 +751,22 @@ global module_name
 ####### Module name ##########
 # Check if current file is empty
 if $GEDIT_BASENAME != '' :
-	# extract fil name (no extension)
-	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  # extract fil name (no extension)
+  module_name = $GEDIT_BASENAME.split('.')[0].lower()
 else:
-	# Default module name
-	module_name = 'mymodule'
+  # Default module name
+  module_name = 'mymodule'
 
 >/**
  * Implementation of hook_insert().
  */
 function $<return module_name>_insert($node) {
-	db_query("INSERT INTO {${2:mytable}} 
-					 		('nid', 'extra')
-						VALUES
-							(%d, %d)",
-						$node->nid, $node->extra
-					);
+  db_query("INSERT INTO {${2:mytable}} 
+               ('nid', 'extra')
+            VALUES
+              (%d, %d)",
+            $node->nid, $node->extra
+          );
 }]]></text>
     <tag>hook</tag>
     <description>hook_insert()</description>
@@ -779,17 +779,17 @@ global module_name
 ####### Module name ##########
 # Check if current file is empty
 if $GEDIT_BASENAME != '' :
-	# extract fil name (no extension)
-	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  # extract fil name (no extension)
+  module_name = $GEDIT_BASENAME.split('.')[0].lower()
 else:
-	# Default module name
-	module_name = 'mymodule'
+  # Default module name
+  module_name = 'mymodule'
 
 >/**
  * Implementation of hook_install().
  */
 function $<return module_name>_install() {
-	// Install tables
+  // Install tables
   drupal_install_schema('${1}');
 }]]></text>
     <tag>hook</tag>
@@ -803,31 +803,31 @@ global module_name
 ####### Module name ##########
 # Check if current file is empty
 if $GEDIT_BASENAME != '' :
-	# extract fil name (no extension)
-	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  # extract fil name (no extension)
+  module_name = $GEDIT_BASENAME.split('.')[0].lower()
 else:
-	# Default module name
-	module_name = 'mymodule'
+  # Default module name
+  module_name = 'mymodule'
 
 >/**
  * Implementation of hook_link().
  */
 function $<return module_name>_link($type, $object, $teaser = FALSE) {
-	$links = array();
+  $links = array();
 
-	 $links['${2:linkname}'] = array(
+   $links['${2:linkname}'] = array(
     'title'      => t('${3:Title of link #1}'),
     'href'       => '${4:link/path}',
-    'query'      => '',	
+    'query'      => '',  
     'fragment'   => '',
     'attributes' => array(
-			'title' => t('${5:link description}'),
-			'class' => '',
-		),
-		'html'       => FALSE,
+      'title' => t('${5:link description}'),
+      'class' => '',
+    ),
+    'html'       => FALSE,
   );
 
-	return $links;
+  return $links;
 }
 ]]></text>
     <tag>hook</tag>
@@ -841,11 +841,11 @@ global module_name
 ####### Module name ##########
 # Check if current file is empty
 if $GEDIT_BASENAME != '' :
-	# extract fil name (no extension)
-	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  # extract fil name (no extension)
+  module_name = $GEDIT_BASENAME.split('.')[0].lower()
 else:
-	# Default module name
-	module_name = 'mymodule'
+  # Default module name
+  module_name = 'mymodule'
 
 >/**
  * Implementation of hook_menu().
@@ -855,25 +855,25 @@ function $<return module_name>_menu() {
 
   $items['${1:path/1}'] = array(
     'title'            => t('${2:title}'),
-		'description'      => t('${3:description}'),
+    'description'      => t('${3:description}'),
     'page callback'    => '${4:drupal_get_form}',
     'page arguments'   => array(${5:''}),
     'access callback'  => '${6}',
     'access arguments' => array(${7:''}),
-		'weight'           => ${8:0},
-		'menu_name'        => '${9:Navigation}',
+    'weight'           => ${8:0},
+    'menu_name'        => '${9:Navigation}',
     'type'             => ${10:MENU_NORMAL_ITEM | MENU_CALLBACK | MENU_SUGGESTED_ITEM | MENU_LOCAL_TASK | MENU_DEFAULT_LOCAL_TASK},
   );
   
   $items['${11:path/1}'] = array(
     'title'            => t('${12:title}'),
-		'description'      => t('${13:description}'),
+    'description'      => t('${13:description}'),
     'page callback'    => '${14:drupal_get_form}',
     'page arguments'   => array(${15:''}),
     'access callback'  => '${16}',
     'access arguments' => array(${17:''}),
-		'weight'           => ${18:0},
-		'menu_name'        => '${19:Navigation}',
+    'weight'           => ${18:0},
+    'menu_name'        => '${19:Navigation}',
     'type'             => ${20:MENU_NORMAL_ITEM | MENU_CALLBACK | MENU_SUGGESTED_ITEM | MENU_LOCAL_TASK | MENU_DEFAULT_LOCAL_TASK},
   );
   
@@ -890,63 +890,63 @@ global module_name
 ####### Module name ##########
 # Check if current file is empty
 if $GEDIT_BASENAME != '' :
-	# extract fil name (no extension)
-	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  # extract fil name (no extension)
+  module_name = $GEDIT_BASENAME.split('.')[0].lower()
 else:
-	# Default module name
-	module_name = 'mymodule'
+  # Default module name
+  module_name = 'mymodule'
 
 >/**
  * Implementation of hook_nodeapi().
  */
 function $<return module_name>_nodeapi(&$node, $op, $a3 = NULL, $a4 = NULL) {
-	switch ($op) {
-		case 'alter':
-			# code...
-			break;
-		case 'delete':
-			# code...
-			break;
-		case 'delete revision':
-			# code...
-			break;
-		case 'insert':
-			# code...
-			break;
-		case 'load':
-			# code...
-			break;
-		case 'prepare':
-			# code...
-			break;
-		case 'prepare translation':
-			# code...
-			break;
-		case 'print':
-			# code...
-			break;
-		case 'rss item':
-			# code...
-			break;
-		case 'search result':
-			# code...
-			break;
-		case 'presave':
-			# code...
-			break;
-		case 'update':
-			# code...
-			break;
-		case 'update index':
-			# code...
-			break;
-		case 'validate':
-			# code...
-			break;
-		case 'view':
-			# code...
-			break;
-	}
+  switch ($op) {
+    case 'alter':
+      # code...
+      break;
+    case 'delete':
+      # code...
+      break;
+    case 'delete revision':
+      # code...
+      break;
+    case 'insert':
+      # code...
+      break;
+    case 'load':
+      # code...
+      break;
+    case 'prepare':
+      # code...
+      break;
+    case 'prepare translation':
+      # code...
+      break;
+    case 'print':
+      # code...
+      break;
+    case 'rss item':
+      # code...
+      break;
+    case 'search result':
+      # code...
+      break;
+    case 'presave':
+      # code...
+      break;
+    case 'update':
+      # code...
+      break;
+    case 'update index':
+      # code...
+      break;
+    case 'validate':
+      # code...
+      break;
+    case 'view':
+      # code...
+      break;
+  }
 }]]></text>
     <tag>hook</tag>
     <description>hook_nodeapi()</description>
@@ -959,11 +959,11 @@ global module_name
 ####### Module name ##########
 # Check if current file is empty
 if $GEDIT_BASENAME != '' :
-	# extract fil name (no extension)
-	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  # extract fil name (no extension)
+  module_name = $GEDIT_BASENAME.split('.')[0].lower()
 else:
-	# Default module name
-	module_name = 'mymodule'
+  # Default module name
+  module_name = 'mymodule'
 
 >/**
  * Implementation of hook_node_grants().
@@ -982,18 +982,18 @@ global module_name
 ####### Module name ##########
 # Check if current file is empty
 if $GEDIT_BASENAME != '' :
-	# extract fil name (no extension)
-	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  # extract fil name (no extension)
+  module_name = $GEDIT_BASENAME.split('.')[0].lower()
 else:
-	# Default module name
-	module_name = 'mymodule'
+  # Default module name
+  module_name = 'mymodule'
 
 >/**
  * Implementation of hook_node_info().
  */
 function $<return module_name>_node_info() {
-	return array(
-		'$<return module_name>' => array(
+  return array(
+    '$<return module_name>' => array(
       'name'        => t('${1:Node name}'),
       'module'      => '$<return module_name>',
       'description' => t("${2:Node description}"),
@@ -1001,8 +1001,8 @@ function $<return module_name>_node_info() {
       'title_label' => t('${4:Title}'),
       'has_body'    => ${5:TRUE},
       'body_label'  => t('${6:Body}'),
-		),
-	);
+    ),
+  );
 }]]></text>
     <tag>hook</tag>
     <description>hook_node_info()</description>
@@ -1015,23 +1015,23 @@ global module_name
 ####### Module name ##########
 # Check if current file is empty
 if $GEDIT_BASENAME != '' :
-	# extract fil name (no extension)
-	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  # extract fil name (no extension)
+  module_name = $GEDIT_BASENAME.split('.')[0].lower()
 else:
-	# Default module name
-	module_name = 'mymodule'
+  # Default module name
+  module_name = 'mymodule'
 
 >/**
  * Implementation of hook_perm().
  */
 function $<return module_name>_perm() {
-	return array(
-		'create ${2:mycontent}',
-		'edit ${2}',
-		'edit own ${2}',
-		'delete ${2}',
-		'view ${2}',
-	);
+  return array(
+    'create ${2:mycontent}',
+    'edit ${2}',
+    'edit own ${2}',
+    'delete ${2}',
+    'view ${2}',
+  );
 }]]></text>
     <tag>hook</tag>
     <description>hook_perm()</description>
@@ -1044,11 +1044,11 @@ global module_name
 ####### Module name ##########
 # Check if current file is empty
 if $GEDIT_BASENAME != '' :
-	# extract fil name (no extension)
-	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  # extract fil name (no extension)
+  module_name = $GEDIT_BASENAME.split('.')[0].lower()
 else:
-	# Default module name
-	module_name = 'mymodule'
+  # Default module name
+  module_name = 'mymodule'
 
 >/**
  * Implementation of hook_schema().
@@ -1062,22 +1062,22 @@ function $<return module_name>_schema() {
         'type'        => '${5:serial}',
         'unsigned'    => ${6:TRUE},
         'not null'    => ${7:TRUE},
-			),
+      ),
       '${13}' => array(
         'description' => t('${14}'),
         'type'        => '${15:int}',
         'unsigned'    => ${16:TRUE},
         'not null'    => ${17:TRUE},
         'default'     => ${18:0},
-			),
+      ),
       '${23}' => array(
         'description' => t('${24}'),
         'type'        => '${25:varchar}',
         'length'      => ${26:32},
         'not null'    => ${27:TRUE},
         'default'     => '${28}',
-			),
-		),
+      ),
+    ),
     'primary key'     => array('${30}'),
   );
   return $schema;
@@ -1094,26 +1094,26 @@ global module_name
 ####### Module name ##########
 # Check if current file is empty
 if $GEDIT_BASENAME != '' :
-	# extract fil name (no extension)
-	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  # extract fil name (no extension)
+  module_name = $GEDIT_BASENAME.split('.')[0].lower()
 else:
-	# Default module name
-	module_name = 'mymodule'
+  # Default module name
+  module_name = 'mymodule'
 
 >/**
  * Implementation of hook_search().
  */
 function $<return module_name>_search($op = 'search', $keys = null) {
-	switch ($op) {
-		case 'name':
-			# code...
-			return t('${2:Content}');
-			break;
-		case 'reset':
-			# code...
-			break;
-		case 'search':
-			// Do operation for extract info
+  switch ($op) {
+    case 'name':
+      # code...
+      return t('${2:Content}');
+      break;
+    case 'reset':
+      # code...
+      break;
+    case 'search':
+      // Do operation for extract info
       $results[] = array(
         'link'      => url(''),
         'type'      => check_plain(''),
@@ -1125,15 +1125,15 @@ function $<return module_name>_search($op = 'search', $keys = null) {
         'score'     => $score / $total,
         'snippet'   => '',
       );
-			return $results;
-			break;
-		case 'status':
+      return $results;
+      break;
+    case 'status':
       return array(
-				'remaining' => $remaining,
-				'total'     => $total
-			);
-			break;
-	}
+        'remaining' => $remaining,
+        'total'     => $total
+      );
+      break;
+  }
 }]]></text>
     <tag>hook</tag>
     <description>hook_search()</description>
@@ -1146,43 +1146,43 @@ global module_name
 ####### Module name ##########
 # Check if current file is empty
 if $GEDIT_BASENAME != '' :
-	# extract fil name (no extension)
-	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  # extract fil name (no extension)
+  module_name = $GEDIT_BASENAME.split('.')[0].lower()
 else:
-	# Default module name
-	module_name = 'mymodule'
+  # Default module name
+  module_name = 'mymodule'
 
 >/**
  * Implementation of hook_taxonomy().
  */
 function $<return module_name>_taxonomy($op, $type, $array = NULL) {
-	switch ($type) {
-		// Term operation
-		case 'term':
-			switch ($op) {
-				case 'delete':
-					break;
-				case 'insert':
-				  return t('${3:description}');
-					break;
-				case 'update':
-					break;
-			}
-			break;
+  switch ($type) {
+    // Term operation
+    case 'term':
+      switch ($op) {
+        case 'delete':
+          break;
+        case 'insert':
+          return t('${3:description}');
+          break;
+        case 'update':
+          break;
+      }
+      break;
 
-		// Vocabulary operation
-		case 'vocabulary':
-			switch ($op) {
-				case 'delete':
-					break;
-				case 'insert':
-				  return t('${3:description}');
-					break;
-				case 'update':
-					break;
-			}
-			break;
-	}
+    // Vocabulary operation
+    case 'vocabulary':
+      switch ($op) {
+        case 'delete':
+          break;
+        case 'insert':
+          return t('${3:description}');
+          break;
+        case 'update':
+          break;
+      }
+      break;
+  }
 }]]></text>
     <tag>hook</tag>
     <description>hook_taxonomy()</description>
@@ -1195,42 +1195,42 @@ global module_name
 ####### Module name ##########
 # Check if current file is empty
 if $GEDIT_BASENAME != '' :
-	# extract fil name (no extension)
-	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  # extract fil name (no extension)
+  module_name = $GEDIT_BASENAME.split('.')[0].lower()
 else:
-	# Default module name
-	module_name = 'mymodule'
+  # Default module name
+  module_name = 'mymodule'
 
 >/**
  * Implementation of hook_theme().
  */
 function $<return module_name>_theme($existing, $type, $theme, $path) {
-	 return array(
+   return array(
     '${2:theme_name_a}' => array(
       'arguments'     => array('' => NULL),
-			'file'          => '',
-			'path'          => ,
-			'template'      => ,
-			'function'      => ,
-			'pattern'       => ,
-			'preprocess functions' => ,
-			'override preprocess functions' => ,
-			'type'          => ,
-			'theme path'    => ,
-			'theme paths'   => ,
+      'file'          => '',
+      'path'          => ,
+      'template'      => ,
+      'function'      => ,
+      'pattern'       => ,
+      'preprocess functions' => ,
+      'override preprocess functions' => ,
+      'type'          => ,
+      'theme path'    => ,
+      'theme paths'   => ,
     ),
     '${3:theme_name_b}' => array(
       'arguments'     => array('' => NULL),
-			'file'          => '',
-			'path'          => ,
-			'template'      => ,
-			'function'      => ,
-			'pattern'       => ,
-			'preprocess functions' => ,
-			'override preprocess functions' => ,
-			'type'          => ,
-			'theme path'    => ,
-			'theme paths'   => ,
+      'file'          => '',
+      'path'          => ,
+      'template'      => ,
+      'function'      => ,
+      'pattern'       => ,
+      'preprocess functions' => ,
+      'override preprocess functions' => ,
+      'type'          => ,
+      'theme path'    => ,
+      'theme paths'   => ,
     ),
   );
 }]]></text>
@@ -1245,11 +1245,11 @@ global module_name
 ####### Module name ##########
 # Check if current file is empty
 if $GEDIT_BASENAME != '' :
-	# extract fil name (no extension)
-	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  # extract fil name (no extension)
+  module_name = $GEDIT_BASENAME.split('.')[0].lower()
 else:
-	# Default module name
-	module_name = 'mymodule'
+  # Default module name
+  module_name = 'mymodule'
 
 >/**
  * Implementation of hook_uninstall().
@@ -1260,9 +1260,9 @@ function $<return module_name>_uninstall() {
   
   // Remove all variable into table
   $result = db_query('SELECT name FROM {variable} WHERE name LIKE "${1}_%"');
-	while ($row = db_fetch_object($result)) {
-		variable_del($row->name);
-	}
+  while ($row = db_fetch_object($result)) {
+    variable_del($row->name);
+  }
 }
 ]]></text>
     <tag>hook</tag>
@@ -1276,23 +1276,23 @@ global module_name
 ####### Module name ##########
 # Check if current file is empty
 if $GEDIT_BASENAME != '' :
-	# extract fil name (no extension)
-	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  # extract fil name (no extension)
+  module_name = $GEDIT_BASENAME.split('.')[0].lower()
 else:
-	# Default module name
-	module_name = 'mymodule'
+  # Default module name
+  module_name = 'mymodule'
 
 >/**
  * Implementation of hook_update().
  */
 function $<return module_name>_update($node) {
-	db_query("UPDATE {${2:mytable}} 
-					 	SET
-							'extra' = %d
-						WHERE
-							nid = %d",
-						$node->extra, $node->nid
-					);
+  db_query("UPDATE {${2:mytable}} 
+             SET
+              'extra' = %d
+            WHERE
+              nid = %d",
+            $node->extra, $node->nid
+          );
 }]]></text>
     <tag>hook</tag>
     <description>hook_update()</description>
@@ -1305,11 +1305,11 @@ global module_name
 ####### Module name ##########
 # Check if current file is empty
 if $GEDIT_BASENAME != '' :
-	# extract fil name (no extension)
-	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  # extract fil name (no extension)
+  module_name = $GEDIT_BASENAME.split('.')[0].lower()
 else:
-	# Default module name
-	module_name = 'mymodule'
+  # Default module name
+  module_name = 'mymodule'
 
 >/**
  * Implementation of hook_update_N().
@@ -1330,65 +1330,65 @@ global module_name
 ####### Module name ##########
 # Check if current file is empty
 if $GEDIT_BASENAME != '' :
-	# extract fil name (no extension)
-	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  # extract fil name (no extension)
+  module_name = $GEDIT_BASENAME.split('.')[0].lower()
 else:
-	# Default module name
-	module_name = 'mymodule'
+  # Default module name
+  module_name = 'mymodule'
 
 >/**
  * Implementation of hook_user().
  */
 function $<return module_name>_user($op, &$edit, &$account, $category = NULL) {
-	switch ($op) {
-		case 'after_update':
-			# code...
-			break;
-		case 'categories':
-			$categories = array(
-				'name'   => t(''),
-				'title'  => t(''),
-				'weight' => 0,
-			);
-			return $categories;
-			# code...
-			break;
-		case 'delete':
-			# code...
-			break;
-		case 'form':
-			$form = array();
-			# code...
-			return $form;
-			break;
-		case 'insert':
-			# code...
-			break;
-		case 'load':
-			# code...
-			break;
-		case 'login':
-			# code...
-			break;
-		case 'logout':
-			# code...
-			break;
-		case 'register':
-			# code...
-			break;
-		case 'submit':
-			# code...
-			break;
-		case 'update':
-			# code...
-			break;
-		case 'validate':
-			# code...
-			break;
-		case 'view':
-			# code...
-			break;
-	}
+  switch ($op) {
+    case 'after_update':
+      # code...
+      break;
+    case 'categories':
+      $categories = array(
+        'name'   => t(''),
+        'title'  => t(''),
+        'weight' => 0,
+      );
+      return $categories;
+      # code...
+      break;
+    case 'delete':
+      # code...
+      break;
+    case 'form':
+      $form = array();
+      # code...
+      return $form;
+      break;
+    case 'insert':
+      # code...
+      break;
+    case 'load':
+      # code...
+      break;
+    case 'login':
+      # code...
+      break;
+    case 'logout':
+      # code...
+      break;
+    case 'register':
+      # code...
+      break;
+    case 'submit':
+      # code...
+      break;
+    case 'update':
+      # code...
+      break;
+    case 'validate':
+      # code...
+      break;
+    case 'view':
+      # code...
+      break;
+  }
 }]]></text>
     <tag>hook</tag>
     <description>hook_user()</description>
@@ -1401,18 +1401,18 @@ global module_name
 ####### Module name ##########
 # Check if current file is empty
 if $GEDIT_BASENAME != '' :
-	# extract fil name (no extension)
-	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  # extract fil name (no extension)
+  module_name = $GEDIT_BASENAME.split('.')[0].lower()
 else:
-	# Default module name
-	module_name = 'mymodule'
+  # Default module name
+  module_name = 'mymodule'
 
 >/**
  * Implementation of hook_validate().
  */
 function $<return module_name>_validate($node, &$form) {
-	if(${2:false}) {
-		form_set_error('${3:form_element}', t('${4:Error message}.'));
+  if(${2:false}) {
+    form_set_error('${3:form_element}', t('${4:Error message}.'));
   }
 }]]></text>
     <tag>hook</tag>
@@ -1420,16 +1420,16 @@ function $<return module_name>_validate($node, &$form) {
   </snippet>
   <snippet>
     <text><![CDATA[if (${1:condition}) {
-	${0:# code...}
+  ${0:# code...}
 }]]></text>
     <tag>if</tag>
     <description>if ..</description>
   </snippet>
   <snippet>
     <text><![CDATA[if (${1:condition}) {
-	${2:# code...}
+  ${2:# code...}
 } else {
-	${3:# code...}
+  ${3:# code...}
 }
 ${0:# code...}]]></text>
     <tag>ifelse</tag>
@@ -1443,11 +1443,11 @@ global module_name
 ####### Module name ##########
 # Check if current file is empty
 if $GEDIT_BASENAME != '' :
-	# extract fil name (no extension)
-	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  # extract fil name (no extension)
+  module_name = $GEDIT_BASENAME.split('.')[0].lower()
 else:
-	# Default module name
-	module_name = 'mymodule'
+  # Default module name
+  module_name = 'mymodule'
 
 >; $$(echo 'I')d$
 name = $<return module_name>
@@ -1466,20 +1466,20 @@ global module_name
 ####### Module name ##########
 # Check if current file is empty
 if $GEDIT_BASENAME != '' :
-	# extract fil name (no extension)
-	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  # extract fil name (no extension)
+  module_name = $GEDIT_BASENAME.split('.')[0].lower()
 else:
-	# Default module name
-	module_name = 'mymodule'
+  # Default module name
+  module_name = 'mymodule'
 
 ><?php // $$(echo 'I')d$
 /**
  * Module:      $<return module_name>
- * Date:        $(3:date +%Y-%m-%d%t%k:%M)
- * Author:      $(4:whoami)
+ * Date:        $(date +%Y-%m-%d%t%k:%M)
+ * Author:      $(whoami)
  *
  * License:
- *	 ${1}
+ *   ${1}
  *   Copyright (C) $(date +%Y)  $(whoami)
  *
  *   This program is free software: you can redistribute it and/or modify
@@ -1501,7 +1501,7 @@ else:
  * Implementation of hook_install().
  */
 function $<return module_name>_install() {
-	// Install tables
+  // Install tables
   drupal_install_schema('$<return module_name>');
 }
 
@@ -1514,9 +1514,9 @@ function $<return module_name>_uninstall() {
   
   // Remove all variable into table
   $result = db_query('SELECT name FROM {variable} WHERE name LIKE "${1}_%"');
-	while ($row = db_fetch_object($result)) {
-		variable_del($row->name);
-	}
+  while ($row = db_fetch_object($result)) {
+    variable_del($row->name);
+  }
 }
 
 /**
@@ -1531,33 +1531,31 @@ function $<return module_name>_schema() {
         'type'        => '${5:serial}',
         'unsigned'    => ${6:TRUE},
         'not null'    => ${7:TRUE},
-			),
+      ),
       '${13}' => array(
         'description' => t('${14}'),
         'type'        => '${15:int}',
         'unsigned'    => ${16:TRUE},
         'not null'    => ${17:TRUE},
         'default'     => ${18:0},
-			),
+      ),
       '${23}' => array(
         'description' => t('${24}'),
         'type'        => '${25:varchar}',
         'length'      => ${26:32},
         'not null'    => ${27:TRUE},
         'default'     => '${28}',
-			),
-		),
-    'primary key'     => array('${30}'),
+      ),
+    ),
+    'primary key'     => array('${3}'),
   );
   return $schema;
-}
-
-]]></text>
+}]]></text>
     <tag>install</tag>
     <description>install</description>
   </snippet>
   <snippet>
-    <text><![CDATA[l(${1:$text}, ${2:$path}, array( 'attributes' => '${3}', 'query' => '${4}', 'fragment' => '${5}', 'absolute' => ${6:false}, 'html' => ${7:false},	'alias' => ${8:false}));]]></text>
+    <text><![CDATA[l(${1:$text}, ${2:$path}, array( 'attributes' => '${3}', 'query' => '${4}', 'fragment' => '${5}', 'absolute' => ${6:false}, 'html' => ${7:false},  'alias' => ${8:false}));]]></text>
     <tag>l</tag>
     <description>l()</description>
   </snippet>
@@ -1569,11 +1567,11 @@ global module_name
 ####### Module name ##########
 # Check if current file is empty
 if $GEDIT_BASENAME != '' :
-	# extract fil name (no extension)
-	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  # extract fil name (no extension)
+  module_name = $GEDIT_BASENAME.split('.')[0].lower()
 else:
-	# Default module name
-	module_name = 'mymodule'
+  # Default module name
+  module_name = 'mymodule'
 
 ><?php // $$(echo 'I')d$
 /**
@@ -1585,7 +1583,7 @@ else:
  *   ${2:description}
  *
  * License:
- *	 ${1}
+ *   ${1}
  *   Copyright (C) $(date +%Y)  $(whoami)
  *
  *   This program is free software: you can redistribute it and/or modify
@@ -1607,13 +1605,13 @@ else:
   </snippet>
   <snippet>
     <text><![CDATA[switch (${1:variable}) {
-	case '${2:value}':
-		${3:# code...}
-		break;
-		
-	default:
-		${0:# code...}
-		break;
+  case '${2:value}':
+    ${3:# code...}
+    break;
+    
+  default:
+    ${0:# code...}
+    break;
 }]]></text>
     <tag>switch</tag>
     <description>switch ..</description>
@@ -1631,11 +1629,11 @@ global module_name
 ####### Module name ##########
 # Check if current file is empty
 if $GEDIT_BASENAME != '' :
-	# extract fil name (no extension)
-	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  # extract fil name (no extension)
+  module_name = $GEDIT_BASENAME.split('.')[0].lower()
 else:
-	# Default module name
-	module_name = 'mymodule'
+  # Default module name
+  module_name = 'mymodule'
 
 >watchdog('$< return module_name >', '${1:message}', ${1:$variables}, ${2:WATCHDOG_DEBUG | WATCHDOG_INFO | WATCHDOG_NOTICE | WATCHDOG_WARNING | WATCHDOG_ERROR | WATCHDOG_ALERT  | WATCHDOG_EMERG }, '${3:link}')]]></text>
     <tag>watchdog</tag>
@@ -1643,7 +1641,7 @@ else:
   </snippet>
   <snippet>
     <text><![CDATA[while (${1:$a} <= ${2:10}) {
-	${0:# code...}
+  ${0:# code...}
 }]]></text>
     <tag>while</tag>
     <description>while ..</description>
