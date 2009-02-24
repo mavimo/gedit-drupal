@@ -1356,7 +1356,7 @@ function $<return module_name>_uninstall() {
   drupal_uninstall_schema('${1}');
   
   // Remove all variable into table
-  $result = db_query('SELECT name FROM {variable} WHERE name LIKE "${1}_%"');
+  $result = db_query('SELECT name FROM {variable} WHERE name LIKE "$<return module_name>_%"');
 	while ($row = db_fetch_object($result)) {
 		variable_del($row->name);
 	}
