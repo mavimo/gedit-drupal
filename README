@@ -25,11 +25,11 @@ This project contains Snippet for getid to have a rapid development for Drupal d
 			(gnome, Tangerine, ..), and copy into this folder (on scalable subfolder)
 			icon file:
 			
-				# sudo cp application-x-drupal-php.svg /usr/share/icon/ICONSET_NAME/scalable/mimetype/application-x-drupal-php.svg
+				# sudo cp application-x-drupal-php.svg /usr/share/icons/ICONSET_NAME/scalable/mimetype/application-x-drupal-php.svg
 			
 			after that regenerate iconset cache:
 			
-				# cd /usr/share/icon
+				# cd /usr/share/icons
 				# sudo gtk-update-icon-cache ICONSET_NAME
 
 	f)	Enable Snippet plugin from
