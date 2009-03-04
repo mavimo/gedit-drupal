@@ -53,6 +53,7 @@ fapi
     FAPI select
     FAPI textarea
     FAPI textfield
+    FAPI submit
 file
     file_copy()
     file_delete()
@@ -74,6 +75,7 @@ hook
     hook_help()
     hook_insert()
     hook_install()
+    hook_load()
     hook_link()
     hook_menu()
     hook_nodeapi()
@@ -88,6 +90,7 @@ hook
     hook_update_N()
     hook_user()
     hook_validate()
+    hook_view()
 l
     l()
 t
