@@ -276,8 +276,14 @@ else:
  * Implementation of hook_form_alter().
  */
 function $<return module_name>_form_alter(&$form, $form_state, $form_id) {
-  if (isset($form['type']) && $form['type']['#value'] .'${2:_node_settings}' == $form_id) {
-		// Change or add some element into $form
+  if ($form_id == 'node_type_form' && isset($form['identity']['type'])) {
+  	// Add configuration here
+  }
+  elseif (isset($form['type']) && isset($form['#node'])) {
+    if ($form['type']['#value'] .'_node_form' == $form_id) {
+    	$node = $form['#node'];
+    	// Add node-form info here
+    }
   }
 }]]></text>
     <tag>hook</tag>
@@ -360,12 +366,13 @@ else:
  * Implementation of hook_insert().
  */
 function $<return module_name>_insert($node) {
-	db_query("INSERT INTO {${2:mytable}} 
-					 		('nid', 'extra')
-						VALUES
-							(%d, %d)",
-						$node->nid, $node->extra
-					);
+	$data = new stdClass();
+	
+	drupal_write_record('${2:mytable}', $data);
+	
+	if(db_affected_rows()) {
+	  // Insert not occured
+	}
 }]]></text>
     <tag>hook</tag>
     <description>hook_insert()</description>
@@ -431,6 +438,30 @@ function $<return module_name>_link($type, $object, $teaser = FALSE) {
 ]]></text>
     <tag>hook</tag>
     <description>hook_link()</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[$<
+# Define global variable
+global module_name
+
+####### Module name ##########
+# Check if current file is empty
+if $GEDIT_BASENAME != '' :
+	# extract fil name (no extension)
+	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+else:
+	# Default module name
+	module_name = 'mymodule'
+
+>/**
+ * Implementation of hook_load().
+ */
+function $<return module_name>_load($node) {
+  $additions = db_fetch_object(db_query('SELECT * FROM {$<return module_name>} WHERE nid = %d', $node->nid));
+  return $additions;
+}]]></text>
+    <tag>hook</tag>
+    <description>hook_load()</description>
   </snippet>
   <snippet>
     <text><![CDATA[$<
@@ -885,13 +916,13 @@ else:
  * Implementation of hook_update().
  */
 function $<return module_name>_update($node) {
-	db_query("UPDATE {${2:mytable}} 
-					 	SET
-							'extra' = %d
-						WHERE
-							nid = %d",
-						$node->extra, $node->nid
-					);
+	$data = new stdClass();
+	
+	drupal_write_record('${2:mytable}', $data, array('${2:key}'));
+	
+	if(db_affected_rows()) {
+	  // update not occured
+	}
 }]]></text>
     <tag>hook</tag>
     <description>hook_update()</description>
@@ -1016,5 +1047,34 @@ function $<return module_name>_validate($node, &$form) {
 }]]></text>
     <tag>hook</tag>
     <description>hook_validate()</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[$<
+# Define global variable
+global module_name
+
+####### Module name ##########
+# Check if current file is empty
+if $GEDIT_BASENAME != '' :
+	# extract fil name (no extension)
+	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+else:
+	# Default module name
+	module_name = 'mymodule'
+
+>/**
+ * Implementation of hook_view().
+ */
+function $<return module_name>_validate($node, $teaser = FALSE, $page = FALSE) {
+	$node = node_prepare($node, $teaser);
+	 $node->content['$<return module_name>'] = array(
+    '#value' => $<1:'test'>,
+    '#weight' => $<2:1>,
+  );
+
+  return $node;
+}]]></text>
+    <tag>hook</tag>
+    <description>hook_view()</description>
   </snippet>
 </snippets>

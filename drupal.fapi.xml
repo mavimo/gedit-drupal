@@ -150,6 +150,16 @@ $form['#attributes'] = array('enctype' => "multipart/form-data");
   </snippet>
   <snippet>
     <text><![CDATA[$form['${1:name}'] = array(
+  '#type'          => 'submit',
+  '#title'         => t('${2:Title}'),
+	'#description'   => t('${3:Description}'),
+  '#weight'        => ${4:5},
+);]]></text>
+    <tag>fapi</tag>
+    <description>FAPI submit</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[$form['${1:name}'] = array(
   '#type'          => 'textarea',
   '#title'         => t('${2:Title}'),
 	'#description'   => t('${3:Description}'),

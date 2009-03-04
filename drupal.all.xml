@@ -299,6 +299,16 @@ $form['#attributes'] = array('enctype' => "multipart/form-data");
   </snippet>
   <snippet>
     <text><![CDATA[$form['${1:name}'] = array(
+  '#type'          => 'submit',
+  '#title'         => t('${2:Title}'),
+	'#description'   => t('${3:Description}'),
+  '#weight'        => ${4:5},
+);]]></text>
+    <tag>fapi</tag>
+    <description>FAPI submit</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[$form['${1:name}'] = array(
   '#type'          => 'textarea',
   '#title'         => t('${2:Title}'),
 	'#description'   => t('${3:Description}'),
@@ -774,8 +784,14 @@ else:
  * Implementation of hook_form_alter().
  */
 function $<return module_name>_form_alter(&$form, $form_state, $form_id) {
-  if (isset($form['type']) && $form['type']['#value'] .'${2:_node_settings}' == $form_id) {
-		// Change or add some element into $form
+  if ($form_id == 'node_type_form' && isset($form['identity']['type'])) {
+  	// Add configuration here
+  }
+  elseif (isset($form['type']) && isset($form['#node'])) {
+    if ($form['type']['#value'] .'_node_form' == $form_id) {
+    	$node = $form['#node'];
+    	// Add node-form info here
+    }
   }
 }]]></text>
     <tag>hook</tag>
@@ -929,6 +945,30 @@ function $<return module_name>_link($type, $object, $teaser = FALSE) {
 ]]></text>
     <tag>hook</tag>
     <description>hook_link()</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[$<
+# Define global variable
+global module_name
+
+####### Module name ##########
+# Check if current file is empty
+if $GEDIT_BASENAME != '' :
+	# extract fil name (no extension)
+	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+else:
+	# Default module name
+	module_name = 'mymodule'
+
+>/**
+ * Implementation of hook_load().
+ */
+function $<return module_name>_load($node) {
+  $additions = db_fetch_object(db_query('SELECT * FROM {$<return module_name>} WHERE nid = %d', $node->nid));
+  return $additions;
+}]]></text>
+    <tag>hook</tag>
+    <description>hook_load()</description>
   </snippet>
   <snippet>
     <text><![CDATA[$<
@@ -1530,6 +1570,35 @@ else:
 	module_name = 'mymodule'
 
 >/**
+ * Implementation of hook_view().
+ */
+function $<return module_name>_validate($node, $teaser = FALSE, $page = FALSE) {
+	$node = node_prepare($node, $teaser);
+	 $node->content['$<return module_name>'] = array(
+    '#value' => $<1:'test'>,
+    '#weight' => $<2:1>,
+  );
+
+  return $node;
+}]]></text>
+    <tag>hook</tag>
+    <description>hook_view()</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[$<
+# Define global variable
+global module_name
+
+####### Module name ##########
+# Check if current file is empty
+if $GEDIT_BASENAME != '' :
+	# extract fil name (no extension)
+	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+else:
+	# Default module name
+	module_name = 'mymodule'
+
+>/**
  * Implementation of hook_views_api.
  */
 function $<return module_name>_views_api() {
@@ -1729,7 +1798,7 @@ function $<return module_name>_uninstall() {
   drupal_uninstall_schema('$<return module_name>');
   
   // Remove all variable into table
-  $result = db_query('SELECT name FROM {variable} WHERE name LIKE "${1}_%"');
+  $result = db_query('SELECT name FROM {variable} WHERE name LIKE "$<return module_name>_%"');
 	while ($row = db_fetch_object($result)) {
 		variable_del($row->name);
 	}
