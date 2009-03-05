@@ -1065,7 +1065,7 @@ else:
 >/**
  * Implementation of hook_view().
  */
-function $<return module_name>_validate($node, $teaser = FALSE, $page = FALSE) {
+function $<return module_name>_view($node, $teaser = FALSE, $page = FALSE) {
 	$node = node_prepare($node, $teaser);
 	 $node->content['$<return module_name>'] = array(
     '#value' => $<1:'test'>,
