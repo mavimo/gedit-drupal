@@ -15,7 +15,7 @@ mkdir -p ./build/tmp/drupal-snippet/usr/share/mime/packages
 cp ./drupal-mime.xml ./build/tmp/drupal-snippet/usr/share/mime/packages/druapl.mime.xml
 
 # Copy Snippets
-mkdir -p ./build/tmp/gdrupal-snippet/usr/share/gedit-2/gmate/snippets
+mkdir -p ./build/tmp/drupal-snippet/usr/share/gedit-2/snippets
 cp -r ./drupal.all.xml ./build/tmp/drupal-snippet/usr/share/gedit-2/snippets/drupal.xml
 
 # Copy icons
