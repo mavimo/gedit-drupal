@@ -209,4 +209,29 @@ function $<return module_name>_views_handlers() {
     <tag>views</tag>
     <description>hook_views_handler()</description>
   </snippet>
+  <snippet>
+    <text><![CDATA[$<
+# Define global variable
+global module_name
+
+####### Module name ##########
+# Check if current file is empty
+if $GEDIT_BASENAME != '' :
+	# extract fil name (no extension)
+	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+else:
+	# Default module name
+	module_name = 'mymodule'
+
+>/**
+ * Implementation of hook_views_handlers().
+ */
+function $<return module_name>_views_default_views() {
+  $view = new view;
+  
+  return $view;
+}]]></text>
+    <tag>views</tag>
+    <description>hook_views_default_views()</description>
+  </snippet>
 </snippets>

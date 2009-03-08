@@ -423,6 +423,31 @@ class $<return module_name>_handler_field_${5:field-type} extends views_handler_
     <description>field handler</description>
   </snippet>
   <snippet>
+    <text><![CDATA[$<
+# Define global variable
+global module_name
+
+####### Module name ##########
+# Check if current file is empty
+if $GEDIT_BASENAME != '' :
+	# extract fil name (no extension)
+	module_name = $GEDIT_BASENAME.split('.')[0].lower()
+else:
+	# Default module name
+	module_name = 'mymodule'
+
+>/**
+ * Implementation of hook_views_handlers().
+ */
+function $<return module_name>_views_default_views() {
+  $view = new view;
+  
+  return $view;
+}]]></text>
+    <tag>views</tag>
+    <description>hook_views_default_views()</description>
+  </snippet>
+  <snippet>
     <text><![CDATA[file_copy(${1:&$source}, ${2:$dest}, ${3:FILE_EXISTS_REPLACE | FILE_EXISTS_RENAME | FILE_EXISTS_ERROR});]]></text>
     <tag>file</tag>
     <description>file_copy()</description>
