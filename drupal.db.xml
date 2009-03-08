@@ -26,6 +26,11 @@
     <description>db_set_active()</description>
   </snippet>
   <snippet>
+    <text><![CDATA[db_affected_rows();]]></text>
+    <tag>db</tag>
+    <description>db_affected_rows()</description>
+  </snippet>
+  <snippet>
     <text><![CDATA[drupal_write_record('${1:table}', ${2:$object}, array('${3:update_key}'));]]></text>
     <tag>db</tag>
     <description>drupal_write_record()</description>

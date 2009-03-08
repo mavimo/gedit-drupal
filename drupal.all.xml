@@ -49,6 +49,11 @@
     <description>db_set_active()</description>
   </snippet>
   <snippet>
+    <text><![CDATA[db_affected_rows();]]></text>
+    <tag>db</tag>
+    <description>db_affected_rows()</description>
+  </snippet>
+  <snippet>
     <text><![CDATA[do {
   ${0:# code...}
 } while (${1:$a <= 10});]]></text>
