@@ -1,0 +1,11 @@
+Package: drupal-snippet
+Version: 0.9-ubuntu1
+Architecture: all
+Maintainer: Marco Vito Moscaritolo
+Installed-Size: 828
+Priority: optional
+Depends: gedit, gedit-plugins
+Section: gnome
+Description: Gedit customization to Drupal developer
+ This package contains a collection of plugins and gtksourceview improvements to
+ make Gedit more powerfull to develop especially Drupal modules.

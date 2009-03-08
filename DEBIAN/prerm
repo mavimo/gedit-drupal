@@ -1,0 +1,2 @@
+#!/bin/sh
+mv /usr/share/gtksourceview-2.0/language-specs/drupal.lang /usr/share/gtksourceview-2.0/language-specs/drupal.lang.bak
