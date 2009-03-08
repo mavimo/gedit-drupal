@@ -1,0 +1,5 @@
+#!/bin/sh
+# Create new lang and mimetype
+update-mime-database /usr/share/mime
+# Setup icon
+gtk-update-icon-cache /usr/share/icons/gnome
