@@ -32,6 +32,7 @@ db
     db_query_range()
     db_set_active()
     drupal_write_record()
+    db_affected_rows()
 drupal
     drupal_add_css()
     drupal_add_js( inline )
@@ -102,6 +103,7 @@ views
     hook_views_api()
     hook_views_data()
     hook_views_handler()
+    hook_views_default_views()
 watchdog
     watchdog()
 
