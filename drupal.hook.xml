@@ -1041,7 +1041,7 @@ else:
  * Implementation of hook_validate().
  */
 function $<return module_name>_validate($node, &$form) {
-  if(${2:false}) {
+  if(${2:FALSE}) {
     form_set_error('${3:form_element}', t('${4:Error message}.'));
   }
 }]]></text>

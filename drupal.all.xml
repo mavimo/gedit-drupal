@@ -214,8 +214,8 @@ else:
   '#title'         => t('${2:Title}'),
   '#description'   => t('${3:Description}'),
   '#weight'        => ${4:0},
-  '#collapsible'   => ${5:true},
-  '#collapsed'     => ${6:false},
+  '#collapsible'   => ${5:TRUE},
+  '#collapsed'     => ${6:FALSE},
 );]]></text>
     <tag>fapi</tag>
     <description>FAPI fieldset</description>
@@ -262,7 +262,7 @@ $form['#attributes'] = array('enctype' => "multipart/form-data");
   '#weight'        => ${4:0},
   '#size'          => ${5:60},
   '#maxlength'     => ${6:128},
-  '#required'      => ${7:true},
+  '#required'      => ${7:TRUE},
 );]]></text>
     <tag>fapi</tag>
     <description>FAPI password</description>
@@ -290,7 +290,7 @@ $form['#attributes'] = array('enctype' => "multipart/form-data");
   '#title'         => t('${2:Title}'),
   '#description'   => t('${3:Description}'),
   '#weight'        => ${4:5},
-  '#required'      => ${5:true},
+  '#required'      => ${5:TRUE},
   '#default_value' => $(6:echo '$node->'${1}),
   '#options'       => ${7:array(
     'value1' => t('Description 1'),
@@ -317,7 +317,7 @@ $form['#attributes'] = array('enctype' => "multipart/form-data");
   '#title'         => t('${2:Title}'),
   '#description'   => t('${3:Description}'),
   '#weight'        => ${4:5},
-  '#required'      => ${5:true},
+  '#required'      => ${5:TRUE},
   '#default_value' => $(6:echo '$node->'${1}),
   '#maxlength'     => ${7:128},
 );]]></text>
@@ -330,7 +330,7 @@ $form['#attributes'] = array('enctype' => "multipart/form-data");
   '#title'         => t('${2:Title}'),
   '#description'   => t('${3:Description}'),
   '#weight'        => ${4:5},
-  '#required'      => ${5:true},
+  '#required'      => ${5:TRUE},
   '#default_value' => $(6:echo '$node->'${1}),
   '#maxlength'     => ${7:128},
 );]]></text>
@@ -1577,7 +1577,7 @@ else:
  * Implementation of hook_validate().
  */
 function $<return module_name>_validate($node, &$form) {
-  if(${2:false}) {
+  if(${2:FALSE}) {
     form_set_error('${3:form_element}', t('${4:Error message}.'));
   }
 }]]></text>
@@ -1870,7 +1870,7 @@ function $<return module_name>_schema() {
     <description>install</description>
   </snippet>
   <snippet>
-    <text><![CDATA[l(${1:$text}, ${2:$path}, array( 'attributes' => '${3}', 'query' => '${4}', 'fragment' => '${5}', 'absolute' => ${6:false}, 'html' => ${7:false},  'alias' => ${8:false}));]]></text>
+    <text><![CDATA[l(${1:$text}, ${2:$path}, array( 'attributes' => '${3}', 'query' => '${4}', 'fragment' => '${5}', 'absolute' => ${6:FALSE}, 'html' => ${7:FALSE},  'alias' => ${8:FALSE}));]]></text>
     <tag>l</tag>
     <description>l()</description>
   </snippet>
