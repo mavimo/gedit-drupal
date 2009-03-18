@@ -1,7 +1,7 @@
 Package: drupal-snippet
-Version: 0.9.2-ubuntu1
+Version: 0.9.3-ubuntu1
 Architecture: all
-Maintainer: Marco Vito Moscaritolo
+Maintainer: Marco Vito Moscaritolo < marco@mavimo.org >
 Installed-Size: 828
 Priority: optional
 Depends: gedit, gedit-plugins
