@@ -19,7 +19,7 @@ mkdir -p ./build/tmp/drupal-snippet/usr/share/gedit-2/snippets
 cp -r ./drupal.all.xml ./build/tmp/drupal-snippet/usr/share/gedit-2/snippets/drupal.xml
 
 # Copy icons
-mkdir -p ./build/tmp/drupal-snippet/usr/share/icons/gnome/scalable/mimetype/
+mkdir -p ./build/tmp/drupal-snippet/usr/share/icons/gnome/scalable/mimetypes/
 cp application-x-drupal-php.svg ./build/tmp/drupal-snippet/usr/share/icons/gnome/scalable/mimetypes/application-x-drupal-php.svg
 
 # Copy documentation
