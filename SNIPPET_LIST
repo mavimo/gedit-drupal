@@ -73,6 +73,7 @@ hook
     hook_filter
     hook_form_alter()
     hook_form()
+    hook_forms()
     hook_help()
     hook_insert()
     hook_install()

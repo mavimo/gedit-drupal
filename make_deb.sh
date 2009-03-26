@@ -12,11 +12,11 @@ cp ./drupal.lang ./build/tmp/drupal-snippet/usr/share/gtksourceview-2.0/language
 
 # Copy mime type
 mkdir -p ./build/tmp/drupal-snippet/usr/share/mime/packages
-cp ./drupal-mime.xml ./build/tmp/drupal-snippet/usr/share/mime/packages/druapl.mime.xml
+cp ./drupal.mime.xml ./build/tmp/drupal-snippet/usr/share/mime/packages/druapl.mime.xml
 
 # Copy Snippets
 mkdir -p ./build/tmp/drupal-snippet/usr/share/gedit-2/snippets
-cp -r ./drupal.all.xml ./build/tmp/drupal-snippet/usr/share/gedit-2/snippets/drupal.xml
+cp -r ./drupal.xml ./build/tmp/drupal-snippet/usr/share/gedit-2/snippets/drupal.xml
 
 # Copy icons
 mkdir -p ./build/tmp/drupal-snippet/usr/share/icons/gnome/scalable/mimetypes/

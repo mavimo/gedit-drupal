@@ -7,7 +7,7 @@ This project contains Snippet for getid to have a rapid development for Drupal d
 				# mkdir gedit-snippet
 				# cd gedit-snippet
 				# git init
-				# git clone git://github.com:mavimo/drupal-snippet.git
+				# git clone git://github.com/mavimo/drupal-snippet.git
 
 	b)	Copy language definition into /usr/share/gtksourceview-2.0/language-specs/
 
@@ -15,7 +15,7 @@ This project contains Snippet for getid to have a rapid development for Drupal d
 
 	c)	Create a new mimetype into your machine
 
-				# sudo cp drupal-mime.xml /usr/share/mime/packages/drupal.mime.xml
+				# sudo cp drupal.mime.xml /usr/share/mime/packages/drupal.mime.xml
 
 	d)	Update mimetype database
 
