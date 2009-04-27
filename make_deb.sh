@@ -19,6 +19,10 @@ cp ./drupal-theme.mime.xml ./build/tmp/gedit-drupal/usr/share/mime/packages/drup
 mkdir -p ./build/tmp/gedit-drupal/usr/share/gedit-2/plugins/snippets
 cp -r ./drupal.xml ./build/tmp/gedit-drupal/usr/share/gedit-2/plugins/snippets/drupal.xml
 
+# Copy mkmodule ================================================================
+mkdir -p ./build/tmp/gedit-drupal/usr/sbin
+cp mkmodule ./build/tmp/gedit-drupal/usr/sbin/mkmodule
+
 # Copy icons ===================================================================
 mkdir -p ./build/tmp/gedit-drupal/usr/share/icons/gnome/scalable/mimetypes/
 cp application-x-drupal-php.svg ./build/tmp/gedit-drupal/usr/share/icons/gnome/scalable/mimetypes/application-x-drupal-php.svg

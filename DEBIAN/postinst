@@ -3,3 +3,7 @@
 update-mime-database /usr/share/mime
 # Setup icon
 gtk-update-icon-cache /usr/share/icons/gnome
+# made mkmodule executable
+chown root:root /usr/sbin/mkmodule
+chmod 555 /usr/sbin/mkmodule
+

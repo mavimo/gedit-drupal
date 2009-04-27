@@ -1,0 +1,19 @@
+#!/bin/sh
+MODULENAME=$1
+
+# Create folder
+mkdir $MODULENAME
+mkdir $MODULENAME/translation
+
+# Create file
+touch $MODULENAME/README
+touch $MODULENAME/INSTALL
+touch $MODULENAME/LICENSE
+echo  "info"    > $MODULENAME/$MODULENAME.info
+echo  "install" > $MODULENAME/$MODULENAME.install
+echo  "module"  > $MODULENAME/$MODULENAME.module
+
+# Open file whit gedit
+gedit $MODULENAME/$MODULENAME.info \
+      $MODULENAME/$MODULENAME.install \
+      $MODULENAME/$MODULENAME.module
