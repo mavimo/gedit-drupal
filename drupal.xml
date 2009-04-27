@@ -1,62 +1,62 @@
 <?xml version='1.0' encoding='utf-8'?>
 <snippets language="drupal">
-  <snippet>
+  <snippet id="array">
     <text><![CDATA[array('${1:key}' => '${2:$value}');]]></text>
     <tag>array</tag>
     <description>array</description>
   </snippet>
-  <snippet>
+  <snippet id="while">
     <text><![CDATA[while (${1:$a} <= ${2:10}) {
 	${0:# code...}
 }]]></text>
     <tag>while</tag>
     <description>array</description>
   </snippet>
-  <snippet>
+  <snippet id="case">
     <text><![CDATA[case '${1:variable}':
 	${0:# code...}
 	break;]]></text>
     <tag>case</tag>
     <description>case ..</description>
   </snippet>
-  <snippet>
+  <snippet id="file-check">
     <text><![CDATA[check_file(${1:$filename})]]></text>
     <tag>file</tag>
     <description>check_file()</description>
   </snippet>
-  <snippet>
+  <snippet id="db-fetch-array">
     <text><![CDATA[db_fetch_array(${1:$result});]]></text>
     <tag>db</tag>
     <description>db_fetch_array()</description>
   </snippet>
-  <snippet>
+  <snippet id="db-fetch-object">
     <text><![CDATA[db_fetch_object(${1:$result});]]></text>
     <tag>db</tag>
     <description>db_fetch_object()</description>
   </snippet>
-  <snippet>
+  <snippet id="db-query">
     <text><![CDATA[$results = db_query("");]]></text>
     <tag>db</tag>
     <description>db_query()</description>
   </snippet>
-  <snippet>
+  <snippet id="db-query-range">
     <text><![CDATA[db_query_range(${1:""}, ${2:$from}, ${4:$count});]]></text>
     <tag>db</tag>
     <description>db_query_range()</description>
   </snippet>
-  <snippet>
+  <snippet id="db-set-active">
     <text><![CDATA[db_set_active('${1:default}');]]></text>
     <tag>db</tag>
     <description>db_set_active()</description>
   </snippet>
-  <snippet>
+  <snippet id="do-while">
     <text><![CDATA[do {
 	${0:# code...}
 } while (${1:$a <= 10});]]></text>
     <tag>do</tag>
     <description>do .. while ..</description>
   </snippet>
-  <snippet>
+  <snippet id="drupal-add-css">
     <text><![CDATA[$<
 # Define global variable
 global module_name
@@ -74,7 +74,7 @@ else:
     <tag>drupal</tag>
     <description>drupal_add_css()</description>
   </snippet>
-  <snippet>
+  <snippet id="drupal-add-js-inline">
     <text><![CDATA[drupal_add_js('
 if (Drupal.jsEnabled) {
 	$(echo '$')(document).ready(function() {
@@ -84,7 +84,7 @@ if (Drupal.jsEnabled) {
     <tag>drupal</tag>
     <description>drupal_add_js( inline )</description>
   </snippet>
-  <snippet>
+  <snippet id="drupal-add-js-module">
     <text><![CDATA[$<
 # Define global variable
 global module_name
@@ -102,7 +102,7 @@ else:
     <tag>drupal</tag>
     <description>drupal_add_js( module )</description>
   </snippet>
-  <snippet>
+  <snippet id="drupal-add-js-settings">
     <text><![CDATA[$<
 # Define global variable
 global module_name
@@ -120,36 +120,36 @@ else:
     <tag>drupal</tag>
     <description>drupal_add_js( settings )</description>
   </snippet>
-  <snippet>
+  <snippet id="drupal-json">
     <text><![CDATA[drupal_json(${0:$var});]]></text>
     <tag>drupal</tag>
     <description>drupal_json()</description>
   </snippet>
-  <snippet>
+  <snippet id="drupal-set-message">
     <text><![CDATA[drupal_set_message(t("${1:message}"), '${2:status | warning | error}', ${3:$repeat});]]></text>
     <tag>drupal</tag>
     <description>drupal_set_message()</description>
   </snippet>
-  <snippet>
+  <snippet id="drupal-write-record">
     <text><![CDATA[drupal_write_record('${1:table}', ${2:$object}, array('${3:update_key}' => '${4:value}'));]]></text>
     <tag>db</tag>
     <description>drupal_write_record()</description>
   </snippet>
-  <snippet>
+  <snippet id="else">
     <text><![CDATA[else {
 	${0:# code...}
 }]]></text>
     <tag>else</tag>
     <description>else ..</description>
   </snippet>
-  <snippet>
+  <snippet id="elseif">
     <text><![CDATA[elseif (${1:condition}) {
 	${0:# code...}	
 }]]></text>
     <tag>elseif</tag>
     <description>elseif ..</description>
   </snippet>
-  <snippet>
+  <snippet id="fapi-button">
     <text><![CDATA[$form['${1:name}'] = array(
   '#type'          => 'button',
   '#value'         => t('${2:Title}'),
@@ -158,7 +158,7 @@ else:
     <tag>fapi</tag>
     <description>FAPI button</description>
   </snippet>
-  <snippet>
+  <snippet id="fapi-checkbox">
     <text><![CDATA[$form['${1:name}'] = array(
   '#type'          => 'checkbox',
   '#title'         => t('${2:Title}'),
@@ -170,7 +170,7 @@ else:
     <tag>fapi</tag>
     <description>FAPI checkbox</description>
   </snippet>
-  <snippet>
+  <snippet id="fapi-checkboxes">
     <text><![CDATA[$form['${1:name}'] = array(
   '#type'          => 'checkboxs',
   '#title'         => t('${2:Title}'),
@@ -187,7 +187,7 @@ else:
     <tag>fapi</tag>
     <description>FAPI checkboxes</description>
   </snippet>
-  <snippet>
+  <snippet id="fapi-date">
     <text><![CDATA[$form['${1:name}'] = array(
   '#type'          => 'date',
   '#title'         => t('${2:Title}'),
@@ -204,7 +204,7 @@ else:
     <tag>fapi</tag>
     <description>FAPI date</description>
   </snippet>
-  <snippet>
+  <snippet id="fapi-fieldset">
     <text><![CDATA[$form['${1:name}'] = array(
   '#type'          => 'fieldset',
   '#title'         => t('${2:Title}'),
@@ -216,7 +216,7 @@ else:
     <tag>fapi</tag>
     <description>FAPI fieldset</description>
   </snippet>
-  <snippet>
+  <snippet id="fapi-file">
     <text><![CDATA[$form['${1:name}'] = array(
   '#type'          => 'file',
   '#title'         => t('${2:Title}'),
@@ -230,7 +230,7 @@ $form['#attributes'] = array('enctype' => "multipart/form-data");
     <tag>fapi</tag>
     <description>FAPI file</description>
   </snippet>
-  <snippet>
+  <snippet id="fapi-hidden">
     <text><![CDATA[$form['${1:name}'] = array(
 	'#type'          => 'hidden',
 	'#value'         => '${2:value}',
@@ -238,7 +238,7 @@ $form['#attributes'] = array('enctype' => "multipart/form-data");
     <tag>fapi</tag>
     <description>FAPI hidden</description>
   </snippet>
-  <snippet>
+  <snippet id="fapi-markup">
     <text><![CDATA[$form['${1:name}'] = array(
 	'#type'          => 'markup',
 	'#value'         => '${2:value}',
@@ -250,7 +250,7 @@ $form['#attributes'] = array('enctype' => "multipart/form-data");
     <tag>fapi</tag>
     <description>FAPI markup</description>
   </snippet>
-  <snippet>
+  <snippet id="fapi-password">
     <text><![CDATA[$form['${1:name}'] = array(
   '#type'          => 'password',
   '#title'         => t('${2:Title}'),
@@ -263,7 +263,7 @@ $form['#attributes'] = array('enctype' => "multipart/form-data");
     <tag>fapi</tag>
     <description>FAPI password</description>
   </snippet>
-  <snippet>
+  <snippet id="fapi-radios">
     <text><![CDATA[$form['${1:name}'] = array(
   '#type'          => 'radios',
   '#title'         => t('${2:Title}'),
@@ -280,7 +280,7 @@ $form['#attributes'] = array('enctype' => "multipart/form-data");
     <tag>fapi</tag>
     <description>FAPI radios</description>
   </snippet>
-  <snippet>
+  <snippet id="fapi-select">
     <text><![CDATA[$form['${1:name}'] = array(
   '#type'          => 'select',
   '#title'         => t('${2:Title}'),
@@ -297,7 +297,7 @@ $form['#attributes'] = array('enctype' => "multipart/form-data");
     <tag>fapi</tag>
     <description>FAPI select</description>
   </snippet>
-  <snippet>
+  <snippet id="fapi-subimt">
     <text><![CDATA[$form['${1:name}'] = array(
   '#type'          => 'submit',
   '#value'         => t('${2:Submit}'),
@@ -306,7 +306,7 @@ $form['#attributes'] = array('enctype' => "multipart/form-data");
     <tag>fapi</tag>
     <description>FAPI submit</description>
   </snippet>
-  <snippet>
+  <snippet id="fapi-textarea">
     <text><![CDATA[$form['${1:name}'] = array(
   '#type'          => 'textarea',
   '#title'         => t('${2:Title}'),
@@ -319,7 +319,7 @@ $form['#attributes'] = array('enctype' => "multipart/form-data");
     <tag>fapi</tag>
     <description>FAPI textarea</description>
   </snippet>
-  <snippet>
+  <snippet id="fapi-textfield">
     <text><![CDATA[$form['${1:name}'] = array(
   '#type'          => 'textfield',
   '#title'         => t('${2:Title}'),
@@ -332,7 +332,7 @@ $form['#attributes'] = array('enctype' => "multipart/form-data");
     <tag>fapi</tag>
     <description>FAPI textfield</description>
   </snippet>
-  <snippet>
+  <snippet id="views-field">
     <text><![CDATA[$<
 # Define global variable
 global module_name
@@ -368,7 +368,7 @@ $data['$<return module_name>']['${21:field}'] = array(
     <tag>views</tag>
     <description>field</description>
   </snippet>
-  <snippet>
+  <snippet id="views-field-handler">
     <text><![CDATA[$<
 # Define global variable
 global module_name
@@ -422,51 +422,51 @@ class $<return module_name>_handler_field_${5:field-type} extends views_handler_
     <tag>views</tag>
     <description>field handler</description>
   </snippet>
-  <snippet>
+  <snippet id="file-copy">
     <text><![CDATA[file_copy(${1:&$source}, ${2:$dest}, ${3:FILE_EXISTS_REPLACE | FILE_EXISTS_RENAME | FILE_EXISTS_ERROR});]]></text>
     <tag>file</tag>
     <description>file_copy()</description>
   </snippet>
-  <snippet>
+  <snippet id="file-delete">
     <text><![CDATA[file_delete(${1:&$source});]]></text>
     <tag>file</tag>
     <description>file_delete()</description>
   </snippet>
-  <snippet>
+  <snippet id="file-destination">
     <text><![CDATA[file_destination(${1:$destination}, ${2:FILE_EXISTS_REPLACE | FILE_EXISTS_RENAME | FILE_EXISTS_ERROR});]]></text>
     <tag>file</tag>
     <description>file_destination()</description>
   </snippet>
-  <snippet>
+  <snippet id="file-move">
     <text><![CDATA[file_move(${1:&$source}, ${2:$dest}, ${3:FILE_EXISTS_REPLACE | FILE_EXISTS_RENAME | FILE_EXISTS_ERROR});]]></text>
     <tag>file</tag>
     <description>file_move()</description>
   </snippet>
-  <snippet>
+  <snippet id="file-save-upload">
     <text><![CDATA[file_save_upload(${1:$source}, ${2:$validators}, ${3:$dest}, ${3:FILE_EXISTS_REPLACE | FILE_EXISTS_RENAME | FILE_EXISTS_ERROR})]]></text>
     <tag>file</tag>
     <description>file_save_upload()</description>
   </snippet>
-  <snippet>
+  <snippet id="for">
     <text><![CDATA[for (${1:$i} = ${2:0}; ${1} < ${3:10}; ${1}++) {
 	${0:# code...}
 }]]></text>
     <tag>for</tag>
     <description>for ..</description>
   </snippet>
-  <snippet>
-    <text><![CDATA[foreach (${1:$variable} as ${2:$key} => ${3:$value}) {
+  <snippet id="foreach">
+    <text><![CDATA[foreach(${1:$variable} as ${2:$key} => ${3:$value}) {
 	${0:# code...}
 }]]></text>
     <tag>foreach</tag>
     <description>foreach ..</description>
   </snippet>
-  <snippet>
-    <text><![CDATA[format_plural(${1:$count}, '${2:singular}, '${3:plural}, array('${4:@param}' => ${5:$value}), ${6:$langcode})]]></text>
+  <snippet id="format-plural">
+    <text><![CDATA[format_plural(${1:$count}, '${2:singular}', '${3:plural}', array('${4:@param}' => ${5:$value}), ${6:$langcode})]]></text>
     <tag>t</tag>
     <description>format_plural()</description>
   </snippet>
-  <snippet>
+  <snippet id="function">
     <text><![CDATA[$<
 # Define global variable
 global strparam, module_name
@@ -476,7 +476,7 @@ strparam = ''
 params = $3.split(',')
 # Generate documentation array
 for par in params:
-	strparam = strparam + '  * @param ' + par.strip() + '\n  *   Description of param ' + par.strip() + '\n'
+	strparam = strparam + ' * @param ' + par.strip() + '\n *   Description of param ' + par.strip() + '\n'
 
 ####### Module name ##########
 # Check if current file is empty
@@ -488,26 +488,26 @@ else:
 	module_name = 'mymodule'
 
 >/** ${10:Short description of this function}.
-  *
-  * ${11:Long description of this function.}
-  *
-  * Example usage:
-  * @code
-  *  ${12:my_print('Function usage sample');}
-  * @endcode
-  * 
+ *
+ * ${11:Long description of this function.}
+ *
+ * Example usage:
+ * @code
+ *  ${12:my_print('Function usage sample');}
+ * @endcode
+ * 
 $<[3]: return strparam
->  *
-  * @return
-  *   ${15:Description of return value}
-  */
+> *
+ * @return
+ *   ${15:Description of return value}
+ */
 function _$< return module_name >_${2:function_name}(${3:$param1, $param2, $param3}) {
 	${0:#code}
 }]]></text>
     <tag>function</tag>
     <description>function()</description>
   </snippet>
-  <snippet>
+  <snippet id="hook-access">
     <text><![CDATA[$<
 # Define global variable
 global module_name
@@ -521,37 +521,38 @@ else:
 	# Default module name
 	module_name = 'mymodule'
 
->/**
+>
+/**
  * Implementation of hook_access().
  */
 function $<return module_name>_access($op, $node, $account) {
-	switch ($op) {
-		case 'create':
-			return user_access('create ${2:my content type}', $account);
-			break;
-		case 'delete':
-		  if ((user_access('edit own ${2}', $account) && ($account->uid == $node->uid)) || (user_access('delete ${2}', $account)) {
-		    return TRUE;
-		  } else {
-				return FALSE;
-			}
-			break;
-		case 'update':
-		  if ((user_access('edit own ${2}', $account) && ($account->uid == $node->uid)) || (user_access('edit ${2}', $account)) {
-		    return TRUE;
-		  } else {
-				return FALSE;
-			}
-			break;
-		case 'view':
-			return user_access('view ${2}', $account);
-			break;
-	}
+  switch ($op) {
+    case 'create':
+      return user_access('create ${2:my content type}', $account);
+      break;
+    case 'delete':
+      if ((user_access('edit own ${2}', $account) && ($account->uid == $node->uid)) || (user_access('delete ${2}', $account)) {
+        return TRUE;
+      } else {
+        return FALSE;
+      }
+      break;
+    case 'update':
+      if ((user_access('edit own ${2}', $account) && ($account->uid == $node->uid)) || (user_access('edit ${2}', $account)) {
+        return TRUE;
+      } else {
+        return FALSE;
+      }
+      break;
+    case 'view':
+      return user_access('view ${2}', $account);
+      break;
+  }
 }]]></text>
     <tag>hook</tag>
     <description>hook_access()</description>
   </snippet>
-  <snippet>
+  <snippet id="hook-block">
     <text><![CDATA[$<
 # Define global variable
 global module_name
@@ -632,7 +633,7 @@ function $<return module_name>_block($op = 'list', $delta = 0, $edit = array()) 
     <tag>hook</tag>
     <description>hook_block()</description>
   </snippet>
-  <snippet>
+  <snippet id="hook-comment">
     <text><![CDATA[$<
 # Define global variable
 global module_name
@@ -677,7 +678,7 @@ function $<return module_name>_comment(&$a1, $op) {
     <tag>hook</tag>
     <description>hook_comment()</description>
   </snippet>
-  <snippet>
+  <snippet id="hook-cron">
     <text><![CDATA[$<
 # Define global variable
 global module_name
@@ -700,7 +701,7 @@ function $<return module_name>_cron() {
     <tag>hook</tag>
     <description>hook_cron()</description>
   </snippet>
-  <snippet>
+  <snippet id="hook-delete">
     <text><![CDATA[$<
 # Define global variable
 global module_name
@@ -723,7 +724,7 @@ function $<return module_name>_delete(&$node) {
     <tag>hook</tag>
     <description>hook_delete()</description>
   </snippet>
-  <snippet>
+  <snippet id="hook-filter">
     <text><![CDATA[$<
 # Define global variable
 global module_name
@@ -765,7 +766,7 @@ function $<return module_name>_filter($op, $delta = 0, $format = -1, $text = '',
     <tag>hook</tag>
     <description>hook_filter()</description>
   </snippet>
-  <snippet>
+  <snippet id="hook-form-alter">
     <text><![CDATA[$<
 # Define global variable
 global module_name
@@ -796,7 +797,7 @@ function $<return module_name>_form_alter(&$form, $form_state, $form_id) {
     <tag>hook</tag>
     <description>hook_form_alter()</description>
   </snippet>
-  <snippet>
+  <snippet id="hook-form">
     <text><![CDATA[$<
 # Define global variable
 global module_name
@@ -826,7 +827,7 @@ function $<return module_name>_form(&$node, $form_state) {
     <tag>hook</tag>
     <description>hook_form()</description>
   </snippet>
-  <snippet>
+  <snippet id="hook-form-formid-alter">
     <text><![CDATA[$<
 # Define global variable
 global module_name
@@ -849,7 +850,7 @@ function $<return module_name>_form_${1:FORM_ID}_alter(&$form, &$form_state) {
     <tag>hook</tag>
     <description>hook_form_FORM_ID_alter()</description>
   </snippet>
-  <snippet>
+  <snippet id="hook-forms">
     <text><![CDATA[$<
 # Define global variable
 global module_name
@@ -881,7 +882,7 @@ function $<return module_name>_forms($node) {
     <tag>hook</tag>
     <description>hook_forms()</description>
   </snippet>
-  <snippet>
+  <snippet id="hook-help">
     <text><![CDATA[$<
 # Define global variable
 global module_name
@@ -910,7 +911,7 @@ function $<return module_name>_help($path, $arg) {
     <tag>hook</tag>
     <description>hook_help()</description>
   </snippet>
-  <snippet>
+  <snippet id="hook-insert">
     <text><![CDATA[$<
 # Define global variable
 global module_name
@@ -939,7 +940,7 @@ function $<return module_name>_insert($node) {
     <tag>hook</tag>
     <description>hook_insert()</description>
   </snippet>
-  <snippet>
+  <snippet id="hook-install">
     <text><![CDATA[$<
 # Define global variable
 global module_name
@@ -963,7 +964,7 @@ function $<return module_name>_install() {
     <tag>hook</tag>
     <description>hook_install()</description>
   </snippet>
-  <snippet>
+  <snippet id="hook-link">
     <text><![CDATA[$<
 # Define global variable
 global module_name
@@ -1001,7 +1002,7 @@ function $<return module_name>_link($type, $object, $teaser = FALSE) {
     <tag>hook</tag>
     <description>hook_link()</description>
   </snippet>
-  <snippet>
+  <snippet id="hook-load">
     <text><![CDATA[$<
 # Define global variable
 global module_name
@@ -1025,7 +1026,7 @@ function $<return module_name>_load($node) {
     <tag>hook</tag>
     <description>hook_load()</description>
   </snippet>
-  <snippet>
+  <snippet id="hook-menu">
     <text><![CDATA[$<
 # Define global variable
 global module_name
@@ -1074,7 +1075,7 @@ function $<return module_name>_menu() {
     <tag>hook</tag>
     <description>hook_menu()</description>
   </snippet>
-  <snippet>
+  <snippet id="hook-nodeapi">
     <text><![CDATA[$<
 # Define global variable
 global module_name
@@ -1143,7 +1144,7 @@ function $<return module_name>_nodeapi(&$node, $op, $a3 = NULL, $a4 = NULL) {
     <tag>hook</tag>
     <description>hook_nodeapi()</description>
   </snippet>
-  <snippet>
+  <snippet id="hook-node-garants">
     <text><![CDATA[$<
 # Define global variable
 global module_name
@@ -1166,7 +1167,7 @@ function $<return module_name>_node_grants($account, $op) {
     <tag>hook</tag>
     <description>hook_node_garant()</description>
   </snippet>
-  <snippet>
+  <snippet id="hook-node-info">
     <text><![CDATA[$<
 # Define global variable
 global module_name
@@ -1199,7 +1200,7 @@ function $<return module_name>_node_info() {
     <tag>hook</tag>
     <description>hook_node_info()</description>
   </snippet>
-  <snippet>
+  <snippet id="hook-perm">
     <text><![CDATA[$<
 # Define global variable
 global module_name
@@ -1228,7 +1229,7 @@ function $<return module_name>_perm() {
     <tag>hook</tag>
     <description>hook_perm()</description>
   </snippet>
-  <snippet>
+  <snippet id="hook-schema">
     <text><![CDATA[$<
 # Define global variable
 global module_name
@@ -1278,7 +1279,7 @@ function $<return module_name>_schema() {
     <tag>hook</tag>
     <description>hook_schema()</description>
   </snippet>
-  <snippet>
+  <snippet id="hook-search">
     <text><![CDATA[$<
 # Define global variable
 global module_name
@@ -1330,7 +1331,7 @@ function $<return module_name>_search($op = 'search', $keys = null) {
     <tag>hook</tag>
     <description>hook_search()</description>
   </snippet>
-  <snippet>
+  <snippet id="hook-taxonomy">
     <text><![CDATA[$<
 # Define global variable
 global module_name
@@ -1379,7 +1380,7 @@ function $<return module_name>_taxonomy($op, $type, $array = NULL) {
     <tag>hook</tag>
     <description>hook_taxonomy()</description>
   </snippet>
-  <snippet>
+  <snippet id="hook-theme">
     <text><![CDATA[$<
 # Define global variable
 global module_name
@@ -1429,7 +1430,7 @@ function $<return module_name>_theme($existing, $type, $theme, $path) {
     <tag>hook</tag>
     <description>hook_theme()</description>
   </snippet>
-  <snippet>
+  <snippet id="hook-uninstall">
     <text><![CDATA[$<
 # Define global variable
 global module_name
@@ -1460,7 +1461,7 @@ function $<return module_name>_uninstall() {
     <tag>hook</tag>
     <description>hook_uninstall()</description>
   </snippet>
-  <snippet>
+  <snippet id="hook-update">
     <text><![CDATA[$<
 # Define global variable
 global module_name
@@ -1489,7 +1490,7 @@ function $<return module_name>_update($node) {
     <tag>hook</tag>
     <description>hook_update()</description>
   </snippet>
-  <snippet>
+  <snippet id="hook-update-n">
     <text><![CDATA[$<
 # Define global variable
 global module_name
@@ -1514,7 +1515,7 @@ function $<return module_name>_update_${2:N}() {
     <tag>hook</tag>
     <description>hook_update_N()</description>
   </snippet>
-  <snippet>
+  <snippet id="hook-user">
     <text><![CDATA[$<
 # Define global variable
 global module_name
@@ -1585,7 +1586,7 @@ function $<return module_name>_user($op, &$edit, &$account, $category = NULL) {
     <tag>hook</tag>
     <description>hook_user()</description>
   </snippet>
-  <snippet>
+  <snippet id="hook-validate">
     <text><![CDATA[$<
 # Define global variable
 global module_name
@@ -1610,7 +1611,7 @@ function $<return module_name>_validate($node, &$form) {
     <tag>hook</tag>
     <description>hook_validate()</description>
   </snippet>
-  <snippet>
+  <snippet id="hook-view">
     <text><![CDATA[$<
 # Define global variable
 global module_name
@@ -1627,7 +1628,7 @@ else:
 >/**
  * Implementation of hook_view().
  */
-function $<return module_name>_validate($node, $teaser = FALSE, $page = FALSE) {
+function $<return module_name>_view($node, $teaser = FALSE, $page = FALSE) {
 	$node = node_prepare($node, $teaser);
   $node->content['$<return module_name>'] = array(
     '#value' => $<1:'test'>,
@@ -1639,7 +1640,7 @@ function $<return module_name>_validate($node, $teaser = FALSE, $page = FALSE) {
     <tag>hook</tag>
     <description>hook_view()</description>
   </snippet>
-  <snippet>
+  <snippet id="views-views-api">
     <text><![CDATA[$<
 # Define global variable
 global module_name
@@ -1662,7 +1663,7 @@ function $<return module_name>_views_api() {
     <tag>views</tag>
     <description>hook_views_api()</description>
   </snippet>
-  <snippet>
+  <snippet id="views-views-data">
     <text><![CDATA[$<
 # Define global variable
 global module_name
@@ -1677,8 +1678,8 @@ else:
 	module_name = 'mymodule'
 
 >/**
-* Implementation of hook_views_data()
-*/
+ * Implementation of hook_views_data()
+ */
 function $<return module_name>_views_data() {
   // ===========================================================================
   // Generic info
@@ -1725,7 +1726,7 @@ function $<return module_name>_views_data() {
     <tag>views</tag>
     <description>hook_views_data()</description>
   </snippet>
-  <snippet>
+  <snippet id="views-views-handler">
     <text><![CDATA[$<
 # Define global variable
 global module_name
@@ -1758,14 +1759,14 @@ function $<return module_name>_views_handlers() {
     <tag>views</tag>
     <description>hook_views_handler()</description>
   </snippet>
-  <snippet>
+  <snippet id="if">
     <text><![CDATA[if (${1:condition}) {
 	${0:# code...}
 }]]></text>
     <tag>if</tag>
     <description>if ..</description>
   </snippet>
-  <snippet>
+  <snippet id="ifelse">
     <text><![CDATA[if (${1:condition}) {
 	${2:# code...}
 } else {
@@ -1775,7 +1776,7 @@ ${0:# code...}]]></text>
     <tag>ifelse</tag>
     <description>if .. else ..</description>
   </snippet>
-  <snippet>
+  <snippet id="info">
     <text><![CDATA[$<
 # Define global variable
 global module_name
@@ -1798,7 +1799,7 @@ core = ${4:6.x}]]></text>
     <tag>info</tag>
     <description>info</description>
   </snippet>
-  <snippet>
+  <snippet id="install">
     <text><![CDATA[$<
 # Define global variable
 global module_name
@@ -1895,12 +1896,12 @@ function $<return module_name>_schema() {
     <tag>install</tag>
     <description>install</description>
   </snippet>
-  <snippet>
+  <snippet id="l">
     <text><![CDATA[l(${1:$text}, ${2:$path}, array( 'attributes' => '${3}', 'query' => '${4}', 'fragment' => '${5}', 'absolute' => ${6:false}, 'html' => ${7:false},	'alias' => ${8:false}));]]></text>
     <tag>l</tag>
     <description>l()</description>
   </snippet>
-  <snippet>
+  <snippet id="module">
     <text><![CDATA[$<
 # Define global variable
 global module_name
@@ -1941,11 +1942,12 @@ else:
  *   along with this program. If not, see <http://www.gnu.org/licenses/>.
  *
  */
+
 ${0}]]></text>
     <tag>module</tag>
     <description>module</description>
   </snippet>
-  <snippet>
+  <snippet id="switch">
     <text><![CDATA[switch (${1:variable}) {
 	case '${2:value}':
 		${3:# code...}
@@ -1958,12 +1960,12 @@ ${0}]]></text>
     <tag>switch</tag>
     <description>switch ..</description>
   </snippet>
-  <snippet>
+  <snippet id="t">
     <text><![CDATA[t('${1:string}', array('${2:@param}' => ${3:$value}), ${4:$langcode});]]></text>
     <tag>t</tag>
     <description>t()</description>
   </snippet>
-  <snippet>
+  <snippet id="watchdog">
     <text><![CDATA[$<
 # Define global variable
 global module_name
