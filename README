@@ -2,12 +2,12 @@ This project contains Snippet for getid to have a rapid development for Drupal d
 
 = INSTALLATION =================================================================
 
-	a)	Create a new floder and clone repository on your machine:
+	a)	Create a new folder and clone repository on your machine:
 
 				# mkdir gedit-snippet
 				# cd gedit-snippet
 				# git init
-				# git clone git://github.com/mavimo/drupal-snippet.git
+				# git clone git://github.com/mavimo/gedit-drupal.git
 
 	b)	Copy language definition into /usr/share/gtksourceview-2.0/language-specs/
 
@@ -16,6 +16,7 @@ This project contains Snippet for getid to have a rapid development for Drupal d
 	c)	Create a new mimetype into your machine
 
 				# sudo cp drupal.mime.xml /usr/share/mime/packages/drupal.mime.xml
+				# sudo cp drupal-theme.mime.xml /usr/share/mime/packages/drupal.mime.xml
 
 	d)	Update mimetype database
 
@@ -26,6 +27,7 @@ This project contains Snippet for getid to have a rapid development for Drupal d
 			icon file:
 			
 				# sudo cp application-x-drupal-php.svg /usr/share/icons/ICONSET_NAME/scalable/mimetype/application-x-drupal-php.svg
+				# sudo cp application-x-drupal-tpl-php.svg /usr/share/icons/ICONSET_NAME/scalable/mimetype/application-x-drupal-php.svg
 			
 			after that regenerate iconset cache:
 			
