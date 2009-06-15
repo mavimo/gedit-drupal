@@ -172,7 +172,7 @@ else:
   </snippet>
   <snippet id="fapi-checkboxes">
     <text><![CDATA[$form['${1:name}'] = array(
-  '#type'          => 'checkboxs',
+  '#type'          => 'checkboxes',
   '#title'         => t('${2:Title}'),
 	'#description'   => t('${3:Description}'),
   '#default_value' => ${4:array(TRUE, TRUE, FALSE)},
@@ -1538,14 +1538,12 @@ function $<return module_name>_user($op, &$edit, &$account, $category = NULL) {
 			# code...
 			break;
 		case 'categories':
-			$categories = array(
-				'name'   => t(''),
+			$categories[] = array(
+				'name'   => '',
 				'title'  => t(''),
 				'weight' => 0,
 			);
 			return $categories;
-			# code...
-			break;
 		case 'delete':
 			# code...
 			break;
