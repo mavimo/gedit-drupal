@@ -1076,6 +1076,22 @@ function $<return module_name>_menu() {
     <tag>hook</tag>
     <description>hook_menu()</description>
   </snippet>
+  <snippet id="menu-item">
+    <text><![CDATA[
+$items['${11:path/1}'] = array(
+  'title'            => '${12:title}',
+  'description'      => '${13:description}',
+  'page callback'    => '${14:drupal_get_form}',
+  'page arguments'   => array(${15:''}),
+  'access callback'  => '${16}',
+  'access arguments' => array(${17:''}),
+  'weight'           => ${18:0},
+  'menu_name'        => '${19:Navigation}',
+  'type'             => ${20:MENU_NORMAL_ITEM | MENU_CALLBACK | MENU_SUGGESTED_ITEM | MENU_LOCAL_TASK | MENU_DEFAULT_LOCAL_TASK},
+);]]></text>
+    <tag>menu</tag>
+    <description>Menu item</description>
+  </snippet>
   <snippet id="hook-nodeapi">
     <text><![CDATA[$<
 # Define global variable
