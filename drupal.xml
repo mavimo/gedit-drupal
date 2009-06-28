@@ -914,6 +914,38 @@ function $<return module_name>_disable($query, $primary_table, $primary_field, $
     <tag>hook</tag>
     <description>hook_disable()</description>
   </snippet>
+  <snippet id="hook-elements">
+    <text><![CDATA[$<
+# Define global variable
+global module_name
+
+####### Module name ##########
+# Check if current file is empty
+if $GEDIT_BASENAME != '' :
+  # extract fil name (no extension)
+  module_name = $GEDIT_BASENAME.split('.')[0].lower()
+else:
+  # Default module name
+  module_name = 'mymodule'
+
+>/**
+ * Implementation of hook_elements().
+ */
+function $<return module_name>_elements() {
+  return array(
+    '#input'            => ${1:TRUE},
+    '#process'          => array('${2:callbak_function}'),
+    '#after_build'      => array('${3:callbak_function}'),
+    '#validate'         => array('${4:callbak_function}'),
+    '#element_validate' => array('${5:callbak_function}'),
+    '#pre_render'       => array('${6:callbak_function}'),
+    '#post_render'      => array('${7:callbak_function}'),
+    '#submit'           => array('${8:callbak_function}'),
+  );
+}]]></text>
+    <tag>hook</tag>
+    <description>hook_elements()</description>
+  </snippet>
   <snippet id="hook-filter">
     <text><![CDATA[$<
 # Define global variable
