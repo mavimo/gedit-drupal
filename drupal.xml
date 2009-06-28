@@ -333,6 +333,23 @@ $form['#attributes'] = array('enctype' => "multipart/form-data");
     <tag>fapi</tag>
     <description>FAPI textfield</description>
   </snippet>
+  <snippet id="fapi-ahah">
+    <text><![CDATA['#ahah' => array(
+  'path'     => '${1:autocomplete/user}',
+  'wrapper'  => '${2:div-replace}',
+  'method'   => '${3:replace after append before prepend}',
+  'event'    => '${4:click blur change}'
+  'effect'   => '${5:none fade slide}',
+  'progress' => array(
+    'type'     => '${6:throbber bar}',
+    'message'  => t("${7:Message}"),
+    'url'      => '${8:path/to/progress}',
+    'interval' => ${9:100},
+  );
+),]]></text>
+    <tag>fapi</tag>
+    <description>FAPI AHAH functionality</description>
+  </snippet>
   <snippet id="views-field">
     <text><![CDATA[$<
 # Define global variable
