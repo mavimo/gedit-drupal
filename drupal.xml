@@ -570,6 +570,12 @@ function $<return module_name>_access($op, $node, $account) {
     <tag>hook</tag>
     <description>hook_access()</description>
   </snippet>
+function hook_boot() {
+  // we need user_access() in the shutdown function. make sure it gets loaded
+  drupal_load('module', 'user');
+  register_shutdown_function('devel_shutdown');
+}
+
   <snippet id="hook-block">
     <text><![CDATA[$<
 # Define global variable
@@ -650,6 +656,30 @@ function $<return module_name>_block($op = 'list', $delta = 0, $edit = array()) 
 }]]></text>
     <tag>hook</tag>
     <description>hook_block()</description>
+  </snippet>
+  <snippet id="hook-boot">
+    <text><![CDATA[$<
+# Define global variable
+global module_name
+
+####### Module name ##########
+# Check if current file is empty
+if $GEDIT_BASENAME != '' :
+  # extract fil name (no extension)
+  module_name = $GEDIT_BASENAME.split('.')[0].lower()
+else:
+  # Default module name
+  module_name = 'mymodule'
+
+>/**
+ * Implementation of hook_boot().
+ */
+function $<return module_name>_boot() {
+  $0
+}
+]]></text>
+    <tag>hook</tag>
+    <description>hook_boot()</description>
   </snippet>
   <snippet id="hook-comment">
     <text><![CDATA[$<
