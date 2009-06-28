@@ -570,6 +570,29 @@ function $<return module_name>_access($op, $node, $account) {
     <tag>hook</tag>
     <description>hook_access()</description>
   </snippet>
+  <snippet id="hook-delete">
+    <text><![CDATA[$<
+# Define global variable
+global module_name
+
+####### Module name ##########
+# Check if current file is empty
+if $GEDIT_BASENAME != '' :
+  # extract fil name (no extension)
+  module_name = $GEDIT_BASENAME.split('.')[0].lower()
+else:
+  # Default module name
+  module_name = 'mymodule'
+
+>/**
+ * Implementation of hook_action_delete().
+ */
+function $<return module_name>_action_delete($aid) {
+  
+}]]></text>
+    <tag>hook</tag>
+    <description>hook_action_delete()</description>
+  </snippet>
   <snippet id="hook-action-info">
     <text><![CDATA[$<
 # Define global variable
