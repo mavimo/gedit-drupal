@@ -1,4 +1,13 @@
 #!/bin/sh
+NO_ARG=0
+E_ERR_OPZ=65
+
+if [ $# -eq "$NO_ARG" ] # Chck for argument
+then
+  echo "Using: `basename $0` module_name"
+  exit $E_ERR_OPZ # Quit and report error number
+fi
+
 MODULENAME=$1
 
 # Create folder
