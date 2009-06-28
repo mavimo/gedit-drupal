@@ -259,7 +259,7 @@ $form['#attributes'] = array('enctype' => "multipart/form-data");
   '#weight'        => ${4:0},
   '#size'          => ${5:60},
   '#maxlength'     => ${6:128},
-  '#required'      => ${7:true},
+  '#required'      => ${7:TRUE},
 );]]></text>
     <tag>fapi</tag>
     <description>FAPI password</description>
@@ -1046,7 +1046,7 @@ else:
  */
 function $<return module_name>_menu() {
   $items = array();
-
+  
   $items['${1:path/1}'] = array(
     'title'            => t('${2:title}'),
     'description'      => t('${3:description}'),
@@ -1603,7 +1603,7 @@ else:
  * Implementation of hook_validate().
  */
 function $<return module_name>_validate($node, &$form) {
-  if(${2:false}) {
+  if(${2:FALSE}) {
     form_set_error('${3:form_element}', t('${4:Error message}.'));
   }
 }]]></text>
@@ -1896,7 +1896,7 @@ function $<return module_name>_schema() {
     <description>install</description>
   </snippet>
   <snippet id="l">
-    <text><![CDATA[l(${1:$text}, ${2:$path}, array( 'attributes' => '${3}', 'query' => '${4}', 'fragment' => '${5}', 'absolute' => ${6:false}, 'html' => ${7:false},  'alias' => ${8:false}));]]></text>
+    <text><![CDATA[l(${1:$text}, ${2:$path}, array( 'attributes' => '${3}', 'query' => '${4}', 'fragment' => '${5}', 'absolute' => ${6:FALSE}, 'html' => ${7:FALSE},  'alias' => ${8:FALSE}));]]></text>
     <tag>l</tag>
     <description>l()</description>
   </snippet>
