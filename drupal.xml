@@ -969,6 +969,52 @@ function $<return module_name>_enable() {
     <tag>hook</tag>
     <description>hook_enable()</description>
   </snippet>
+  <snippet id="hook-exit">
+    <text><![CDATA[$<
+# Define global variable
+global module_name
+
+####### Module name ##########
+# Check if current file is empty
+if $GEDIT_BASENAME != '' :
+  # extract fil name (no extension)
+  module_name = $GEDIT_BASENAME.split('.')[0].lower()
+else:
+  # Default module name
+  module_name = 'mymodule'
+
+>/**
+ * Implementation of hook_exit().
+ */
+function $<return module_name>_exit($destination = NULL) {
+  $0
+}]]></text>
+    <tag>hook</tag>
+    <description>hook_exit()</description>
+  </snippet>
+  <snippet id="hook-file-download">
+    <text><![CDATA[$<
+# Define global variable
+global module_name
+
+####### Module name ##########
+# Check if current file is empty
+if $GEDIT_BASENAME != '' :
+  # extract fil name (no extension)
+  module_name = $GEDIT_BASENAME.split('.')[0].lower()
+else:
+  # Default module name
+  module_name = 'mymodule'
+
+>/**
+ * Implementation of hook_file_download().
+ */
+function $<return module_name>_file_download($filepath) {
+  $0
+}]]></text>
+    <tag>hook</tag>
+    <description>hook_file_download()</description>
+  </snippet>
   <snippet id="hook-filter">
     <text><![CDATA[$<
 # Define global variable
