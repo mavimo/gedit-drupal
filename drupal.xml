@@ -1,4 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
+<?xml-stylesheet type="text/xsl" href="drupal.xslt"?>
 <snippets language="drupal">
   <snippet id="array">
     <text><![CDATA[array('${1:key}' => '${2:$value}');]]></text>
