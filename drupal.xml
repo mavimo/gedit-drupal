@@ -10,7 +10,7 @@
 	${0:# code...}
 }]]></text>
     <tag>while</tag>
-    <description>array</description>
+    <description>while</description>
   </snippet>
   <snippet id="case">
     <text><![CDATA[case '${1:variable}':
