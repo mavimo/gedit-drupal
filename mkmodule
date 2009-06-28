@@ -4,6 +4,7 @@ MODULENAME=$1
 # Create folder
 mkdir $MODULENAME
 mkdir $MODULENAME/translation
+mkdir $MODULENAME/tests
 
 # Create file
 touch $MODULENAME/README
