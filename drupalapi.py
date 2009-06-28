@@ -111,7 +111,7 @@ class DApiCompletion():
         function = function.replace(name + '_', 'hook_', 1)
       
       # Load info page
-      self._dapi_panel.load_url('http://api.drupal.org/api/function/' + function + '/6')
+      self._dapi_panel.load_url('http://api.drupal.org/api/function/' + function)
       return False
     else:
       return False
