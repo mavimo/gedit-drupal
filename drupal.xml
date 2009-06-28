@@ -585,7 +585,7 @@ else:
   module_name = 'mymodule'
 
 >/**
- * Implementation of hook_action_info_alter().
+ * Implementation of hook_action_info().
  */
 function $<return module_name>_action_info() {
   return array(
