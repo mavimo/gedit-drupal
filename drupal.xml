@@ -946,6 +946,29 @@ function $<return module_name>_elements() {
     <tag>hook</tag>
     <description>hook_elements()</description>
   </snippet>
+  <snippet id="hook-enable">
+    <text><![CDATA[$<
+# Define global variable
+global module_name
+
+####### Module name ##########
+# Check if current file is empty
+if $GEDIT_BASENAME != '' :
+  # extract fil name (no extension)
+  module_name = $GEDIT_BASENAME.split('.')[0].lower()
+else:
+  # Default module name
+  module_name = 'mymodule'
+
+>/**
+ * Implementation of hook_enable().
+ */
+function $<return module_name>_enable() {
+  $0
+}]]></text>
+    <tag>hook</tag>
+    <description>hook_enable()</description>
+  </snippet>
   <snippet id="hook-filter">
     <text><![CDATA[$<
 # Define global variable
