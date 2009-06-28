@@ -61,6 +61,7 @@
       </thead>
       <tbody>
       <xsl:for-each select="snippets/snippet">
+        <xsl:sort select="tag"/>
         <tr>
           <td class="tags"><span><xsl:value-of select="tag"/></span></td>
           <td class="desc"><xsl:value-of select="description"/></td>
