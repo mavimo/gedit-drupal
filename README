@@ -2,53 +2,53 @@ This project contains Snippet for getid to have a rapid development for Drupal d
 
 = INSTALLATION =================================================================
 
-	a)	Create a new folder and clone repository on your machine:
+  a)  Create a new folder and clone repository on your machine:
 
-				# mkdir gedit-snippet
-				# cd gedit-snippet
-				# git init
-				# git clone git://github.com/mavimo/gedit-drupal.git
+        # mkdir gedit-drupal
+        # cd gedit-drupal
+        # git init
+        # git clone git://github.com/mavimo/gedit-drupal.git
 
-	b)	Copy language definition into /usr/share/gtksourceview-2.0/language-specs/
+  b)  Copy language definition into /usr/share/gtksourceview-2.0/language-specs/
 
-				# sudo cp drupal.lang /usr/share/gtksourceview-2.0/language-specs/
+        # sudo cp drupal.lang /usr/share/gtksourceview-2.0/language-specs/
 
-	c)	Create a new mimetype into your machine
+  c)  Create a new mimetype into your machine
 
-				# sudo cp drupal.mime.xml /usr/share/mime/packages/drupal.mime.xml
-				# sudo cp drupal-theme.mime.xml /usr/share/mime/packages/drupal.mime.xml
+        # sudo cp drupal.mime.xml /usr/share/mime/packages/drupal.mime.xml
+        # sudo cp drupal-theme.mime.xml /usr/share/mime/packages/drupal.mime.xml
 
-	d)	Update mimetype database
+  d)  Update mimetype database
 
-				# sudo update-mime-database /usr/share/mime
+        # sudo update-mime-database /usr/share/mime
 
-	e)	Add icon into your icons folder, first of all find your iconset name 
-			(gnome, Tangerine, ..), and copy into this folder (on scalable subfolder)
-			icon file:
-			
-				# sudo cp application-x-drupal-php.svg /usr/share/icons/ICONSET_NAME/scalable/mimetype/application-x-drupal-php.svg
-				# sudo cp application-x-drupal-tpl-php.svg /usr/share/icons/ICONSET_NAME/scalable/mimetype/application-x-drupal-php.svg
-			
-			after that regenerate iconset cache:
-			
-				# cd /usr/share/icons
-				# sudo gtk-update-icon-cache ICONSET_NAME
+  e)  Add icon into your icons folder, first of all find your iconset name 
+      (gnome, Tangerine, ..), and copy into this folder (on scalable subfolder)
+      icon file:
+      
+        # sudo cp application-x-drupal-php.svg /usr/share/icons/ICONSET_NAME/scalable/mimetype/application-x-drupal-php.svg
+        # sudo cp application-x-drupal-tpl-php.svg /usr/share/icons/ICONSET_NAME/scalable/mimetype/application-x-drupal-php.svg
+      
+      after that regenerate iconset cache:
+      
+        # cd /usr/share/icons
+        # sudo gtk-update-icon-cache ICONSET_NAME
 
-	f)	Enable Snippet plugin from
+  f)  Enable Snippet plugin from
 
-				Edit -> Preferences -> Plugins
+        Edit -> Preferences -> Plugins
 
-			If not already aviable please install it from your distrubution system, for 
-			debian / ubuntu system use:
+      If not already aviable please install it from your distrubution system, for 
+      debian / ubuntu system use:
 
-				# sudo apt-get install gedit-plugins
+        # sudo apt-get install gedit-plugins
 
-	g)	Add variuos snippets
+  g)  Add variuos snippets
 
-				Tools -> Manage Snippets ...
+        Tools -> Manage Snippets ...
 
-			Press "Import snippets" button (second from left on bottom) and import *.xml file
-			do you require. After that you can use drupal-snippet
+      Press "Import snippets" button (second from left on bottom) and import *.xml file
+      do you require. After that you can use drupal-snippet
 
 = USAGE ========================================================================
 
