@@ -570,6 +570,46 @@ function $<return module_name>_access($op, $node, $account) {
     <tag>hook</tag>
     <description>hook_access()</description>
   </snippet>
+  <snippet id="hook-action-info">
+    <text><![CDATA[$<
+# Define global variable
+global module_name
+
+####### Module name ##########
+# Check if current file is empty
+if $GEDIT_BASENAME != '' :
+  # extract fil name (no extension)
+  module_name = $GEDIT_BASENAME.split('.')[0].lower()
+else:
+  # Default module name
+  module_name = 'mymodule'
+
+>/**
+ * Implementation of hook_action_info_alter().
+ */
+function $<return module_name>_action_info() {
+  return array(
+    '${1:action_1}' => array(
+      'description'   => t('${2:Action description}'),
+      'type'          => '${3:type}',
+      'configurable'  => ${4:FALSE},
+      'hooks'         => array(
+        '${5:module}' => array('${6:operation}', '${7:operation}'),
+      )
+    ),
+    '${11:action_2}' => array(
+      'description'   => t('${12:Action description}'),
+      'type'          => '${13:type}',
+      'configurable'  => ${14:FALSE},
+      'hooks'         => array(
+        '${15:module}' => array('${16:operation}', '${17:operation}'),
+      )
+    ),
+  );
+}]]></text>
+    <tag>hook</tag>
+    <description>hook_action_info()</description>
+  </snippet>
   <snippet id="hook-action-info-alter">
     <text><![CDATA[$<
 # Define global variable
@@ -589,8 +629,7 @@ else:
  */
 function $<return module_name>_action_info_alter(&$actions) {
   $0
-}
-]]></text>
+}]]></text>
     <tag>hook</tag>
     <description>hook_action_info_alter()</description>
   </snippet>
