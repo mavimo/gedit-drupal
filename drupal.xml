@@ -588,7 +588,7 @@ else:
  * Implementation of hook_action_delete().
  */
 function $<return module_name>_action_delete($aid) {
-  
+  $0
 }]]></text>
     <tag>hook</tag>
     <description>hook_action_delete()</description>
@@ -828,6 +828,45 @@ function $<return module_name>_cron() {
 }]]></text>
     <tag>hook</tag>
     <description>hook_cron()</description>
+  </snippet>
+  <snippet id="hook-db-rewrite-sql">
+    <text><![CDATA[$<
+# Define global variable
+global module_name
+
+####### Module name ##########
+# Check if current file is empty
+if $GEDIT_BASENAME != '' :
+  # extract fil name (no extension)
+  module_name = $GEDIT_BASENAME.split('.')[0].lower()
+else:
+  # Default module name
+  module_name = 'mymodule'
+
+>/**
+ * Implementation of hook_db_rewrite_sql().
+ */
+function hook_db_rewrite_sql($query, $primary_table, $primary_field, $args) {
+  switch ($primary_field) {
+    case '${1:nid}':
+      // this query deals with node objects
+      $return = array();
+      if ($primary_table != 'n') {
+        $return['join'] = "LEFT JOIN {node} n ON $primary_table.nid = n.nid";
+      }
+      $return['where'] = 'created >' . mktime(0, 0, 0, 1, 1, 2005);
+      return $return;
+      break;
+    case '${1:tid}':
+      // this query deals with taxonomy objects
+      break;
+    case '${1:vid}':
+      // this query deals with vocabulary objects
+      break;
+  }
+}]]></text>
+    <tag>hook</tag>
+    <description>hook_db_rewrite_sql()</description>
   </snippet>
   <snippet id="hook-delete">
     <text><![CDATA[$<
