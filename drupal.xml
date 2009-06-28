@@ -1048,8 +1048,8 @@ function $<return module_name>_menu() {
   $items = array();
   
   $items['${1:path/1}'] = array(
-    'title'            => t('${2:title}'),
-    'description'      => t('${3:description}'),
+    'title'            => '${2:title}',
+    'description'      => '${3:description}',
     'page callback'    => '${4:drupal_get_form}',
     'page arguments'   => array(${5:''}),
     'access callback'  => '${6}',
@@ -1060,8 +1060,8 @@ function $<return module_name>_menu() {
   );
   
   $items['${11:path/1}'] = array(
-    'title'            => t('${12:title}'),
-    'description'      => t('${13:description}'),
+    'title'            => '${12:title}',
+    'description'      => '${13:description}',
     'page callback'    => '${14:drupal_get_form}',
     'page arguments'   => array(${15:''}),
     'access callback'  => '${16}',
