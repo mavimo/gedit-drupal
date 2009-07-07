@@ -244,9 +244,9 @@ $form['#attributes'] = array('enctype' => "multipart/form-data");
   '#type'          => 'markup',
   '#value'         => '${2:value}',
   '#weight'        => ${4:0},
-  '#prefix'        => '${3:}',
-  '#suffix'        => '${4:}',
-  '#attribute'     => '${5:}',
+  '#prefix'        => '${3}',
+  '#suffix'        => '${4}',
+  '#attribute'     => '${5}',
 );]]></text>
     <tag>fapi</tag>
     <description>FAPI markup</description>
