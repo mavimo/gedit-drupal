@@ -1181,7 +1181,7 @@ else:
 >/**
  * Implementation of hook_forms().
  */
-function $<return module_name>_forms($node) {
+function $<return module_name>_forms() {
   $forms['$<return module_name + '_first_form'>'] = array(
     'callback' => '$<return module_name + '_first_form_builder'>',
     'callback arguments' => array('${1:some parameter}'),
