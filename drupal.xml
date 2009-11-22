@@ -1340,6 +1340,68 @@ function $<return module_name>_load($node) {
     <tag>hook</tag>
     <description>hook_load()</description>
   </snippet>
+  <snippet id="hook-mail">
+    <text><![CDATA[$<
+# Define global variable
+global module_name
+
+####### Module name ##########
+# Check if current file is empty
+if $GEDIT_CURRENT_DOCUMENT_NAME != '' :
+  # extract fil name (no extension)
+  module_name = $GEDIT_CURRENT_DOCUMENT_NAME.split('.')[0].lower()
+else:
+  # Default module name
+  module_name = 'mymodule'
+
+>/**
+ * Implementation of hook_mail().
+ */
+function $<return module_name>_mail($key, &$message, $params) {
+  $message['id']      = '${1:mail id}';
+  $message['to']      = '${2:email@address.loc}';
+  $message['subject'] = '${3:Mail subject}';
+  $message['body']    = '${4:Mail body}';
+  $message['from']    = '${5:from@address.loc}';
+  $message['headers'] =  array(
+    '${6:header-type}' => '${7:header-value}'
+  );
+}]]></text>
+    <tag>hook</tag>
+    <description>hook_mail()</description>
+  </snippet>
+  <snippet id="hook-mail-alter">
+    <text><![CDATA[$<
+# Define global variable
+global module_name
+
+####### Module name ##########
+# Check if current file is empty
+if $GEDIT_CURRENT_DOCUMENT_NAME != '' :
+  # extract fil name (no extension)
+  module_name = $GEDIT_CURRENT_DOCUMENT_NAME.split('.')[0].lower()
+else:
+  # Default module name
+  module_name = 'mymodule'
+
+>/**
+ * Implementation of hook_mail_alter().
+ */
+function $<return module_name>_mail_alter(&$message) {
+  $message['id']       = '${1:mail id}';
+  $message['to']       = '${2:email@address.loc}';
+  $message['subject']  = '${3:Mail subject}';
+  $message['body']     = '${4:Mail body}';
+  $message['from']     = '${5:from@address.loc}';
+  $message['headers']  =  array(
+    '${6:header-type}' => '${7:header-value}'
+  );
+  $message['params']   =  array('${8:param}');
+  $message['language'] = '${9:from@address.loc}';
+}]]></text>
+    <tag>hook</tag>
+    <description>hook_mail_alter()</description>
+  </snippet>
   <snippet id="hook-menu">
     <text><![CDATA[$<
 # Define global variable
