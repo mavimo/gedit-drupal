@@ -64,9 +64,9 @@ global module_name
 
 ####### Module name ##########
 # Check if current file is empty
-if $GEDIT_BASENAME != '' :
+if $GEDIT_CURRENT_DOCUMENT_NAME != '' :
   # extract fil name (no extension)
-  module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  module_name = $GEDIT_CURRENT_DOCUMENT_NAME.split('.')[0].lower()
 else:
   # Default module name
   module_name = 'mymodule'
@@ -92,9 +92,9 @@ global module_name
 
 ####### Module name ##########
 # Check if current file is empty
-if $GEDIT_BASENAME != '' :
+if $GEDIT_CURRENT_DOCUMENT_NAME != '' :
   # extract fil name (no extension)
-  module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  module_name = $GEDIT_CURRENT_DOCUMENT_NAME.split('.')[0].lower()
 else:
   # Default module name
   module_name = 'mymodule'
@@ -110,9 +110,9 @@ global module_name
 
 ####### Module name ##########
 # Check if current file is empty
-if $GEDIT_BASENAME != '' :
+if $GEDIT_CURRENT_DOCUMENT_NAME != '' :
   # extract fil name (no extension)
-  module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  module_name = $GEDIT_CURRENT_DOCUMENT_NAME.split('.')[0].lower()
 else:
   # Default module name
   module_name = 'mymodule'
@@ -357,9 +357,9 @@ global module_name
 
 ####### Module name ##########
 # Check if current file is empty
-if $GEDIT_BASENAME != '' :
+if $GEDIT_CURRENT_DOCUMENT_NAME != '' :
   # extract fil name (no extension)
-  module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  module_name = $GEDIT_CURRENT_DOCUMENT_NAME.split('.')[0].lower()
 else:
   # Default module name
   module_name = 'mymodule'
@@ -393,9 +393,9 @@ global module_name
 
 ####### Module name ##########
 # Check if current file is empty
-if $GEDIT_BASENAME != '' :
+if $GEDIT_CURRENT_DOCUMENT_NAME != '' :
   # extract fil name (no extension)
-  module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  module_name = $GEDIT_CURRENT_DOCUMENT_NAME.split('.')[0].lower()
 else:
   # Default module name
   module_name = 'mymodule'
@@ -498,9 +498,9 @@ for par in params:
 
 ####### Module name ##########
 # Check if current file is empty
-if $GEDIT_BASENAME != '' :
+if $GEDIT_CURRENT_DOCUMENT_NAME != '' :
   # extract fil name (no extension)
-  module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  module_name = $GEDIT_CURRENT_DOCUMENT_NAME.split('.')[0].lower()
 else:
   # Default module name
   module_name = 'mymodule'
@@ -532,9 +532,9 @@ global module_name
 
 ####### Module name ##########
 # Check if current file is empty
-if $GEDIT_BASENAME != '' :
+if $GEDIT_CURRENT_DOCUMENT_NAME != '' :
   # extract fil name (no extension)
-  module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  module_name = $GEDIT_CURRENT_DOCUMENT_NAME.split('.')[0].lower()
 else:
   # Default module name
   module_name = 'mymodule'
@@ -577,9 +577,9 @@ global module_name
 
 ####### Module name ##########
 # Check if current file is empty
-if $GEDIT_BASENAME != '' :
+if $GEDIT_CURRENT_DOCUMENT_NAME != '' :
   # extract fil name (no extension)
-  module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  module_name = $GEDIT_CURRENT_DOCUMENT_NAME.split('.')[0].lower()
 else:
   # Default module name
   module_name = 'mymodule'
@@ -600,9 +600,9 @@ global module_name
 
 ####### Module name ##########
 # Check if current file is empty
-if $GEDIT_BASENAME != '' :
+if $GEDIT_CURRENT_DOCUMENT_NAME != '' :
   # extract fil name (no extension)
-  module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  module_name = $GEDIT_CURRENT_DOCUMENT_NAME.split('.')[0].lower()
 else:
   # Default module name
   module_name = 'mymodule'
@@ -640,9 +640,9 @@ global module_name
 
 ####### Module name ##########
 # Check if current file is empty
-if $GEDIT_BASENAME != '' :
+if $GEDIT_CURRENT_DOCUMENT_NAME != '' :
   # extract fil name (no extension)
-  module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  module_name = $GEDIT_CURRENT_DOCUMENT_NAME.split('.')[0].lower()
 else:
   # Default module name
   module_name = 'mymodule'
@@ -663,9 +663,9 @@ global module_name
 
 ####### Module name ##########
 # Check if current file is empty
-if $GEDIT_BASENAME != '' :
+if $GEDIT_CURRENT_DOCUMENT_NAME != '' :
   # extract fil name (no extension)
-  module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  module_name = $GEDIT_CURRENT_DOCUMENT_NAME.split('.')[0].lower()
 else:
   # Default module name
   module_name = 'mymodule'
@@ -744,9 +744,9 @@ global module_name
 
 ####### Module name ##########
 # Check if current file is empty
-if $GEDIT_BASENAME != '' :
+if $GEDIT_CURRENT_DOCUMENT_NAME != '' :
   # extract fil name (no extension)
-  module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  module_name = $GEDIT_CURRENT_DOCUMENT_NAME.split('.')[0].lower()
 else:
   # Default module name
   module_name = 'mymodule'
@@ -768,9 +768,9 @@ global module_name
 
 ####### Module name ##########
 # Check if current file is empty
-if $GEDIT_BASENAME != '' :
+if $GEDIT_CURRENT_DOCUMENT_NAME != '' :
   # extract fil name (no extension)
-  module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  module_name = $GEDIT_CURRENT_DOCUMENT_NAME.split('.')[0].lower()
 else:
   # Default module name
   module_name = 'mymodule'
@@ -813,9 +813,9 @@ global module_name
 
 ####### Module name ##########
 # Check if current file is empty
-if $GEDIT_BASENAME != '' :
+if $GEDIT_CURRENT_DOCUMENT_NAME != '' :
   # extract fil name (no extension)
-  module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  module_name = $GEDIT_CURRENT_DOCUMENT_NAME.split('.')[0].lower()
 else:
   # Default module name
   module_name = 'mymodule'
@@ -836,9 +836,9 @@ global module_name
 
 ####### Module name ##########
 # Check if current file is empty
-if $GEDIT_BASENAME != '' :
+if $GEDIT_CURRENT_DOCUMENT_NAME != '' :
   # extract fil name (no extension)
-  module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  module_name = $GEDIT_CURRENT_DOCUMENT_NAME.split('.')[0].lower()
 else:
   # Default module name
   module_name = 'mymodule'
@@ -875,9 +875,9 @@ global module_name
 
 ####### Module name ##########
 # Check if current file is empty
-if $GEDIT_BASENAME != '' :
+if $GEDIT_CURRENT_DOCUMENT_NAME != '' :
   # extract fil name (no extension)
-  module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  module_name = $GEDIT_CURRENT_DOCUMENT_NAME.split('.')[0].lower()
 else:
   # Default module name
   module_name = 'mymodule'
@@ -898,9 +898,9 @@ global module_name
 
 ####### Module name ##########
 # Check if current file is empty
-if $GEDIT_BASENAME != '' :
+if $GEDIT_CURRENT_DOCUMENT_NAME != '' :
   # extract fil name (no extension)
-  module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  module_name = $GEDIT_CURRENT_DOCUMENT_NAME.split('.')[0].lower()
 else:
   # Default module name
   module_name = 'mymodule'
@@ -921,9 +921,9 @@ global module_name
 
 ####### Module name ##########
 # Check if current file is empty
-if $GEDIT_BASENAME != '' :
+if $GEDIT_CURRENT_DOCUMENT_NAME != '' :
   # extract fil name (no extension)
-  module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  module_name = $GEDIT_CURRENT_DOCUMENT_NAME.split('.')[0].lower()
 else:
   # Default module name
   module_name = 'mymodule'
@@ -953,9 +953,9 @@ global module_name
 
 ####### Module name ##########
 # Check if current file is empty
-if $GEDIT_BASENAME != '' :
+if $GEDIT_CURRENT_DOCUMENT_NAME != '' :
   # extract fil name (no extension)
-  module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  module_name = $GEDIT_CURRENT_DOCUMENT_NAME.split('.')[0].lower()
 else:
   # Default module name
   module_name = 'mymodule'
@@ -976,9 +976,9 @@ global module_name
 
 ####### Module name ##########
 # Check if current file is empty
-if $GEDIT_BASENAME != '' :
+if $GEDIT_CURRENT_DOCUMENT_NAME != '' :
   # extract fil name (no extension)
-  module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  module_name = $GEDIT_CURRENT_DOCUMENT_NAME.split('.')[0].lower()
 else:
   # Default module name
   module_name = 'mymodule'
@@ -999,9 +999,9 @@ global module_name
 
 ####### Module name ##########
 # Check if current file is empty
-if $GEDIT_BASENAME != '' :
+if $GEDIT_CURRENT_DOCUMENT_NAME != '' :
   # extract fil name (no extension)
-  module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  module_name = $GEDIT_CURRENT_DOCUMENT_NAME.split('.')[0].lower()
 else:
   # Default module name
   module_name = 'mymodule'
@@ -1022,9 +1022,9 @@ global module_name
 
 ####### Module name ##########
 # Check if current file is empty
-if $GEDIT_BASENAME != '' :
+if $GEDIT_CURRENT_DOCUMENT_NAME != '' :
   # extract fil name (no extension)
-  module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  module_name = $GEDIT_CURRENT_DOCUMENT_NAME.split('.')[0].lower()
 else:
   # Default module name
   module_name = 'mymodule'
@@ -1064,9 +1064,9 @@ global module_name
 
 ####### Module name ##########
 # Check if current file is empty
-if $GEDIT_BASENAME != '' :
+if $GEDIT_CURRENT_DOCUMENT_NAME != '' :
   # extract fil name (no extension)
-  module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  module_name = $GEDIT_CURRENT_DOCUMENT_NAME.split('.')[0].lower()
 else:
   # Default module name
   module_name = 'mymodule'
@@ -1087,9 +1087,9 @@ global module_name
 
 ####### Module name ##########
 # Check if current file is empty
-if $GEDIT_BASENAME != '' :
+if $GEDIT_CURRENT_DOCUMENT_NAME != '' :
   # extract fil name (no extension)
-  module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  module_name = $GEDIT_CURRENT_DOCUMENT_NAME.split('.')[0].lower()
 else:
   # Default module name
   module_name = 'mymodule'
@@ -1118,9 +1118,9 @@ global module_name
 
 ####### Module name ##########
 # Check if current file is empty
-if $GEDIT_BASENAME != '' :
+if $GEDIT_CURRENT_DOCUMENT_NAME != '' :
   # extract fil name (no extension)
-  module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  module_name = $GEDIT_CURRENT_DOCUMENT_NAME.split('.')[0].lower()
 else:
   # Default module name
   module_name = 'mymodule'
@@ -1148,9 +1148,9 @@ global module_name
 
 ####### Module name ##########
 # Check if current file is empty
-if $GEDIT_BASENAME != '' :
+if $GEDIT_CURRENT_DOCUMENT_NAME != '' :
   # extract fil name (no extension)
-  module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  module_name = $GEDIT_CURRENT_DOCUMENT_NAME.split('.')[0].lower()
 else:
   # Default module name
   module_name = 'mymodule'
@@ -1171,9 +1171,9 @@ global module_name
 
 ####### Module name ##########
 # Check if current file is empty
-if $GEDIT_BASENAME != '' :
+if $GEDIT_CURRENT_DOCUMENT_NAME != '' :
   # extract fil name (no extension)
-  module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  module_name = $GEDIT_CURRENT_DOCUMENT_NAME.split('.')[0].lower()
 else:
   # Default module name
   module_name = 'mymodule'
@@ -1203,9 +1203,9 @@ global module_name
 
 ####### Module name ##########
 # Check if current file is empty
-if $GEDIT_BASENAME != '' :
+if $GEDIT_CURRENT_DOCUMENT_NAME != '' :
   # extract fil name (no extension)
-  module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  module_name = $GEDIT_CURRENT_DOCUMENT_NAME.split('.')[0].lower()
 else:
   # Default module name
   module_name = 'mymodule'
@@ -1232,9 +1232,9 @@ global module_name
 
 ####### Module name ##########
 # Check if current file is empty
-if $GEDIT_BASENAME != '' :
+if $GEDIT_CURRENT_DOCUMENT_NAME != '' :
   # extract fil name (no extension)
-  module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  module_name = $GEDIT_CURRENT_DOCUMENT_NAME.split('.')[0].lower()
 else:
   # Default module name
   module_name = 'mymodule'
@@ -1261,9 +1261,9 @@ global module_name
 
 ####### Module name ##########
 # Check if current file is empty
-if $GEDIT_BASENAME != '' :
+if $GEDIT_CURRENT_DOCUMENT_NAME != '' :
   # extract fil name (no extension)
-  module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  module_name = $GEDIT_CURRENT_DOCUMENT_NAME.split('.')[0].lower()
 else:
   # Default module name
   module_name = 'mymodule'
@@ -1285,9 +1285,9 @@ global module_name
 
 ####### Module name ##########
 # Check if current file is empty
-if $GEDIT_BASENAME != '' :
+if $GEDIT_CURRENT_DOCUMENT_NAME != '' :
   # extract fil name (no extension)
-  module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  module_name = $GEDIT_CURRENT_DOCUMENT_NAME.split('.')[0].lower()
 else:
   # Default module name
   module_name = 'mymodule'
@@ -1323,9 +1323,9 @@ global module_name
 
 ####### Module name ##########
 # Check if current file is empty
-if $GEDIT_BASENAME != '' :
+if $GEDIT_CURRENT_DOCUMENT_NAME != '' :
   # extract fil name (no extension)
-  module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  module_name = $GEDIT_CURRENT_DOCUMENT_NAME.split('.')[0].lower()
 else:
   # Default module name
   module_name = 'mymodule'
@@ -1347,9 +1347,9 @@ global module_name
 
 ####### Module name ##########
 # Check if current file is empty
-if $GEDIT_BASENAME != '' :
+if $GEDIT_CURRENT_DOCUMENT_NAME != '' :
   # extract fil name (no extension)
-  module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  module_name = $GEDIT_CURRENT_DOCUMENT_NAME.split('.')[0].lower()
 else:
   # Default module name
   module_name = 'mymodule'
@@ -1412,9 +1412,9 @@ global module_name
 
 ####### Module name ##########
 # Check if current file is empty
-if $GEDIT_BASENAME != '' :
+if $GEDIT_CURRENT_DOCUMENT_NAME != '' :
   # extract fil name (no extension)
-  module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  module_name = $GEDIT_CURRENT_DOCUMENT_NAME.split('.')[0].lower()
 else:
   # Default module name
   module_name = 'mymodule'
@@ -1481,9 +1481,9 @@ global module_name
 
 ####### Module name ##########
 # Check if current file is empty
-if $GEDIT_BASENAME != '' :
+if $GEDIT_CURRENT_DOCUMENT_NAME != '' :
   # extract fil name (no extension)
-  module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  module_name = $GEDIT_CURRENT_DOCUMENT_NAME.split('.')[0].lower()
 else:
   # Default module name
   module_name = 'mymodule'
@@ -1504,9 +1504,9 @@ global module_name
 
 ####### Module name ##########
 # Check if current file is empty
-if $GEDIT_BASENAME != '' :
+if $GEDIT_CURRENT_DOCUMENT_NAME != '' :
   # extract fil name (no extension)
-  module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  module_name = $GEDIT_CURRENT_DOCUMENT_NAME.split('.')[0].lower()
 else:
   # Default module name
   module_name = 'mymodule'
@@ -1537,9 +1537,9 @@ global module_name
 
 ####### Module name ##########
 # Check if current file is empty
-if $GEDIT_BASENAME != '' :
+if $GEDIT_CURRENT_DOCUMENT_NAME != '' :
   # extract fil name (no extension)
-  module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  module_name = $GEDIT_CURRENT_DOCUMENT_NAME.split('.')[0].lower()
 else:
   # Default module name
   module_name = 'mymodule'
@@ -1566,9 +1566,9 @@ global module_name
 
 ####### Module name ##########
 # Check if current file is empty
-if $GEDIT_BASENAME != '' :
+if $GEDIT_CURRENT_DOCUMENT_NAME != '' :
   # extract fil name (no extension)
-  module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  module_name = $GEDIT_CURRENT_DOCUMENT_NAME.split('.')[0].lower()
 else:
   # Default module name
   module_name = 'mymodule'
@@ -1616,9 +1616,9 @@ global module_name
 
 ####### Module name ##########
 # Check if current file is empty
-if $GEDIT_BASENAME != '' :
+if $GEDIT_CURRENT_DOCUMENT_NAME != '' :
   # extract fil name (no extension)
-  module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  module_name = $GEDIT_CURRENT_DOCUMENT_NAME.split('.')[0].lower()
 else:
   # Default module name
   module_name = 'mymodule'
@@ -1668,9 +1668,9 @@ global module_name
 
 ####### Module name ##########
 # Check if current file is empty
-if $GEDIT_BASENAME != '' :
+if $GEDIT_CURRENT_DOCUMENT_NAME != '' :
   # extract fil name (no extension)
-  module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  module_name = $GEDIT_CURRENT_DOCUMENT_NAME.split('.')[0].lower()
 else:
   # Default module name
   module_name = 'mymodule'
@@ -1717,9 +1717,9 @@ global module_name
 
 ####### Module name ##########
 # Check if current file is empty
-if $GEDIT_BASENAME != '' :
+if $GEDIT_CURRENT_DOCUMENT_NAME != '' :
   # extract fil name (no extension)
-  module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  module_name = $GEDIT_CURRENT_DOCUMENT_NAME.split('.')[0].lower()
 else:
   # Default module name
   module_name = 'mymodule'
@@ -1767,9 +1767,9 @@ global module_name
 
 ####### Module name ##########
 # Check if current file is empty
-if $GEDIT_BASENAME != '' :
+if $GEDIT_CURRENT_DOCUMENT_NAME != '' :
   # extract fil name (no extension)
-  module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  module_name = $GEDIT_CURRENT_DOCUMENT_NAME.split('.')[0].lower()
 else:
   # Default module name
   module_name = 'mymodule'
@@ -1798,9 +1798,9 @@ global module_name
 
 ####### Module name ##########
 # Check if current file is empty
-if $GEDIT_BASENAME != '' :
+if $GEDIT_CURRENT_DOCUMENT_NAME != '' :
   # extract fil name (no extension)
-  module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  module_name = $GEDIT_CURRENT_DOCUMENT_NAME.split('.')[0].lower()
 else:
   # Default module name
   module_name = 'mymodule'
@@ -1827,9 +1827,9 @@ global module_name
 
 ####### Module name ##########
 # Check if current file is empty
-if $GEDIT_BASENAME != '' :
+if $GEDIT_CURRENT_DOCUMENT_NAME != '' :
   # extract fil name (no extension)
-  module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  module_name = $GEDIT_CURRENT_DOCUMENT_NAME.split('.')[0].lower()
 else:
   # Default module name
   module_name = 'mymodule'
@@ -1852,9 +1852,9 @@ global module_name
 
 ####### Module name ##########
 # Check if current file is empty
-if $GEDIT_BASENAME != '' :
+if $GEDIT_CURRENT_DOCUMENT_NAME != '' :
   # extract fil name (no extension)
-  module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  module_name = $GEDIT_CURRENT_DOCUMENT_NAME.split('.')[0].lower()
 else:
   # Default module name
   module_name = 'mymodule'
@@ -1921,9 +1921,9 @@ global module_name
 
 ####### Module name ##########
 # Check if current file is empty
-if $GEDIT_BASENAME != '' :
+if $GEDIT_CURRENT_DOCUMENT_NAME != '' :
   # extract fil name (no extension)
-  module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  module_name = $GEDIT_CURRENT_DOCUMENT_NAME.split('.')[0].lower()
 else:
   # Default module name
   module_name = 'mymodule'
@@ -1946,9 +1946,9 @@ global module_name
 
 ####### Module name ##########
 # Check if current file is empty
-if $GEDIT_BASENAME != '' :
+if $GEDIT_CURRENT_DOCUMENT_NAME != '' :
   # extract fil name (no extension)
-  module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  module_name = $GEDIT_CURRENT_DOCUMENT_NAME.split('.')[0].lower()
 else:
   # Default module name
   module_name = 'mymodule'
@@ -1975,9 +1975,9 @@ global module_name
 
 ####### Module name ##########
 # Check if current file is empty
-if $GEDIT_BASENAME != '' :
+if $GEDIT_CURRENT_DOCUMENT_NAME != '' :
   # extract fil name (no extension)
-  module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  module_name = $GEDIT_CURRENT_DOCUMENT_NAME.split('.')[0].lower()
 else:
   # Default module name
   module_name = 'mymodule'
@@ -1998,9 +1998,9 @@ global module_name
 
 ####### Module name ##########
 # Check if current file is empty
-if $GEDIT_BASENAME != '' :
+if $GEDIT_CURRENT_DOCUMENT_NAME != '' :
   # extract fil name (no extension)
-  module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  module_name = $GEDIT_CURRENT_DOCUMENT_NAME.split('.')[0].lower()
 else:
   # Default module name
   module_name = 'mymodule'
@@ -2061,9 +2061,9 @@ global module_name
 
 ####### Module name ##########
 # Check if current file is empty
-if $GEDIT_BASENAME != '' :
+if $GEDIT_CURRENT_DOCUMENT_NAME != '' :
   # extract fil name (no extension)
-  module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  module_name = $GEDIT_CURRENT_DOCUMENT_NAME.split('.')[0].lower()
 else:
   # Default module name
   module_name = 'mymodule'
@@ -2111,9 +2111,9 @@ global module_name
 
 ####### Module name ##########
 # Check if current file is empty
-if $GEDIT_BASENAME != '' :
+if $GEDIT_CURRENT_DOCUMENT_NAME != '' :
   # extract fil name (no extension)
-  module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  module_name = $GEDIT_CURRENT_DOCUMENT_NAME.split('.')[0].lower()
 else:
   # Default module name
   module_name = 'mymodule'
@@ -2134,9 +2134,9 @@ global module_name
 
 ####### Module name ##########
 # Check if current file is empty
-if $GEDIT_BASENAME != '' :
+if $GEDIT_CURRENT_DOCUMENT_NAME != '' :
   # extract fil name (no extension)
-  module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  module_name = $GEDIT_CURRENT_DOCUMENT_NAME.split('.')[0].lower()
 else:
   # Default module name
   module_name = 'mymodule'
@@ -2236,9 +2236,9 @@ global module_name
 
 ####### Module name ##########
 # Check if current file is empty
-if $GEDIT_BASENAME != '' :
+if $GEDIT_CURRENT_DOCUMENT_NAME != '' :
   # extract fil name (no extension)
-  module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  module_name = $GEDIT_CURRENT_DOCUMENT_NAME.split('.')[0].lower()
 else:
   # Default module name
   module_name = 'mymodule'
@@ -2300,9 +2300,9 @@ global module_name
 
 ####### Module name ##########
 # Check if current file is empty
-if $GEDIT_BASENAME != '' :
+if $GEDIT_CURRENT_DOCUMENT_NAME != '' :
   # extract fil name (no extension)
-  module_name = $GEDIT_BASENAME.split('.')[0].lower()
+  module_name = $GEDIT_CURRENT_DOCUMENT_NAME.split('.')[0].lower()
 else:
   # Default module name
   module_name = 'mymodule'
