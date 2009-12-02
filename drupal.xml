@@ -132,7 +132,7 @@ else:
     <description>drupal_set_message()</description>
   </snippet>
   <snippet id="drupal-write-record">
-    <text><![CDATA[drupal_write_record('${1:table}', ${2:$object}, array('${3:update_key}' => '${4:value}'));]]></text>
+    <text><![CDATA[drupal_write_record('${1:table}', ${2:$object}, array('${3:update_key}'));]]></text>
     <tag>db</tag>
     <description>drupal_write_record()</description>
   </snippet>
