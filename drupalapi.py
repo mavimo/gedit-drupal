@@ -2,17 +2,17 @@ import gedit
 import os
 import re
 import gtk
-import gtkmozembed
+import webkit
 import types
 
 class DrupalApi(gedit.Plugin):
-
   # A list of (handler_id, view) tuples
   handler_ids = []
 
   def __init__(self):
     # Create Drupal API browser
-    self._panel = gtkmozembed.MozEmbed()
+    self._panel = webkit.WebView()
+    # = gtkmozembed.MozEmbed()
     gedit.Plugin.__init__(self)
 
   def activate(self, window):
@@ -111,7 +111,8 @@ class DApiCompletion():
         function = function.replace(name + '_', 'hook_', 1)
       
       # Load info page
-      self._dapi_panel.load_url('http://api.drupal.org/api/function/' + function)
+      self._dapi_panel.open('http://api.drupal.org/api/function/' + function)
       return False
     else:
       return False
+
