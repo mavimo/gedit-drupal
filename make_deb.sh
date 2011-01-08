@@ -29,10 +29,10 @@ cp application-x-drupal-php.svg ./build/tmp/gedit-drupal/usr/share/icons/gnome/s
 cp application-x-drupal-tpl-php.svg ./build/tmp/gedit-drupal/usr/share/icons/gnome/scalable/mimetypes/application-x-drupal-tpl-php.svg
 
 # Copy DrupalAPI plugin ========================================================
-mkdir -p ./build/tmp/gedit-drupal/usr/lib/gedit-2/plugins/drupalapi
-cp drupalapi.py ./build/tmp/gedit-drupal/usr/lib/gedit-2/plugins/drupalapi/drupalapi.py
-cp drupalapi.png ./build/tmp/gedit-drupal/usr/lib/gedit-2/plugins/drupalapi/drupalapi.png
-cp drupalapi.gedit-plugin ./build/tmp/gedit-drupal/usr/lib/gedit-2/plugins/drupalapi/drupalapi.gedit-plugin
+mkdir -p ./build/tmp/gedit-drupal/usr/lib/gedit-2/plugins
+cp drupalapi.py ./build/tmp/gedit-drupal/usr/lib/gedit-2/plugins/drupalapi.py
+cp drupalapi.png ./build/tmp/gedit-drupal/usr/lib/gedit-2/plugins/drupalapi.png
+cp drupalapi.gedit-plugin ./build/tmp/gedit-drupal/usr/lib/gedit-2/plugins/drupalapi.gedit-plugin
 
 # Copy documentation ===========================================================
 mkdir -p ./build/tmp/gedit-drupal/usr/share/doc/gedit-drupal
