@@ -18,10 +18,9 @@ mkdir $MODULENAME/tests
 # Create file
 touch $MODULENAME/README
 touch $MODULENAME/INSTALL
-touch $MODULENAME/LICENSE
-echo  "info"    > $MODULENAME/$MODULENAME.info
-echo  "install" > $MODULENAME/$MODULENAME.install
-echo  "module"  > $MODULENAME/$MODULENAME.module
+echo  "info_init"    > $MODULENAME/$MODULENAME.info
+echo  "install_init" > $MODULENAME/$MODULENAME.install
+echo  "module_init"  > $MODULENAME/$MODULENAME.module
 
 # Open file whit gedit
 gedit $MODULENAME/$MODULENAME.info \
