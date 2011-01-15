@@ -220,7 +220,7 @@ function _${1:$GEDIT_CURRENT_DOCUMENT_NAME/((?P<name>.+?)\.(?P<ext>.+?))|/(?<nam
 
   <!-- CSS -->
   <snippet id="drupal-add-css">
-    <text><![CDATA[drupal_add_css(drupal_get_path('${1:[module,theme,theme_engine]}', '${2:$GEDIT_CURRENT_DOCUMENT_NAME/((?P<name>.+?)\.(?P<ext>.+?))|/(?<name>,\<name>,modulename)} . $(3:echo '/css/style.css')', '${4:[module,theme]}', '${5:[all,print,screen]}');]]></text>
+    <text><![CDATA[drupal_add_css(drupal_get_path('${1:[module,theme,theme_engine]}', '${2:$GEDIT_CURRENT_DOCUMENT_NAME/((?P<name>.+?)\.(?P<ext>.+?))|/(?<name>,\<name>,modulename)} . '$(3:echo '/css/style.css')', '${4:[module,theme]}', '${5:[all,print,screen]}');]]></text>
     <tag>drupal</tag>
     <description>drupal_add_css()</description>
   </snippet>
