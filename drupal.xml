@@ -1423,6 +1423,20 @@ function ${1:$GEDIT_CURRENT_DOCUMENT_NAME/((?P<name>.+?)\.(?P<ext>.+?))|/(?<name
     <tag>hook</tag>
     <description>hook_view()</description>
   </snippet>
+  <snippet id="hook-footer">
+    <text><![CDATA[/**
+ * Implementation of hook_footer().
+ */
+function ${1:$GEDIT_CURRENT_DOCUMENT_NAME/((?P<name>.+?)\.(?P<ext>.+?))|/(?<name>,\<name>,modulename)}_footer($main = 0) {
+  $output = '';
+
+  ${0}
+
+  return $output;
+}]]></text>
+    <tag>hook</tag>
+    <description>hook_footer()</description>
+  </snippet>
 
   <!-- File structure -->
   <snippet id="info">
