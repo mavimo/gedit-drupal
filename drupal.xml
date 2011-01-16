@@ -1437,6 +1437,16 @@ function ${1:$GEDIT_CURRENT_DOCUMENT_NAME/((?P<name>.+?)\.(?P<ext>.+?))|/(?<name
     <tag>hook</tag>
     <description>hook_footer()</description>
   </snippet>
+  <snippet id="hook-flush-caches">
+    <text><![CDATA[/**
+ * Implementation of hook_flush_caches().
+ */
+function ${1:$GEDIT_CURRENT_DOCUMENT_NAME/((?P<name>.+?)\.(?P<ext>.+?))|/(?<name>,\<name>,modulename)}_flush_caches() {
+  return array('cache_${1}');
+}]]></text>
+    <tag>hook</tag>
+    <description>hook_flush_caches()</description>
+  </snippet>
 
   <!-- File structure -->
   <snippet id="info">
