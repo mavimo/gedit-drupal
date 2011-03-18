@@ -1,3 +1,5 @@
 *.*~
 *.deb
 *.todo
+*.log
+/debian-repo
