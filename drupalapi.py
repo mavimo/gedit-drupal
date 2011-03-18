@@ -86,7 +86,7 @@ class DApiCompletion():
     # Used to find Keycode to use
     #    print event.keyval
     # Set CTRL + KEYCODE to open API Doc
-    if(event.state & gtk.gdk.CONTROL_MASK and event.keyval == 62):
+    if(event.state and gtk.gdk.CONTROL_MASK and gtk.gdk.keyval_name(event.keyval) == 'l'):
       buffer      = view.get_buffer()
       iter_cursor = buffer.get_iter_at_mark(buffer.get_insert())
       iter_start  = iter_cursor.copy()
