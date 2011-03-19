@@ -91,7 +91,7 @@ class DApiCompletion():
       # Set window position (center)
       main_window.set_position(gtk.WIN_POS_CENTER)
       # Set window title
-      main_window.set_title ("Drupal 6 API: " + function)
+      main_window.set_title ("Drupal 7 API: " + function)
       # Show window
       gtk.Widget.show_all (main_window)
       return False
