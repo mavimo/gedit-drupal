@@ -232,12 +232,12 @@ if (Drupal.jsEnabled) {
   $(echo '$')(document).ready(function() {
     ${0:// Add code here}
   });
-}', 'inline');  ]]></text>
+}', 'inline');]]></text>
     <tag>drupal</tag>
     <description>drupal_add_js( inline )</description>
   </snippet>
   <snippet id="drupal-add-js-module">
-    <text><![CDATA[drupal_add_js(drupal_get_path('[module,theme,theme_engine]', '${1:$GEDIT_CURRENT_DOCUMENT_NAME/((?P<name>.+?)\.(?P<ext>.+?))|/(?<name>,\<name>,modulename)}').'$(1: echo '/js/script.js')');]]></text>
+    <text><![CDATA[drupal_add_js(drupal_get_path('${1:[module,theme,theme_engine]}', '${2:$GEDIT_CURRENT_DOCUMENT_NAME/((?P<name>.+?)\.(?P<ext>.+?))|/(?<name>,\<name>,modulename)}').'$(3: echo '/js/script.js')');]]></text>
     <tag>drupal</tag>
     <description>drupal_add_js( module )</description>
   </snippet>
@@ -456,8 +456,7 @@ $form['#attributes'] = array('enctype' => "multipart/form-data");
 
   <!-- Hooks -->
   <snippet id="hook-access">
-    <text><![CDATA[
-/**
+    <text><![CDATA[/**
  * Implementation of hook_access().
  */
 function ${1:$GEDIT_CURRENT_DOCUMENT_NAME/((?P<name>.+?)\.(?P<ext>.+?))|/(?<name>,\<name>,modulename)}_access($op, $node, $account) {
@@ -1456,7 +1455,7 @@ description = ${2:Module description}
 package = ${3:package}
 version = ${4:1.0}
 core = ${5:6.x}]]></text>
-    <tag>info_init</tag>
+    <tag>initinfo</tag>
     <description>info</description>
   </snippet>
   <snippet id="install">
@@ -1540,7 +1539,7 @@ function ${1}_schema() {
   return $schema;
 }
 ]]></text>
-    <tag>install_init</tag>
+    <tag>initinstall</tag>
     <description>install</description>
   </snippet>
   <snippet id="module">
@@ -1573,7 +1572,7 @@ function ${1}_schema() {
  */
 
 ${0}]]></text>
-    <tag>module_init</tag>
+    <tag>initmodule</tag>
     <description>module</description>
   </snippet>
 
