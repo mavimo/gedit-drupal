@@ -85,7 +85,7 @@ class DApiCompletion():
       gtk.Container.add (scrolled_window, web_view)
       gtk.Container.add (main_window, scrolled_window)
       # Set URL to open
-      webkit.WebView.load_uri (web_view, "http://api.drupal.org/api/function/" + function + '/6')
+      webkit.WebView.load_uri (web_view, "http://api.drupal.org/api/function/" + function + '/7')
       # Set window size
       gtk.Window.set_default_size (main_window, 1024, 600)
       # Set window position (center)
