@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mime-info xmlns="http://www.freedesktop.org/standards/shared-mime-info">
 
-  <mime-type type="application/x-drupal">
+  <mime-type type="application/x-drupal-module">
     <comment>Drupal module</comment>
     <comment xml:lang="it">Modulo di Drupal</comment>
     <sub-class-of type="text/plain"/>
-    <icon name="x-drupal"/>
+    <icon name="x-drupal-module"/>
     <magic priority="80">
       <match value="&lt;?php" type="string" offset="0:64"/>
     </magic>
@@ -20,6 +20,14 @@
     <sub-class-of type="text/plain"/>
     <icon name="x-drupal-make"/>
     <glob pattern="*.make"/>
+  </mime-type>
+
+  <mime-type type="application/x-drupal-info">
+    <comment>Drupal info</comment>
+    <comment xml:lang="it">File info di Drupal</comment>
+    <sub-class-of type="text/plain"/>
+    <icon name="x-drupal-info"/>
+    <glob pattern="*.info"/>
   </mime-type>
 
   <mime-type type="application/x-drupal-profile">
