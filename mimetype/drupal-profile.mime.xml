@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mime-info xmlns="http://www.freedesktop.org/standards/shared-mime-info">
+  <mime-type type="application/x-drupal-profile-php">
+    <comment>Drupal profile</comment>
+    <comment xml:lang="it">Profilo di installazione di Drupal</comment>
+    <sub-class-of type="text/plain"/>
+    <generic-icon name="x-drupal-profile-php"/>
+    <magic priority="80">
+      <match value="&lt;?php" type="string" offset="0:64"/>
+    </magic>
+    <glob pattern="*.profile"/>
+  </mime-type>
+</mime-info>
