@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mime-info xmlns="http://www.freedesktop.org/standards/shared-mime-info">
   <mime-type type="application/x-drupal-php">
-    <comment>Drupal module script</comment>
+    <comment>Drupal module</comment>
     <comment xml:lang="it">Modulo di Drupal</comment>
     <sub-class-of type="text/plain"/>
     <generic-icon name="x-drupal-php"/>
@@ -10,6 +10,6 @@
     </magic>
     <glob pattern="*.install"/>
     <glob pattern="*.module"/>
-    <glob pattern="*.info"/>
+    <glob pattern="*.inc"/>
   </mime-type>
 </mime-info>
