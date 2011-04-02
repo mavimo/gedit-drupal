@@ -38,7 +38,10 @@
   <!-- ============================================================= -->
   <target name="clean" >
     <delete quiet="true" verbose="false" includeemptydirs="true">
-      <fileset dir="${tmp.directory}">
+      <fileset dir="${tmp.directory.deb}">
+        <include name="**" />
+      </fileset>
+      <fileset dir="${tmp.directory.repo}">
         <include name="**" />
       </fileset>
     </delete>
