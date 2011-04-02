@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mime-info xmlns="http://www.freedesktop.org/standards/shared-mime-info">
+
   <mime-type type="application/x-drupal">
     <comment>Drupal module</comment>
     <comment xml:lang="it">Modulo di Drupal</comment>
@@ -16,6 +17,7 @@
   <mime-type type="application/x-drupal-make">
     <comment>Drupal make</comment>
     <comment xml:lang="it">Make file di Drupal</comment>
+    <sub-class-of type="text/plain"/>
     <icon name="x-drupal-make"/>
     <glob pattern="*.make"/>
   </mime-type>
@@ -23,13 +25,15 @@
   <mime-type type="application/x-drupal-profile">
     <comment>Drupal installation profile</comment>
     <comment xml:lang="it">Profilo di installazione di Drupal</comment>
+    <sub-class-of type="text/plain"/>
     <icon name="x-drupal-profile"/>
     <glob pattern="*.profile"/>
   </mime-type>
 
-  <mime-type type="application/x-drupal-tpl">
+  <mime-type type="application/x-drupal-tpl-php">
     <comment>Drupal template file</comment>
     <comment xml:lang="it">File template di Drupal</comment>
+    <sub-class-of type="text/plain"/>
     <generic-icon name="x-drupal-tpl-php"/>
     <glob pattern="*.tpl.php"/>
   </mime-type>

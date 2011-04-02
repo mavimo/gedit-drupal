@@ -30,8 +30,8 @@
   <!-- DO NOT CHANGE AFTER THAT LINE! -->
   <!-- ============================================================= -->
   <!-- Entry point -->
-  <!-- ============================================================= -->
-  <target name="main" depends="clean, copyfiles, build-deb, build-repo, upload-repo-files"/>
+  <!-- ============================================================= , upload-repo-files -->
+  <target name="main" depends="clean, copyfiles, build-deb, build-repo"/>
 
   <!-- ============================================================= -->
   <!-- Clean folders -->
@@ -78,7 +78,7 @@
     </copy>
     <copy todir="${tmp.directory.deb}/usr/share/mime/packages" >
       <fileset dir="./mimetype">
-        <include name="*.mime.xml" />
+        <include name="*.xml" />
       </fileset>
     </copy>
     <copy todir="${tmp.directory.deb}/usr/share/gedit-2/plugins/snippets" >
