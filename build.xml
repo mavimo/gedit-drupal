@@ -15,8 +15,8 @@
   <!-- Proect name -->
   <property name="project.name"       value="gedit-drupal" />
   <property name="project.version"    value="0.1" />
-  <property name="project.mantainer"  value="Marco Vito Moscaritolo" />
-  <property name="project.email"      value="marco@mavimo.org" />
+  <property name="project.mantainer.name"  value="Marco Vito Moscaritolo" />
+  <property name="project.mantainer.email" value="marco@mavimo.org" />
 
   <!-- FTP -->
   <property name="ftp.username"       value="" />
@@ -51,10 +51,10 @@
 
       <filterchain>
         <replacetokens begintoken="{{" endtoken="}}">
-          <token key="project.name"       value="${project.name}" />
-          <token key="project.version"    value="${project.version}" />
-          <token key="project.mantainer"  value="${project.mantainer}" />
-          <token key="project.email"      value="${project.email}" />
+          <token key="project.name"             value="${project.name}" />
+          <token key="project.version"          value="${project.version}" />
+          <token key="project.mantainer.name"   value="${project.mantainer}" />
+          <token key="project.mantainer.email"  value="${project.email}" />
         </replacetokens>
       </filterchain>
 
@@ -69,8 +69,8 @@
       </fileset>
     </copy>
     <copy todir="${tmp.directory.deb}/usr/share/mime/packages" >
-      <fileset dir=".">
-        <include name="**.mime.xml" />
+      <fileset dir="./mimetype">
+        <include name="*.mime.xml" />
       </fileset>
     </copy>
     <copy todir="${tmp.directory.deb}/usr/share/gedit-2/plugins/snippets" >
@@ -79,12 +79,12 @@
       </fileset>
     </copy>
     <copy todir="${tmp.directory.deb}/usr/share/icons/gnome/scalable/mimetypes" >
-      <fileset dir=".">
+      <fileset dir="./icons">
         <include name="application-x-drupal-*.svg" />
       </fileset>
     </copy>
     <copy todir="${tmp.directory.deb}/usr/lib/gedit-2/plugins" >
-      <fileset dir=".">
+      <fileset dir="./drupalapi">
         <include name="drupalapi.*" />
       </fileset>
     </copy>

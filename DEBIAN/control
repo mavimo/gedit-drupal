@@ -1,7 +1,7 @@
-Package: gedit-drupal
-Version: 0.11.0-ubuntu1
+Package: {{project.name}}
+Version: {{project.version}}
 Architecture: all
-Maintainer: Marco Vito Moscaritolo < marco@mavimo.org >
+Maintainer: {{project.mantainer.name}} <{{project.mantainer.email}}>
 Installed-Size: 828
 Priority: optional
 Depends: gedit, gedit-plugins, python-webkit
