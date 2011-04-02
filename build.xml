@@ -116,7 +116,7 @@
       </fileset>
     </copy>
 
-    <exec command="/usr/bin/dpkg-scanpackages ${tmp.directory.repo}/binary /dev/null | gzip -9c > ${tmp.directory.repo}/binary/Packages.gz" />
+    <exec command="/usr/bin/dpkg-scanpackages binary /dev/null | gzip -9c > ${tmp.directory.repo}/binary/Packages.gz" dir="${tmp.directory.repo}" />
 
     <echo file="${tmp.directory.repo}/binary/Release" append="false">Archive: stable
 Component: contrib
