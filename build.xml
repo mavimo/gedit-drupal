@@ -1,0 +1,132 @@
+<?xml version="1.0"?>
+
+<!--
+    Document   : build.xml
+    Created on : 2 april 2011, 9.55
+    Author     : marco
+    Description:
+        Purpose of the document follows.
+-->
+
+<project name="build" default="main">
+  <!-- ============================================================= -->
+  <!-- Configuration -->
+  <!-- ============================================================= -->
+  <!-- Proect name -->
+  <property name="project.name"       value="gedit-drupal" />
+  <property name="project.version"    value="0.1" />
+  <property name="project.mantainer"  value="Marco Vito Moscaritolo" />
+  <property name="project.email"      value="marco@mavimo.org" />
+
+  <!-- FTP -->
+  <property name="ftp.username"       value="" />
+  <property name="ftp.password"       value="" />
+  <property name="ftp.server"         value="deb.mavimo.org" />
+  <property name="ftp.directory"      value="/www/deb_mavimo" />
+
+  <property name="tmp.directory.deb"  value="/tmp/${project.name}/${project.version}/deb" />
+  <property name="tmp.directory.repo" value="/tmp/${project.name}/${project.version}/repo" />
+
+  <!-- DO NOT CHANGE AFTER THAT LINE! -->
+  <!-- ============================================================= -->
+  <!-- Entry point -->
+  <!-- ============================================================= -->
+  <target name="main" depends="clean, copyfiles, build-deb, build-repo, upload-repo-files"/>
+
+  <!-- ============================================================= -->
+  <!-- Clean folders -->
+  <!-- ============================================================= -->
+  <target name="clean" >
+    <delete quiet="true" verbose="false" includeemptydirs="true">
+      <fileset dir="${tmp.directory}">
+        <include name="**" />
+      </fileset>
+    </delete>
+
+    <mkdir dir="${tmp.directory.deb}" />
+  </target>
+
+  <target name="copyfiles" >
+    <copy todir="${tmp.directory.deb}/DEBIAN" >
+
+      <filterchain>
+        <replacetokens begintoken="{{" endtoken="}}">
+          <token key="project.name"       value="${project.name}" />
+          <token key="project.version"    value="${project.version}" />
+          <token key="project.mantainer"  value="${project.mantainer}" />
+          <token key="project.email"      value="${project.email}" />
+        </replacetokens>
+      </filterchain>
+
+      <fileset dir="./DEBIAN">
+        <include name="**" />
+      </fileset>
+    </copy>
+
+    <copy todir="${tmp.directory.deb}/usr/share/gtksourceview-2.0/language-specs" >
+      <fileset dir=".">
+        <include name="drupal.lang" />
+      </fileset>
+    </copy>
+    <copy todir="${tmp.directory.deb}/usr/share/mime/packages" >
+      <fileset dir=".">
+        <include name="**.mime.xml" />
+      </fileset>
+    </copy>
+    <copy todir="${tmp.directory.deb}/usr/share/gedit-2/plugins/snippets" >
+      <fileset dir=".">
+        <include name="drupal.xml" />
+      </fileset>
+    </copy>
+    <copy todir="${tmp.directory.deb}/usr/share/icons/gnome/scalable/mimetypes" >
+      <fileset dir=".">
+        <include name="application-x-drupal-*.svg" />
+      </fileset>
+    </copy>
+    <copy todir="${tmp.directory.deb}/usr/lib/gedit-2/plugins" >
+      <fileset dir=".">
+        <include name="drupalapi.*" />
+      </fileset>
+    </copy>
+    <copy todir="${tmp.directory.deb}/usr/share/doc/gedit-drupal" >
+      <fileset dir=".">
+        <include name="README" />
+      </fileset>
+    </copy>
+  </target>
+
+  <target name="build-deb" >
+    <exec command="/usr/bin/dpkg-deb -b ${tmp.directory.deb} ${tmp.directory.deb}" />
+  </target>
+
+  <target name="build-repo" >
+    <mkdir dir="${tmp.directory.repo}/binary" />
+
+    <copy todir="${tmp.directory.repo}/binary" >
+      <fileset dir="${tmp.directory.deb}">
+        <include name="**.deb" />
+      </fileset>
+    </copy>
+
+    <exec command="/usr/bin/dpkg-scanpackages ${tmp.directory.repo}/binary /dev/null | gzip -9c > ${tmp.directory.repo}/binary/Packages.gz" />
+
+    <echo file="${tmp.directory.repo}/binary/Release" append="false">Archive: stable
+Component: contrib
+Origin: Agavee
+Label: Mavimo
+Architecture: i386</echo>
+  </target>
+
+  <target name="upload-repo-files" >
+    <ftpdeploy 
+      host="${ftp.server}"
+      username="${ftp.username}"
+      password="${ftp.password}"
+      dir="${ftp.directory}">
+      <fileset dir="${tmp.directory.repo}">
+        <include name="**"/>
+      </fileset>
+    </ftpdeploy>
+  </target>
+
+</project>
