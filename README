@@ -15,8 +15,10 @@ This project contains Snippet for getid to have a rapid development for Drupal d
 
   c)  Create a new mimetype into your machine
 
-        # sudo cp drupal.mime.xml /usr/share/mime/packages/drupal.mime.xml
-        # sudo cp drupal-theme.mime.xml /usr/share/mime/packages/drupal.mime.xml
+        # sudo cp mimetype/drupal.mime.xml          /usr/share/mime/packages/drupal.mime.xml
+        # sudo cp mimetype/drupal-theme.mime.xml    /usr/share/mime/packages/drupal-theme.mime.xml
+        # sudo cp mimetype/drupal-profile.mime.xml  /usr/share/mime/packages/drupal-profile.mime.xml
+        # sudo cp mimetype/drupal-make.mime.xml     /usr/share/mime/packages/drupal-make.mime.xml
 
   d)  Update mimetype database
 
@@ -26,8 +28,10 @@ This project contains Snippet for getid to have a rapid development for Drupal d
       (gnome, Tangerine, ..), and copy into this folder (on scalable subfolder)
       icon file:
       
-        # sudo cp application-x-drupal-php.svg /usr/share/icons/ICONSET_NAME/scalable/mimetype/application-x-drupal-php.svg
-        # sudo cp application-x-drupal-tpl-php.svg /usr/share/icons/ICONSET_NAME/scalable/mimetype/application-x-drupal-php.svg
+        # sudo cp icons/application-x-drupal-php.svg          /usr/share/icons/ICONSET_NAME/scalable/mimetype/application-x-drupal-php.svg
+        # sudo cp icons/application-x-drupal-tpl-php.svg      /usr/share/icons/ICONSET_NAME/scalable/mimetype/application-x-drupal-tpl-php.svg
+        # sudo cp icons/application-x-drupal-profile-php.svg  /usr/share/icons/ICONSET_NAME/scalable/mimetype/application-x-drupal-profile-php.svg
+        # sudo cp icons/application-x-drupal-make-php.svg     /usr/share/icons/ICONSET_NAME/scalable/mimetype/application-x-drupal-make-php.svg
       
       after that regenerate iconset cache:
       
@@ -39,8 +43,10 @@ This project contains Snippet for getid to have a rapid development for Drupal d
         Edit -> Preferences -> Plugins
 
       If not already aviable please install it from your distrubution system, for 
-      debian / ubuntu system use:
+      debian / ubuntu system you can use repostitory at deb.mavimo.org:
 
+        # sudo sh -c "echo 'deb http://deb.mavimo.org/ binary/' >> /etc/apt/sources.list"
+        # sudo apt-get update
         # sudo apt-get install gedit-plugins
 
   g)  Add variuos snippets

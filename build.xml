@@ -56,8 +56,8 @@
         <replacetokens begintoken="{{" endtoken="}}">
           <token key="project.name"             value="${project.name}" />
           <token key="project.version"          value="${project.version}" />
-          <token key="project.mantainer.name"   value="${project.mantainer}" />
-          <token key="project.mantainer.email"  value="${project.email}" />
+          <token key="project.mantainer.name"   value="${project.mantainer.name}" />
+          <token key="project.mantainer.email"  value="${project.mantainer.email}" />
         </replacetokens>
       </filterchain>
 
@@ -67,8 +67,13 @@
     </copy>
 
     <copy todir="${tmp.directory.deb}/usr/share/gtksourceview-2.0/language-specs" >
+      <fileset dir="./lang">
+        <include name="*.lang" />
+      </fileset>
+    </copy>
+    <copy todir="${tmp.directory.deb}/usr/sbin" >
       <fileset dir=".">
-        <include name="drupal.lang" />
+        <include name="mkmodule" />
       </fileset>
     </copy>
     <copy todir="${tmp.directory.deb}/usr/share/mime/packages" >
