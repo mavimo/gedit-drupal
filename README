@@ -2,12 +2,10 @@ This project contains Snippet for getid to have a rapid development for Drupal d
 
 = INSTALLATION =================================================================
 
-  a)  Create a new folder and clone repository on your machine:
+  a)  Clone repository on your machine:
 
-        # mkdir gedit-drupal
-        # cd gedit-drupal
-        # git init
         # git clone git://github.com/mavimo/gedit-drupal.git
+        # cd gedit-drupal
 
   b)  Copy language definition into /usr/share/gtksourceview-2.0/language-specs/
 
